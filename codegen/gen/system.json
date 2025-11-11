@@ -4,60 +4,161 @@
     "HomeKit": {
       "Notification": {
         "CoalesceNotifications": {
-          "tilt.current": ["slats"],
-          "brightness": ["lightbulb"],
-          "horizontal-tilt.current": ["window-covering"],
-          "saturation": ["lightbulb"],
-          "position.current": ["window-covering"],
-          "vertical-tilt.current": ["window-covering"],
-          "color-temperature": ["lightbulb"],
-          "hue": ["lightbulb"],
-          "temperature.current": ["sensor.temperature"]
+          "tilt.current": [
+            "slats"
+          ],
+          "brightness": [
+            "lightbulb"
+          ],
+          "horizontal-tilt.current": [
+            "window-covering"
+          ],
+          "saturation": [
+            "lightbulb"
+          ],
+          "position.current": [
+            "window-covering"
+          ],
+          "vertical-tilt.current": [
+            "window-covering"
+          ],
+          "color-temperature": [
+            "lightbulb"
+          ],
+          "hue": [
+            "lightbulb"
+          ],
+          "temperature.current": [
+            "sensor.temperature"
+          ]
         },
         "NotificationAutoEnabled": {
-          "display-order": ["television"],
-          "position.target": ["door", "window"],
-          "operating-state-response": ["doorbell"],
-          "active": ["access-code"],
-          "lock-mechanism.current-state": ["garage-door-opener", "lock-mechanism"],
-          "security-system-state.current": ["security-system"],
-          "is-configured": ["valve"],
-          "input-event": ["doorbell"],
-          "heart-beat": ["accessory-runtime-information"],
-          "position.hold": ["door", "window"],
-          "configured-name": ["input-source", "television", "smart-speaker"],
-          "lock-mechanism.target-state": ["garage-door-opener", "lock-mechanism"],
-          "position.current": ["door", "window"],
-          "position.state": ["door", "window"],
-          "door-state.current": ["garage-door-opener"],
-          "security-system-state.target": ["security-system"],
-          "door-state.target": ["garage-door-opener"]
+          "display-order": [
+            "television"
+          ],
+          "position.target": [
+            "door",
+            "window"
+          ],
+          "operating-state-response": [
+            "doorbell"
+          ],
+          "active": [
+            "access-code"
+          ],
+          "lock-mechanism.current-state": [
+            "garage-door-opener",
+            "lock-mechanism"
+          ],
+          "security-system-state.current": [
+            "security-system"
+          ],
+          "is-configured": [
+            "valve"
+          ],
+          "input-event": [
+            "doorbell"
+          ],
+          "heart-beat": [
+            "accessory-runtime-information"
+          ],
+          "position.hold": [
+            "door",
+            "window"
+          ],
+          "configured-name": [
+            "input-source",
+            "television",
+            "smart-speaker"
+          ],
+          "lock-mechanism.target-state": [
+            "garage-door-opener",
+            "lock-mechanism"
+          ],
+          "position.current": [
+            "door",
+            "window"
+          ],
+          "position.state": [
+            "door",
+            "window"
+          ],
+          "door-state.current": [
+            "garage-door-opener"
+          ],
+          "security-system-state.target": [
+            "security-system"
+          ],
+          "door-state.target": [
+            "garage-door-opener"
+          ]
         },
         "BulletinBoardEnabled": {
-          "position.hold": ["door", "window"],
-          "lock-mechanism.current-state": ["garage-door-opener", "lock-mechanism"],
-          "position.state": ["door", "window"],
-          "input-event": ["doorbell"],
-          "security-system-state.current": ["security-system"],
-          "door-state.current": ["garage-door-opener"],
-          "position.current": ["door", "window"]
+          "position.hold": [
+            "door",
+            "window"
+          ],
+          "lock-mechanism.current-state": [
+            "garage-door-opener",
+            "lock-mechanism"
+          ],
+          "position.state": [
+            "door",
+            "window"
+          ],
+          "input-event": [
+            "doorbell"
+          ],
+          "security-system-state.current": [
+            "security-system"
+          ],
+          "door-state.current": [
+            "garage-door-opener"
+          ],
+          "position.current": [
+            "door",
+            "window"
+          ]
         }
       },
-      "WakeOnOperationsFilter": { "active": { "television": { "Operations": ["Write"], "Values": [1] } } },
+      "WakeOnOperationsFilter": {
+        "active": {
+          "television": {
+            "Operations": [
+              "Write"
+            ],
+            "Values": [
+              1
+            ]
+          }
+        }
+      },
       "Categories": {
-        "faucet": { "Identifier": 29, "DefaultDescription": "Faucet", "UUID": "43CE6F7E-F7E8-44B4-80CE-5786F6E6CD47" },
+        "faucet": {
+          "Identifier": 29,
+          "DefaultDescription": "Faucet",
+          "UUID": "43CE6F7E-F7E8-44B4-80CE-5786F6E6CD47"
+        },
         "television-set-top-box": {
           "Identifier": 35,
           "DefaultDescription": "Television Set Top Box",
           "UUID": "FB953A08-6CDD-44E0-B011-CFAC559A3CFB"
         },
-        "other": { "Identifier": 1, "DefaultDescription": "Other", "UUID": "0FBA259B-05AC-46F2-875F-204ABB6D9FE7" },
+        "other": {
+          "Identifier": 1,
+          "DefaultDescription": "Other",
+          "UUID": "0FBA259B-05AC-46F2-875F-204ABB6D9FE7"
+        },
         "air-heater": {
           "Identifier": 20,
           "DefaultDescription": "Air Heater",
           "UUID": "BF7036FD-93CF-49B5-954F-CD2B760D11DA"
         },
-        "window": { "Identifier": 13, "DefaultDescription": "Window", "UUID": "1C501511-408E-4C1E-816B-3FC011FFD5B1" },
+        "window": {
+          "Identifier": 13,
+          "DefaultDescription": "Window",
+          "UUID": "1C501511-408E-4C1E-816B-3FC011FFD5B1"
+        },
         "audio-receiver": {
           "Identifier": 34,
           "DefaultDescription": "Audio Receiver",
@@ -73,7 +174,11 @@
           "DefaultDescription": "Television",
           "UUID": "830C0952-7CD8-44FB-B0C0-DA4EDB0F32A9"
         },
-        "outlet": { "Identifier": 7, "DefaultDescription": "Outlet", "UUID": "730F40D4-6D0E-4903-B09E-520A08AFB78C" },
+        "outlet": {
+          "Identifier": 7,
+          "DefaultDescription": "Outlet",
+          "UUID": "730F40D4-6D0E-4903-B09E-520A08AFB78C"
+        },
         "garage-door-opener": {
           "Identifier": 4,
           "DefaultDescription": "Garage Door Opener",
@@ -119,7 +224,11 @@
           "DefaultDescription": "Air Conditioner",
           "UUID": "18DDD63A-27F9-4341-B59B-759D3D114586"
         },
-        "fan": { "Identifier": 3, "DefaultDescription": "Fan", "UUID": "151CB559-0DF9-40AA-8A67-12AF06C4449D" },
+        "fan": {
+          "Identifier": 3,
+          "DefaultDescription": "Fan",
+          "UUID": "151CB559-0DF9-40AA-8A67-12AF06C4449D"
+        },
         "sprinkler": {
           "Identifier": 28,
           "DefaultDescription": "Sprinkler",
@@ -130,13 +239,21 @@
           "DefaultDescription": "Speaker",
           "UUID": "C0F5EDC5-4003-464A-9E5D-0DB36677BC35"
         },
-        "bridge": { "Identifier": 2, "DefaultDescription": "Bridge", "UUID": "61102194-9993-48BF-A1EF-6C7DC50F0C01" },
+        "bridge": {
+          "Identifier": 2,
+          "DefaultDescription": "Bridge",
+          "UUID": "61102194-9993-48BF-A1EF-6C7DC50F0C01"
+        },
         "television-streaming-stick": {
           "Identifier": 36,
           "DefaultDescription": "Television Streaming Stick",
           "UUID": "B0C866C4-3E25-4F6A-8476-A8A3B579A86E"
         },
-        "door": { "Identifier": 12, "DefaultDescription": "Door", "UUID": "DD4DE411-8F01-44EE-866A-1F96144DC1B6" },
+        "door": {
+          "Identifier": 12,
+          "DefaultDescription": "Door",
+          "UUID": "DD4DE411-8F01-44EE-866A-1F96144DC1B6"
+        },
         "door-lock": {
           "Identifier": 6,
           "DefaultDescription": "Door Lock",
@@ -147,8 +264,16 @@
           "DefaultDescription": "Thermostat",
           "UUID": "79668DCF-89FB-450D-94B5-AEE70B7B09F1"
         },
-        "switch": { "Identifier": 8, "DefaultDescription": "Switch", "UUID": "2F4C3164-8DE4-4A4F-93BA-DD1D5068DF0B" },
-        "sensor": { "Identifier": 10, "DefaultDescription": "Sensor", "UUID": "772AFB8E-8D2F-455E-90E5-9852E6C4DD31" },
+        "switch": {
+          "Identifier": 8,
+          "DefaultDescription": "Switch",
+          "UUID": "2F4C3164-8DE4-4A4F-93BA-DD1D5068DF0B"
+        },
+        "sensor": {
+          "Identifier": 10,
+          "DefaultDescription": "Sensor",
+          "UUID": "772AFB8E-8D2F-455E-90E5-9852E6C4DD31"
+        },
         "air-dehumidifier": {
           "Identifier": 23,
           "DefaultDescription": "Air Dehumidifier",
@@ -186,22 +311,58 @@
         }
       },
       "AllowableSecuringWrites": {
-        "security-system-state.target": [0, 1, 2],
-        "lock-mechanism.target-state": [1],
-        "position.target": [0],
-        "door-state.target": [1]
+        "security-system-state.target": [
+          0,
+          1,
+          2
+        ],
+        "lock-mechanism.target-state": [
+          1
+        ],
+        "position.target": [
+          0
+        ],
+        "door-state.target": [
+          1
+        ]
       },
       "RequiresDeviceUnlock": {
-        "position.hold": ["door", "window"],
-        "lock-mechanism.current-state": ["garage-door-opener", "lock-mechanism"],
-        "position.state": ["door", "window"],
-        "position.target": ["door", "window"],
-        "lock-mechanism.target-state": ["garage-door-opener", "lock-mechanism"],
-        "door-state.current": ["garage-door-opener"],
-        "door-state.target": ["garage-door-opener"],
-        "position.current": ["door", "window"],
-        "security-system-state.current": ["security-system"],
-        "security-system-state.target": ["security-system"]
+        "position.hold": [
+          "door",
+          "window"
+        ],
+        "lock-mechanism.current-state": [
+          "garage-door-opener",
+          "lock-mechanism"
+        ],
+        "position.state": [
+          "door",
+          "window"
+        ],
+        "position.target": [
+          "door",
+          "window"
+        ],
+        "lock-mechanism.target-state": [
+          "garage-door-opener",
+          "lock-mechanism"
+        ],
+        "door-state.current": [
+          "garage-door-opener"
+        ],
+        "door-state.target": [
+          "garage-door-opener"
+        ],
+        "position.current": [
+          "door",
+          "window"
+        ],
+        "security-system-state.current": [
+          "security-system"
+        ],
+        "security-system-state.target": [
+          "security-system"
+        ]
       },
       "Blacklist": {
         "Characteristics": [
@@ -215,7 +376,11 @@
           "pairing-features",
           "service-signature"
         ],
-        "Services": ["cloud-relay", "pairing", "protocol-information"]
+        "Services": [
+          "cloud-relay",
+          "pairing",
+          "protocol-information"
+        ]
       },
       "BlacklistFromApplications": {
         "Characteristics": [
@@ -567,7 +732,7 @@
           "Properties": 2
         },
         "digital-zoom": {
-          "StepValue": 0.10000000000000001,
+          "StepValue": 0.1,
           "DefaultDescription": "Digital Zoom",
           "Format": "float",
           "ShortUUID": "0000011D",
@@ -783,7 +948,7 @@
           "Properties": 39
         },
         "optical-zoom": {
-          "StepValue": 0.10000000000000001,
+          "StepValue": 0.1,
           "DefaultDescription": "Optical Zoom",
           "Format": "float",
           "ShortUUID": "0000011C",
@@ -818,7 +983,7 @@
           "LocalizationKey": "",
           "DefaultDescription": "Current Temperature",
           "Properties": 3,
-          "StepValue": 0.10000000000000001,
+          "StepValue": 0.1,
           "MaxValue": 100,
           "Units": "celsius"
         },
@@ -1888,7 +2053,7 @@
           "LocalizationKey": "",
           "DefaultDescription": "Cooling Threshold Temperature",
           "Properties": 7,
-          "StepValue": 0.10000000000000001,
+          "StepValue": 0.1,
           "MaxValue": 35,
           "Units": "celsius"
         },
@@ -2040,7 +2205,7 @@
           "LocalizationKey": "",
           "DefaultDescription": "Target Temperature",
           "Properties": 7,
-          "StepValue": 0.10000000000000001,
+          "StepValue": 0.1,
           "MaxValue": 38,
           "Units": "celsius"
         },
@@ -2291,52 +2456,134 @@
           "LocalizationKey": "",
           "DefaultDescription": "Heating Threshold Temperature",
           "Properties": 7,
-          "StepValue": 0.10000000000000001,
+          "StepValue": 0.1,
           "MaxValue": 25,
           "Units": "celsius"
         }
       },
       "Properties": {
-        "hidden": { "LocalizationKey": "", "DefaultDescription": "Hidden", "Position": 6 },
-        "notify": { "LocalizationKey": "", "DefaultDescription": "Notify", "Position": 0 },
-        "write": { "LocalizationKey": "", "DefaultDescription": "Write", "Position": 2 },
-        "timedWrite": { "LocalizationKey": "", "DefaultDescription": "Timed Write Required", "Position": 5 },
-        "aa": { "LocalizationKey": "", "DefaultDescription": "Additional Authorization Needed", "Position": 4 },
-        "read": { "LocalizationKey": "", "DefaultDescription": "Read", "Position": 1 },
-        "adminOnly": { "LocalizationKey": "", "DefaultDescription": "Admin Only", "Position": 8 },
-        "broadcast": { "LocalizationKey": "", "DefaultDescription": "Broadcast State Changes", "Position": 3 },
-        "writeResponse": { "LocalizationKey": "", "DefaultDescription": "Write Response Needed", "Position": 7 }
+        "hidden": {
+          "LocalizationKey": "",
+          "DefaultDescription": "Hidden",
+          "Position": 6
+        },
+        "notify": {
+          "LocalizationKey": "",
+          "DefaultDescription": "Notify",
+          "Position": 0
+        },
+        "write": {
+          "LocalizationKey": "",
+          "DefaultDescription": "Write",
+          "Position": 2
+        },
+        "timedWrite": {
+          "LocalizationKey": "",
+          "DefaultDescription": "Timed Write Required",
+          "Position": 5
+        },
+        "aa": {
+          "LocalizationKey": "",
+          "DefaultDescription": "Additional Authorization Needed",
+          "Position": 4
+        },
+        "read": {
+          "LocalizationKey": "",
+          "DefaultDescription": "Read",
+          "Position": 1
+        },
+        "adminOnly": {
+          "LocalizationKey": "",
+          "DefaultDescription": "Admin Only",
+          "Position": 8
+        },
+        "broadcast": {
+          "LocalizationKey": "",
+          "DefaultDescription": "Broadcast State Changes",
+          "Position": 3
+        },
+        "writeResponse": {
+          "LocalizationKey": "",
+          "DefaultDescription": "Write Response Needed",
+          "Position": 7
+        }
       },
       "Units": {
-        "lux": { "DefaultDescription": "Lux", "LocalizationKey": "" },
-        "micrograms/m^3": { "DefaultDescription": "Micrograms Per Cubic Meter", "LocalizationKey": "" },
-        "celsius": { "DefaultDescription": "Celsius", "LocalizationKey": "" },
-        "seconds": { "DefaultDescription": "Seconds", "LocalizationKey": "" },
-        "fahrenheit": { "DefaultDescription": "Fahrenheit", "LocalizationKey": "" },
-        "ppm": { "DefaultDescription": "Parts Per Million", "LocalizationKey": "" },
-        "percentage": { "DefaultDescription": "Percentage", "LocalizationKey": "" },
-        "arcdegrees": { "DefaultDescription": "ArcDegrees", "LocalizationKey": "" }
+        "lux": {
+          "DefaultDescription": "Lux",
+          "LocalizationKey": ""
+        },
+        "micrograms/m^3": {
+          "DefaultDescription": "Micrograms Per Cubic Meter",
+          "LocalizationKey": ""
+        },
+        "celsius": {
+          "DefaultDescription": "Celsius",
+          "LocalizationKey": ""
+        },
+        "seconds": {
+          "DefaultDescription": "Seconds",
+          "LocalizationKey": ""
+        },
+        "fahrenheit": {
+          "DefaultDescription": "Fahrenheit",
+          "LocalizationKey": ""
+        },
+        "ppm": {
+          "DefaultDescription": "Parts Per Million",
+          "LocalizationKey": ""
+        },
+        "percentage": {
+          "DefaultDescription": "Percentage",
+          "LocalizationKey": ""
+        },
+        "arcdegrees": {
+          "DefaultDescription": "ArcDegrees",
+          "LocalizationKey": ""
+        }
       },
       "SupportsAuthorizationData": {
-        "door-state.target": ["garage-door-opener"],
-        "lock-mechanism.target-state": ["garage-door-opener", "lock-mechanism"]
+        "door-state.target": [
+          "garage-door-opener"
+        ],
+        "lock-mechanism.target-state": [
+          "garage-door-opener",
+          "lock-mechanism"
+        ]
       },
       "Services": {
         "assistant": {
-          "Characteristics": { "Required": ["active", "identifier", "name"] },
+          "Characteristics": {
+            "Required": [
+              "active",
+              "identifier",
+              "name"
+            ]
+          },
           "LocalizationKey": "",
           "ShortUUID": "0000026A",
           "DefaultDescription": "Assistant"
         },
         "stateful-programmable-switch": {
-          "Characteristics": { "Required": ["input-event", "output-state"], "Optional": ["name"] },
+          "Characteristics": {
+            "Required": [
+              "input-event",
+              "output-state"
+            ],
+            "Optional": [
+              "name"
+            ]
+          },
           "LocalizationKey": "",
           "ShortUUID": "00000088",
           "DefaultDescription": "Stateful Programmable Switch"
         },
         "camera-operating-mode": {
           "Characteristics": {
-            "Required": ["event-snapshots-active", "homekit-camera-active"],
+            "Required": [
+              "event-snapshots-active",
+              "homekit-camera-active"
+            ],
             "Optional": [
               "camera-operating-mode-indicator",
               "manually-disabled",
@@ -2372,14 +2619,26 @@
           "DefaultDescription": "Humidifier-Dehumidifier"
         },
         "stateless-programmable-switch": {
-          "Characteristics": { "Required": ["input-event"], "Optional": ["name", "service-label-index"] },
+          "Characteristics": {
+            "Required": [
+              "input-event"
+            ],
+            "Optional": [
+              "name",
+              "service-label-index"
+            ]
+          },
           "LocalizationKey": "",
           "ShortUUID": "00000089",
           "DefaultDescription": "Stateless Programmable Switch"
         },
         "nfc-access": {
           "Characteristics": {
-            "Required": ["configuration-state", "nfc-access-control-point", "nfc-access-supported-configuration"]
+            "Required": [
+              "configuration-state",
+              "nfc-access-control-point",
+              "nfc-access-supported-configuration"
+            ]
           },
           "LocalizationKey": "",
           "ShortUUID": "00000266",
@@ -2387,8 +2646,16 @@
         },
         "sensor.motion": {
           "Characteristics": {
-            "Required": ["motion-detected"],
-            "Optional": ["name", "status-active", "status-fault", "status-lo-batt", "status-tampered"]
+            "Required": [
+              "motion-detected"
+            ],
+            "Optional": [
+              "name",
+              "status-active",
+              "status-fault",
+              "status-lo-batt",
+              "status-tampered"
+            ]
           },
           "LocalizationKey": "",
           "ShortUUID": "00000085",
@@ -2396,23 +2663,44 @@
         },
         "speaker": {
           "Characteristics": {
-            "Required": ["mute"],
-            "Optional": ["active", "volume", "volume-control-type", "volume-selector"]
+            "Required": [
+              "mute"
+            ],
+            "Optional": [
+              "active",
+              "volume",
+              "volume-control-type",
+              "volume-selector"
+            ]
           },
           "LocalizationKey": "",
           "ShortUUID": "00000113",
           "DefaultDescription": "Speaker"
         },
         "metrics": {
-          "Characteristics": { "Required": ["active"] },
+          "Characteristics": {
+            "Required": [
+              "active"
+            ]
+          },
           "LocalizationKey": "",
           "ShortUUID": "00000270",
           "DefaultDescription": "Accessory Metrics"
         },
         "input-source": {
           "Characteristics": {
-            "Required": ["configured-name", "input-source-type", "is-configured", "name", "visibility-state.current"],
-            "Optional": ["identifier", "input-device-type", "visibility-state.target"]
+            "Required": [
+              "configured-name",
+              "input-source-type",
+              "is-configured",
+              "name",
+              "visibility-state.current"
+            ],
+            "Optional": [
+              "identifier",
+              "input-device-type",
+              "visibility-state.target"
+            ]
           },
           "LocalizationKey": "",
           "ShortUUID": "000000D9",
@@ -2420,8 +2708,14 @@
         },
         "accessory-runtime-information": {
           "Characteristics": {
-            "Required": ["ping"],
-            "Optional": ["activity-interval", "heart-beat", "sleep-interval"]
+            "Required": [
+              "ping"
+            ],
+            "Optional": [
+              "activity-interval",
+              "heart-beat",
+              "sleep-interval"
+            ]
           },
           "LocalizationKey": "",
           "ShortUUID": "00000239",
@@ -2429,8 +2723,16 @@
         },
         "sensor.light": {
           "Characteristics": {
-            "Required": ["light-level.current"],
-            "Optional": ["name", "status-active", "status-fault", "status-lo-batt", "status-tampered"]
+            "Required": [
+              "light-level.current"
+            ],
+            "Optional": [
+              "name",
+              "status-active",
+              "status-fault",
+              "status-lo-batt",
+              "status-tampered"
+            ]
           },
           "LocalizationKey": "",
           "ShortUUID": "00000084",
@@ -2438,15 +2740,30 @@
         },
         "fan": {
           "DefaultDescription": "Fan",
-          "Characteristics": { "Required": ["on"], "Optional": ["name", "rotation.direction", "rotation.speed"] },
+          "Characteristics": {
+            "Required": [
+              "on"
+            ],
+            "Optional": [
+              "name",
+              "rotation.direction",
+              "rotation.speed"
+            ]
+          },
           "ShortUUID": "00000040",
           "LocalizationKey": "",
           "BTLE_ShortUUID": "FECB"
         },
         "filter-maintenance": {
           "Characteristics": {
-            "Required": ["filter.change-indication"],
-            "Optional": ["filter.life-level", "filter.reset-indication", "name"]
+            "Required": [
+              "filter.change-indication"
+            ],
+            "Optional": [
+              "filter.life-level",
+              "filter.reset-indication",
+              "name"
+            ]
           },
           "LocalizationKey": "",
           "ShortUUID": "000000BA",
@@ -2454,7 +2771,9 @@
         },
         "sensor.carbon-dioxide": {
           "Characteristics": {
-            "Required": ["carbon-dioxide.detected"],
+            "Required": [
+              "carbon-dioxide.detected"
+            ],
             "Optional": [
               "carbon-dioxide.level",
               "carbon-dioxide.peak-level",
@@ -2471,7 +2790,11 @@
         },
         "valve": {
           "Characteristics": {
-            "Required": ["active", "in-use", "valve-type"],
+            "Required": [
+              "active",
+              "in-use",
+              "valve-type"
+            ],
             "Optional": [
               "is-configured",
               "name",
@@ -2487,7 +2810,12 @@
         },
         "thread-transport": {
           "Characteristics": {
-            "Required": ["current-transport", "thread-control-point", "thread-node-capabilities", "thread-status"],
+            "Required": [
+              "current-transport",
+              "thread-control-point",
+              "thread-node-capabilities",
+              "thread-status"
+            ],
             "Optional": [
               "cca-energy-detect-threshold",
               "cca-signal-detect-threshold",
@@ -2509,8 +2837,17 @@
         },
         "air-purifier": {
           "Characteristics": {
-            "Required": ["active", "air-purifier.state.current", "air-purifier.state.target"],
-            "Optional": ["lock-physical-controls", "name", "rotation.speed", "swing-mode"]
+            "Required": [
+              "active",
+              "air-purifier.state.current",
+              "air-purifier.state.target"
+            ],
+            "Optional": [
+              "lock-physical-controls",
+              "name",
+              "rotation.speed",
+              "swing-mode"
+            ]
           },
           "LocalizationKey": "",
           "ShortUUID": "000000BB",
@@ -2518,8 +2855,16 @@
         },
         "irrigation-system": {
           "Characteristics": {
-            "Required": ["active", "program-mode", "in-use"],
-            "Optional": ["remaining-duration", "name", "status-fault"]
+            "Required": [
+              "active",
+              "program-mode",
+              "in-use"
+            ],
+            "Optional": [
+              "remaining-duration",
+              "name",
+              "status-fault"
+            ]
           },
           "LocalizationKey": "",
           "ShortUUID": "000000CF",
@@ -2546,8 +2891,16 @@
         "garage-door-opener": {
           "DefaultDescription": "Garage Door Opener",
           "Characteristics": {
-            "Required": ["door-state.current", "door-state.target", "obstruction-detected"],
-            "Optional": ["lock-mechanism.current-state", "lock-mechanism.target-state", "name"]
+            "Required": [
+              "door-state.current",
+              "door-state.target",
+              "obstruction-detected"
+            ],
+            "Optional": [
+              "lock-mechanism.current-state",
+              "lock-mechanism.target-state",
+              "name"
+            ]
           },
           "ShortUUID": "00000041",
           "LocalizationKey": "",
@@ -2555,7 +2908,11 @@
         },
         "cloud-relay": {
           "Characteristics": {
-            "Required": ["cloud-relay.control-point", "cloud-relay.current-state", "cloud-relay.enabled"]
+            "Required": [
+              "cloud-relay.control-point",
+              "cloud-relay.current-state",
+              "cloud-relay.enabled"
+            ]
           },
           "LocalizationKey": "",
           "ShortUUID": "0000005A",
@@ -2563,38 +2920,73 @@
         },
         "diagnostics": {
           "Characteristics": {
-            "Required": ["supported-diagnostics-snapshot"],
-            "Optional": ["selected-diagnostics-modes", "supported-diagnostics-modes"]
+            "Required": [
+              "supported-diagnostics-snapshot"
+            ],
+            "Optional": [
+              "selected-diagnostics-modes",
+              "supported-diagnostics-modes"
+            ]
           },
           "LocalizationKey": "",
           "ShortUUID": "00000237",
           "DefaultDescription": "Diagnostics"
         },
         "target-control": {
-          "Characteristics": { "Required": ["active", "active-identifier", "button-event"], "Optional": ["name"] },
+          "Characteristics": {
+            "Required": [
+              "active",
+              "active-identifier",
+              "button-event"
+            ],
+            "Optional": [
+              "name"
+            ]
+          },
           "LocalizationKey": "",
           "ShortUUID": "00000125",
           "DefaultDescription": "Target Control"
         },
         "sensor.leak": {
           "Characteristics": {
-            "Required": ["leak-detected"],
-            "Optional": ["name", "status-active", "status-fault", "status-lo-batt", "status-tampered"]
+            "Required": [
+              "leak-detected"
+            ],
+            "Optional": [
+              "name",
+              "status-active",
+              "status-fault",
+              "status-lo-batt",
+              "status-tampered"
+            ]
           },
           "LocalizationKey": "",
           "ShortUUID": "00000083",
           "DefaultDescription": "Leak Sensor"
         },
         "asset-update": {
-          "Characteristics": { "Required": ["asset-update-readiness", "supported-asset-types"] },
+          "Characteristics": {
+            "Required": [
+              "asset-update-readiness",
+              "supported-asset-types"
+            ]
+          },
           "LocalizationKey": "",
           "ShortUUID": "00000267",
           "DefaultDescription": "Asset Update"
         },
         "sensor.temperature": {
           "Characteristics": {
-            "Required": ["temperature.current"],
-            "Optional": ["name", "status-active", "status-fault", "status-lo-batt", "status-tampered"]
+            "Required": [
+              "temperature.current"
+            ],
+            "Optional": [
+              "name",
+              "status-active",
+              "status-fault",
+              "status-lo-batt",
+              "status-tampered"
+            ]
           },
           "LocalizationKey": "",
           "ShortUUID": "0000008A",
@@ -2602,7 +2994,9 @@
         },
         "sensor.carbon-monoxide": {
           "Characteristics": {
-            "Required": ["carbon-monoxide.detected"],
+            "Required": [
+              "carbon-monoxide.detected"
+            ],
             "Optional": [
               "carbon-monoxide.level",
               "carbon-monoxide.peak-level",
@@ -2619,7 +3013,11 @@
         },
         "data-stream-transport-management": {
           "Characteristics": {
-            "Required": ["setup-data-stream-transport", "supported-data-stream-transport-configuration", "version"]
+            "Required": [
+              "setup-data-stream-transport",
+              "supported-data-stream-transport-configuration",
+              "version"
+            ]
           },
           "LocalizationKey": "",
           "ShortUUID": "00000129",
@@ -2628,8 +3026,16 @@
         "sensor.contact": {
           "AllowAssociatedService": 1,
           "Characteristics": {
-            "Required": ["contact-state"],
-            "Optional": ["name", "status-active", "status-fault", "status-lo-batt", "status-tampered"]
+            "Required": [
+              "contact-state"
+            ],
+            "Optional": [
+              "name",
+              "status-active",
+              "status-fault",
+              "status-lo-batt",
+              "status-tampered"
+            ]
           },
           "LocalizationKey": "",
           "ShortUUID": "00000080",
@@ -2637,45 +3043,84 @@
         },
         "doorbell": {
           "Characteristics": {
-            "Required": ["input-event"],
-            "Optional": ["brightness", "mute", "name", "operating-state-response", "volume"]
+            "Required": [
+              "input-event"
+            ],
+            "Optional": [
+              "brightness",
+              "mute",
+              "name",
+              "operating-state-response",
+              "volume"
+            ]
           },
           "LocalizationKey": "",
           "ShortUUID": "00000121",
           "DefaultDescription": "Doorbell"
         },
         "protocol-information": {
-          "Characteristics": { "Required": ["version"] },
+          "Characteristics": {
+            "Required": [
+              "version"
+            ]
+          },
           "LocalizationKey": "",
           "ShortUUID": "000000A2",
           "DefaultDescription": "Protocol Information"
         },
         "window": {
           "Characteristics": {
-            "Required": ["position.current", "position.state", "position.target"],
-            "Optional": ["name", "obstruction-detected", "position.hold"]
+            "Required": [
+              "position.current",
+              "position.state",
+              "position.target"
+            ],
+            "Optional": [
+              "name",
+              "obstruction-detected",
+              "position.hold"
+            ]
           },
           "LocalizationKey": "",
           "ShortUUID": "0000008B",
           "DefaultDescription": "Window"
         },
         "wifi-satellite": {
-          "Characteristics": { "Required": ["wifi-satellite-status"] },
+          "Characteristics": {
+            "Required": [
+              "wifi-satellite-status"
+            ]
+          },
           "LocalizationKey": "",
           "ShortUUID": "0000020F",
           "DefaultDescription": "Wi-Fi Satellite"
         },
         "pairing": {
           "DefaultDescription": "Pairing",
-          "Characteristics": { "Required": ["list-pairings", "pair-setup", "pair-verify", "pairing-features"] },
+          "Characteristics": {
+            "Required": [
+              "list-pairings",
+              "pair-setup",
+              "pair-verify",
+              "pairing-features"
+            ]
+          },
           "ShortUUID": "00000055",
           "LocalizationKey": "",
           "BTLE_ShortUUID": "FED4"
         },
         "sensor.smoke": {
           "Characteristics": {
-            "Required": ["smoke-detected"],
-            "Optional": ["name", "status-active", "status-fault", "status-lo-batt", "status-tampered"]
+            "Required": [
+              "smoke-detected"
+            ],
+            "Optional": [
+              "name",
+              "status-active",
+              "status-fault",
+              "status-lo-batt",
+              "status-tampered"
+            ]
           },
           "LocalizationKey": "",
           "ShortUUID": "00000087",
@@ -2683,8 +3128,16 @@
         },
         "slats": {
           "Characteristics": {
-            "Required": ["slat.state.current", "slat.type"],
-            "Optional": ["name", "swing-mode", "tilt.current", "tilt.target"]
+            "Required": [
+              "slat.state.current",
+              "slat.type"
+            ],
+            "Optional": [
+              "name",
+              "swing-mode",
+              "tilt.current",
+              "tilt.target"
+            ]
           },
           "LocalizationKey": "",
           "ShortUUID": "000000B9",
@@ -2692,8 +3145,14 @@
         },
         "battery": {
           "Characteristics": {
-            "Required": ["status-lo-batt"],
-            "Optional": ["battery-level", "charging-state", "name"]
+            "Required": [
+              "status-lo-batt"
+            ],
+            "Optional": [
+              "battery-level",
+              "charging-state",
+              "name"
+            ]
           },
           "LocalizationKey": "",
           "ShortUUID": "00000096",
@@ -2724,21 +3183,38 @@
         "lock-mechanism": {
           "DefaultDescription": "Lock Mechanism",
           "Characteristics": {
-            "Required": ["lock-mechanism.current-state", "lock-mechanism.target-state"],
-            "Optional": ["name"]
+            "Required": [
+              "lock-mechanism.current-state",
+              "lock-mechanism.target-state"
+            ],
+            "Optional": [
+              "name"
+            ]
           },
           "ShortUUID": "00000045",
           "LocalizationKey": "",
           "BTLE_ShortUUID": "FED0"
         },
         "microphone": {
-          "Characteristics": { "Required": ["mute"], "Optional": ["volume"] },
+          "Characteristics": {
+            "Required": [
+              "mute"
+            ],
+            "Optional": [
+              "volume"
+            ]
+          },
           "LocalizationKey": "",
           "ShortUUID": "00000112",
           "DefaultDescription": "Microphone"
         },
         "target-control-management": {
-          "Characteristics": { "Required": ["supported-target-configuration", "target-list"] },
+          "Characteristics": {
+            "Required": [
+              "supported-target-configuration",
+              "target-list"
+            ]
+          },
           "LocalizationKey": "",
           "ShortUUID": "00000122",
           "DefaultDescription": "Target Control Management"
@@ -2746,7 +3222,10 @@
         "lock-management": {
           "DefaultDescription": "Lock Management",
           "Characteristics": {
-            "Required": ["lock-management.control-point", "version"],
+            "Required": [
+              "lock-management.control-point",
+              "version"
+            ],
             "Optional": [
               "administrator-only-access",
               "audio-feedback",
@@ -2763,8 +3242,16 @@
         },
         "sensor.occupancy": {
           "Characteristics": {
-            "Required": ["occupancy-detected"],
-            "Optional": ["name", "status-active", "status-fault", "status-lo-batt", "status-tampered"]
+            "Required": [
+              "occupancy-detected"
+            ],
+            "Optional": [
+              "name",
+              "status-active",
+              "status-fault",
+              "status-lo-batt",
+              "status-tampered"
+            ]
           },
           "LocalizationKey": "",
           "ShortUUID": "00000086",
@@ -2772,8 +3259,14 @@
         },
         "siri-endpoint": {
           "Characteristics": {
-            "Required": ["siri-endpoint-session-status", "version"],
-            "Optional": ["active-identifier", "manually-disabled"]
+            "Required": [
+              "siri-endpoint-session-status",
+              "version"
+            ],
+            "Optional": [
+              "active-identifier",
+              "manually-disabled"
+            ]
           },
           "LocalizationKey": "",
           "ShortUUID": "00000253",
@@ -2781,7 +3274,9 @@
         },
         "siri": {
           "Characteristics": {
-            "Required": ["siri-input-type"],
+            "Required": [
+              "siri-input-type"
+            ],
             "Optional": [
               "multifunction-button",
               "siri-enable",
@@ -2797,7 +3292,10 @@
         },
         "audio-stream-management": {
           "Characteristics": {
-            "Required": ["supported-audio-stream-configuration", "selected-audio-stream-configuration"]
+            "Required": [
+              "supported-audio-stream-configuration",
+              "selected-audio-stream-configuration"
+            ]
           },
           "LocalizationKey": "",
           "ShortUUID": "00000127",
@@ -2805,23 +3303,48 @@
         },
         "smart-speaker": {
           "Characteristics": {
-            "Required": ["media-state.current", "media-state.target"],
-            "Optional": ["airplay-enable", "configured-name", "mute", "name", "volume"]
+            "Required": [
+              "media-state.current",
+              "media-state.target"
+            ],
+            "Optional": [
+              "airplay-enable",
+              "configured-name",
+              "mute",
+              "name",
+              "volume"
+            ]
           },
           "LocalizationKey": "",
           "ShortUUID": "00000228",
           "DefaultDescription": "Speaker"
         },
         "faucet": {
-          "Characteristics": { "Required": ["active"], "Optional": ["name", "status-fault"] },
+          "Characteristics": {
+            "Required": [
+              "active"
+            ],
+            "Optional": [
+              "name",
+              "status-fault"
+            ]
+          },
           "LocalizationKey": "",
           "ShortUUID": "000000D7",
           "DefaultDescription": "Faucet"
         },
         "door": {
           "Characteristics": {
-            "Required": ["position.current", "position.state", "position.target"],
-            "Optional": ["name", "obstruction-detected", "position.hold"]
+            "Required": [
+              "position.current",
+              "position.state",
+              "position.target"
+            ],
+            "Optional": [
+              "name",
+              "obstruction-detected",
+              "position.hold"
+            ]
           },
           "LocalizationKey": "",
           "ShortUUID": "00000081",
@@ -2829,8 +3352,16 @@
         },
         "security-system": {
           "Characteristics": {
-            "Required": ["security-system-state.current", "security-system-state.target"],
-            "Optional": ["name", "security-system.alarm-type", "status-fault", "status-tampered"]
+            "Required": [
+              "security-system-state.current",
+              "security-system-state.target"
+            ],
+            "Optional": [
+              "name",
+              "security-system.alarm-type",
+              "status-fault",
+              "status-tampered"
+            ]
           },
           "LocalizationKey": "",
           "ShortUUID": "0000007E",
@@ -2846,7 +3377,9 @@
               "supported-rtp-configuration",
               "supported-video-stream-configuration"
             ],
-            "Optional": ["active"]
+            "Optional": [
+              "active"
+            ]
           },
           "LocalizationKey": "",
           "ShortUUID": "00000110",
@@ -2854,7 +3387,9 @@
         },
         "sensor.air-quality": {
           "Characteristics": {
-            "Required": ["air-quality"],
+            "Required": [
+              "air-quality"
+            ],
             "Optional": [
               "density.no2",
               "density.ozone",
@@ -2875,7 +3410,13 @@
         },
         "television": {
           "Characteristics": {
-            "Required": ["active", "active-identifier", "configured-name", "remote-key", "sleep-discovery-mode"],
+            "Required": [
+              "active",
+              "active-identifier",
+              "configured-name",
+              "remote-key",
+              "sleep-discovery-mode"
+            ],
             "Optional": [
               "brightness",
               "closed-captions",
@@ -2892,14 +3433,24 @@
           "DefaultDescription": "Television"
         },
         "transfer-transport-management": {
-          "Characteristics": { "Required": ["supported-transfer-transport-configuration", "setup-transfer-transport"] },
+          "Characteristics": {
+            "Required": [
+              "supported-transfer-transport-configuration",
+              "setup-transfer-transport"
+            ]
+          },
           "LocalizationKey": "",
           "ShortUUID": "00000203",
           "DefaultDescription": "Transfer Transport Management"
         },
         "heater-cooler": {
           "Characteristics": {
-            "Required": ["active", "heater-cooler.state.current", "heater-cooler.state.target", "temperature.current"],
+            "Required": [
+              "active",
+              "heater-cooler.state.current",
+              "heater-cooler.state.target",
+              "temperature.current"
+            ],
             "Optional": [
               "lock-physical-controls",
               "name",
@@ -2917,7 +3468,13 @@
         "accessory-information": {
           "DefaultDescription": "Accessory Information Service",
           "Characteristics": {
-            "Required": ["identify", "manufacturer", "model", "name", "serial-number"],
+            "Required": [
+              "identify",
+              "manufacturer",
+              "model",
+              "name",
+              "serial-number"
+            ],
             "Optional": [
               "accessory-flags",
               "app-matching-identifier",
@@ -2935,7 +3492,15 @@
         },
         "outlet": {
           "BTLE_ShortUUID": "FECC",
-          "Characteristics": { "Required": ["on"], "Optional": ["name", "outlet-in-use"] },
+          "Characteristics": {
+            "Required": [
+              "on"
+            ],
+            "Optional": [
+              "name",
+              "outlet-in-use"
+            ]
+          },
           "AllowAssociatedService": 1,
           "ShortUUID": "00000047",
           "LocalizationKey": "",
@@ -2943,8 +3508,16 @@
         },
         "sensor.humidity": {
           "Characteristics": {
-            "Required": ["relative-humidity.current"],
-            "Optional": ["name", "status-active", "status-fault", "status-lo-batt", "status-tampered"]
+            "Required": [
+              "relative-humidity.current"
+            ],
+            "Optional": [
+              "name",
+              "status-active",
+              "status-fault",
+              "status-lo-batt",
+              "status-tampered"
+            ]
           },
           "LocalizationKey": "",
           "ShortUUID": "00000082",
@@ -2952,7 +3525,9 @@
         },
         "fanv2": {
           "Characteristics": {
-            "Required": ["active"],
+            "Required": [
+              "active"
+            ],
             "Optional": [
               "fan.state.current",
               "fan.state.target",
@@ -2969,7 +3544,11 @@
         },
         "access-code": {
           "Characteristics": {
-            "Required": ["access-code-control-point", "access-code-supported-configuration", "configuration-state"]
+            "Required": [
+              "access-code-control-point",
+              "access-code-supported-configuration",
+              "configuration-state"
+            ]
           },
           "LocalizationKey": "",
           "ShortUUID": "00000260",
@@ -2978,7 +3557,9 @@
         "lightbulb": {
           "DefaultDescription": "Lightbulb",
           "Characteristics": {
-            "Required": ["on"],
+            "Required": [
+              "on"
+            ],
             "Optional": [
               "brightness",
               "characteristic-value-active-transition-count",
@@ -2995,7 +3576,11 @@
           "BTLE_ShortUUID": "FED2"
         },
         "service-label": {
-          "Characteristics": { "Required": ["service-label-namespace"] },
+          "Characteristics": {
+            "Required": [
+              "service-label-namespace"
+            ]
+          },
           "LocalizationKey": "",
           "ShortUUID": "000000CC",
           "DefaultDescription": "Label"
@@ -3009,7 +3594,9 @@
               "supported-audio-recording-configuration",
               "selected-camera-recording-configuration"
             ],
-            "Optional": ["recording-audio-active"]
+            "Optional": [
+              "recording-audio-active"
+            ]
           },
           "LocalizationKey": "",
           "ShortUUID": "00000204",
@@ -3017,28 +3604,52 @@
         },
         "switch": {
           "BTLE_ShortUUID": "FECD",
-          "Characteristics": { "Required": ["on"], "Optional": ["name"] },
+          "Characteristics": {
+            "Required": [
+              "on"
+            ],
+            "Optional": [
+              "name"
+            ]
+          },
           "AllowAssociatedService": 1,
           "ShortUUID": "00000049",
           "LocalizationKey": "",
           "DefaultDescription": "Switch"
         },
         "access-control": {
-          "Characteristics": { "Required": ["privilege"], "Optional": ["password-setting"] },
+          "Characteristics": {
+            "Required": [
+              "privilege"
+            ],
+            "Optional": [
+              "password-setting"
+            ]
+          },
           "LocalizationKey": "",
           "ShortUUID": "000000DA",
           "DefaultDescription": "Access Control"
         },
         "power-management": {
-          "Characteristics": { "Required": ["wake-configuration"], "Optional": [] },
+          "Characteristics": {
+            "Required": [
+              "wake-configuration"
+            ],
+            "Optional": []
+          },
           "LocalizationKey": "",
           "ShortUUID": "00000221",
           "DefaultDescription": "Power Management"
         },
         "wifi-transport": {
           "Characteristics": {
-            "Required": ["current-transport", "wifi-capabilities"],
-            "Optional": ["wifi-configuration-control"]
+            "Required": [
+              "current-transport",
+              "wifi-capabilities"
+            ],
+            "Optional": [
+              "wifi-configuration-control"
+            ]
           },
           "LocalizationKey": "",
           "ShortUUID": "0000022A",
@@ -3046,7 +3657,11 @@
         },
         "window-covering": {
           "Characteristics": {
-            "Required": ["position.current", "position.state", "position.target"],
+            "Required": [
+              "position.current",
+              "position.state",
+              "position.target"
+            ],
             "Optional": [
               "horizontal-tilt.current",
               "horizontal-tilt.target",
@@ -3067,159 +3682,372 @@
     "SchemaVersion": 1,
     "Assistant": {
       "Characteristics": {
-        "CONTROL_LOCK": { "Format": "int", "ReadWrite": "lock-physical-controls" },
+        "CONTROL_LOCK": {
+          "Format": "int",
+          "ReadWrite": "lock-physical-controls"
+        },
         "HEATING_COOLING_MODE": {
           "Read": "heating-cooling.current",
-          "Values": { "COOL": 2, "AUTO": 3, "HEAT": 1, "OFF": 0 },
+          "Values": {
+            "COOL": 2,
+            "AUTO": 3,
+            "HEAT": 1,
+            "OFF": 0
+          },
           "Format": "string",
           "Write": "heating-cooling.target"
         },
-        "OUTLET_IN_USE": { "Format": "bool", "Read": "outlet-in-use" },
+        "OUTLET_IN_USE": {
+          "Format": "bool",
+          "Read": "outlet-in-use"
+        },
         "HEATING_THRESHOLD": {
           "Format": "float",
           "SupportsLocalization": 1,
           "ReadWrite": "temperature.heating-threshold"
         },
-        "CARBON_MONOXIDE_PEAK_LEVEL": { "Format": "float", "Read": "carbon-monoxide.peak-level" },
+        "CARBON_MONOXIDE_PEAK_LEVEL": {
+          "Format": "float",
+          "Read": "carbon-monoxide.peak-level"
+        },
         "COOLING_THRESHOLD": {
           "Format": "float",
           "SupportsLocalization": 1,
           "ReadWrite": "temperature.cooling-threshold"
         },
         "HEATER_COOLER_MODE": {
-          "OutValues": { "3": "COOLING", "1": "IDLE", "2": "HEATING", "0": "INACTIVE" },
+          "OutValues": {
+            "0": "INACTIVE",
+            "1": "IDLE",
+            "2": "HEATING",
+            "3": "COOLING"
+          },
           "Read": "heater-cooler.state.current",
           "Format": "string",
-          "Values": { "AUTO": 0, "HEAT_AUTO": 1, "COOL_AUTO": 2 },
+          "Values": {
+            "AUTO": 0,
+            "HEAT_AUTO": 1,
+            "COOL_AUTO": 2
+          },
           "Write": "heater-cooler.state.target"
         },
-        "PROGRAM_MODE": { "Format": "int", "Read": "program-mode" },
+        "PROGRAM_MODE": {
+          "Format": "int",
+          "Read": "program-mode"
+        },
         "FILTER_CHANGE": {
-          "Values": { "CHANGE": 1, "NO_CHANGE": 0 },
+          "Values": {
+            "CHANGE": 1,
+            "NO_CHANGE": 0
+          },
           "Format": "string",
           "Read": "filter.change-indication"
         },
-        "AIR_PARTICULATE_DENSITY": { "Format": "float", "Read": "air-particulate.density" },
-        "TILT": { "Write": "tilt.target", "Format": "int", "Read": "tilt.current" },
-        "DURATION": { "Format": "int", "ReadWrite": "set-duration" },
-        "SATURATION": { "Format": "float", "ReadWrite": "saturation" },
+        "AIR_PARTICULATE_DENSITY": {
+          "Format": "float",
+          "Read": "air-particulate.density"
+        },
+        "TILT": {
+          "Write": "tilt.target",
+          "Format": "int",
+          "Read": "tilt.current"
+        },
+        "DURATION": {
+          "Format": "int",
+          "ReadWrite": "set-duration"
+        },
+        "SATURATION": {
+          "Format": "float",
+          "ReadWrite": "saturation"
+        },
         "CARBON_DIOXIDE_DETECTED": {
-          "Values": { "ABNORMAL": 1, "NORMAL": 0 },
+          "Values": {
+            "ABNORMAL": 1,
+            "NORMAL": 0
+          },
           "Format": "string",
           "Read": "carbon-dioxide.detected"
         },
-        "AMBIENT_LIGHT_LEVEL": { "Format": "float", "Read": "light-level.current" },
-        "CARBON_DIOXIDE_LEVEL": { "Format": "float", "Read": "carbon-dioxide.level" },
-        "CARBON_MONOXIDE_DETECTED": { "Format": "bool", "Read": "carbon-monoxide.detected" },
-        "IN_USE": { "Format": "int", "Read": "in-use" },
-        "IDENTIFY": { "Write": "identify", "Format": "bool" },
-        "ROTATION_SPEED": { "Format": "float", "ReadWrite": "rotation.speed" },
-        "HUMIDIFIER_THRESHOLD": { "Format": "float", "ReadWrite": "relative-humidity.humidifier-threshold" },
-        "NITROGEN_DIOXIDE_DENSITY": { "Format": "float", "Read": "density.no2" },
-        "REMAINING_DURATION": { "Format": "int", "Read": "remaining-duration" },
-        "CONTACT_DETECTED": { "Values": { "0": "0", "1": "1" }, "Format": "int", "Read": "contact-state" },
+        "AMBIENT_LIGHT_LEVEL": {
+          "Format": "float",
+          "Read": "light-level.current"
+        },
+        "CARBON_DIOXIDE_LEVEL": {
+          "Format": "float",
+          "Read": "carbon-dioxide.level"
+        },
+        "CARBON_MONOXIDE_DETECTED": {
+          "Format": "bool",
+          "Read": "carbon-monoxide.detected"
+        },
+        "IN_USE": {
+          "Format": "int",
+          "Read": "in-use"
+        },
+        "IDENTIFY": {
+          "Write": "identify",
+          "Format": "bool"
+        },
+        "ROTATION_SPEED": {
+          "Format": "float",
+          "ReadWrite": "rotation.speed"
+        },
+        "HUMIDIFIER_THRESHOLD": {
+          "Format": "float",
+          "ReadWrite": "relative-humidity.humidifier-threshold"
+        },
+        "NITROGEN_DIOXIDE_DENSITY": {
+          "Format": "float",
+          "Read": "density.no2"
+        },
+        "REMAINING_DURATION": {
+          "Format": "int",
+          "Read": "remaining-duration"
+        },
+        "CONTACT_DETECTED": {
+          "Values": {
+            "0": "0",
+            "1": "1"
+          },
+          "Format": "int",
+          "Read": "contact-state"
+        },
         "HUMIDIFIER_DEHUMIDIFIER_MODE": {
-          "OutValues": { "3": "DEHUMIDIFYING", "1": "IDLE", "2": "HUMIDIFYING", "0": "INACTIVE" },
+          "OutValues": {
+            "0": "INACTIVE",
+            "1": "IDLE",
+            "2": "HUMIDIFYING",
+            "3": "DEHUMIDIFYING"
+          },
           "Read": "humidifier-dehumidifier.state.current",
           "Format": "string",
-          "Values": { "AUTO": 0, "HUMIDIFY_AUTO": 1, "DEHUMIDIFY_AUTO": 2 },
+          "Values": {
+            "AUTO": 0,
+            "HUMIDIFY_AUTO": 1,
+            "DEHUMIDIFY_AUTO": 2
+          },
           "Write": "humidifier-dehumidifier.state.target"
         },
         "SLAT_OPERATING_MODE": {
-          "OutValues": { "3": "JAMMED", "1": "FIXED", "2": "SWINGING", "0": "INACTIVE" },
+          "OutValues": {
+            "0": "INACTIVE",
+            "1": "FIXED",
+            "2": "SWINGING",
+            "3": "JAMMED"
+          },
           "Read": "slat.state.current",
           "Format": "string",
-          "Values": { "AUTO": 1, "MANUAL": 0 }
+          "Values": {
+            "AUTO": 1,
+            "MANUAL": 0
+          }
         },
-        "BRIGHTNESS": { "Format": "int", "ReadWrite": "brightness" },
+        "BRIGHTNESS": {
+          "Format": "int",
+          "ReadWrite": "brightness"
+        },
         "FAN_OPERATING_MODE": {
-          "OutValues": { "0": "INACTIVE", "1": "IDLE", "2": "BLOWING" },
+          "OutValues": {
+            "0": "INACTIVE",
+            "1": "IDLE",
+            "2": "BLOWING"
+          },
           "Read": "fan.state.current",
           "Format": "string",
-          "Values": { "AUTO": 1, "MANUAL": 0 },
+          "Values": {
+            "AUTO": 1,
+            "MANUAL": 0
+          },
           "Write": "fan.state.target"
         },
-        "CARBON_DIOXIDE_PEAK_LEVEL": { "Format": "float", "Read": "carbon-dioxide.peak-level" },
+        "CARBON_DIOXIDE_PEAK_LEVEL": {
+          "Format": "float",
+          "Read": "carbon-dioxide.peak-level"
+        },
         "ROTATION_DIRECTION": {
-          "Values": { "COUNTERCLOCKWISE": 1, "CLOCKWISE": 0 },
+          "Values": {
+            "COUNTERCLOCKWISE": 1,
+            "CLOCKWISE": 0
+          },
           "Format": "string",
           "ReadWrite": "rotation.direction"
         },
         "AIR_PURIFIER_OPERATING_MODE": {
-          "OutValues": { "0": "INACTIVE", "1": "IDLE", "2": "PURIFYING_AIR" },
+          "OutValues": {
+            "0": "INACTIVE",
+            "1": "IDLE",
+            "2": "PURIFYING_AIR"
+          },
           "Read": "air-purifier.state.current",
           "Format": "string",
-          "Values": { "AUTO": 1, "MANUAL": 0 },
+          "Values": {
+            "AUTO": 1,
+            "MANUAL": 0
+          },
           "Write": "air-purifier.state.target"
         },
         "OCCUPANCY_DETECTED": {
-          "Values": { "OCCUPANCY_DETECTED": 1, "OCCUPANCY_NOT_DETECTED": 0 },
+          "Values": {
+            "OCCUPANCY_DETECTED": 1,
+            "OCCUPANCY_NOT_DETECTED": 0
+          },
           "Format": "string",
           "Read": "occupancy-detected"
         },
-        "DEHUMIDIFIER_THRESHOLD": { "Format": "float", "ReadWrite": "relative-humidity.dehumidifier-threshold" },
-        "SMOKE_DETECTED": { "Format": "bool", "Read": "smoke-detected" },
+        "DEHUMIDIFIER_THRESHOLD": {
+          "Format": "float",
+          "ReadWrite": "relative-humidity.dehumidifier-threshold"
+        },
+        "SMOKE_DETECTED": {
+          "Format": "bool",
+          "Read": "smoke-detected"
+        },
         "TEMPERATURE": {
           "Read": "temperature.current",
           "SupportsLocalization": 1,
           "Format": "float",
           "Write": "temperature.target"
         },
-        "POSITION": { "Write": "position.target", "Format": "int", "Read": "position.current" },
+        "POSITION": {
+          "Write": "position.target",
+          "Format": "int",
+          "Read": "position.current"
+        },
         "RAISE": {
-          "OutValues": { "3": 3, "1": 0, "4": 4, "2": 2, "0": 1 },
+          "OutValues": {
+            "0": 1,
+            "1": 0,
+            "2": 2,
+            "3": 3,
+            "4": 4
+          },
           "Read": "door-state.current",
           "Format": "int",
-          "Values": { "0": 1, "1": 0 },
+          "Values": {
+            "0": 1,
+            "1": 0
+          },
           "Write": "door-state.target"
         },
         "LOCK": {
           "Read": "lock-mechanism.current-state",
-          "Values": { "0": 0, "1": 1 },
+          "Values": {
+            "0": 0,
+            "1": 1
+          },
           "Format": "int",
           "Write": "lock-mechanism.target-state"
         },
         "LOW_BATTERY": {
-          "Values": { "BATTERY_NORMAL": 0, "BATTERY_LOW": 1 },
+          "Values": {
+            "BATTERY_NORMAL": 0,
+            "BATTERY_LOW": 1
+          },
           "Format": "string",
           "Read": "status-lo-batt"
         },
-        "HUMIDITY": { "Write": "relative-humidity.target", "Format": "float", "Read": "relative-humidity.current" },
-        "HUE": { "Format": "float", "ReadWrite": "hue" },
-        "MOTION_DETECTED": { "Format": "bool", "Read": "motion-detected" },
+        "HUMIDITY": {
+          "Write": "relative-humidity.target",
+          "Format": "float",
+          "Read": "relative-humidity.current"
+        },
+        "HUE": {
+          "Format": "float",
+          "ReadWrite": "hue"
+        },
+        "MOTION_DETECTED": {
+          "Format": "bool",
+          "Read": "motion-detected"
+        },
         "SECURITY_SYSTEM_STATE": {
           "Read": "security-system-state.current",
-          "Values": { "DISARM": 3, "ALARM_TRIGGERED": 4, "NIGHT_ARM": 2, "AWAY_ARM": 1, "STAY_ARM": 0 },
+          "Values": {
+            "DISARM": 3,
+            "ALARM_TRIGGERED": 4,
+            "NIGHT_ARM": 2,
+            "AWAY_ARM": 1,
+            "STAY_ARM": 0
+          },
           "Format": "string",
           "Write": "security-system-state.target"
         },
-        "PARTICULATE_MATTER_2_5_DENSITY": { "Format": "float", "Read": "density.pm2_5" },
-        "FILTER_LIFE": { "Format": "float", "ReadWrite": "filter.life-level" },
-        "VOLATILE_ORGANIC_COMPOUND_DENSITY": { "Format": "float", "Read": "density.voc" },
+        "PARTICULATE_MATTER_2_5_DENSITY": {
+          "Format": "float",
+          "Read": "density.pm2_5"
+        },
+        "FILTER_LIFE": {
+          "Format": "float",
+          "ReadWrite": "filter.life-level"
+        },
+        "VOLATILE_ORGANIC_COMPOUND_DENSITY": {
+          "Format": "float",
+          "Read": "density.voc"
+        },
         "CHARGING_STATE": {
-          "Values": { "NOT_CHARGEABLE": 2, "CHARGING": 1, "NOT_CHARGING": 0 },
+          "Values": {
+            "NOT_CHARGEABLE": 2,
+            "CHARGING": 1,
+            "NOT_CHARGING": 0
+          },
           "Format": "string",
           "Read": "charging-state"
         },
-        "CARBON_MONOXIDE_LEVEL": { "Format": "float", "Read": "carbon-monoxide.level" },
-        "PARTICULATE_MATTER_10_DENSITY": { "Format": "float", "Read": "density.pm10" },
+        "CARBON_MONOXIDE_LEVEL": {
+          "Format": "float",
+          "Read": "carbon-monoxide.level"
+        },
+        "PARTICULATE_MATTER_10_DENSITY": {
+          "Format": "float",
+          "Read": "density.pm10"
+        },
         "LEAK_DETECTED": {
-          "Values": { "LEAK_NOT_DETECTED": 0, "LEAK_DETECTED": 1 },
+          "Values": {
+            "LEAK_NOT_DETECTED": 0,
+            "LEAK_DETECTED": 1
+          },
           "Format": "string",
           "Read": "leak-detected"
         },
-        "OZONE_DENSITY": { "Format": "float", "Read": "density.ozone" },
+        "OZONE_DENSITY": {
+          "Format": "float",
+          "Read": "density.ozone"
+        },
         "AIR_QUALITY_RATING": {
-          "Values": { "GOOD": 2, "POOR": 5, "INFERIOR": 4, "EXCELLENT": 1, "FAIR": 3, "UNKNOWN": 0 },
+          "Values": {
+            "GOOD": 2,
+            "POOR": 5,
+            "INFERIOR": 4,
+            "EXCELLENT": 1,
+            "FAIR": 3,
+            "UNKNOWN": 0
+          },
           "Format": "string",
           "Read": "air-quality"
         },
-        "OBSTRUCTION_DETECTED": { "Format": "bool", "Read": "obstruction-detected" },
-        "SWING_MODE": { "Format": "bool", "ReadWrite": "swing-mode" },
-        "POWER": { "Format": "bool", "ReadWrite": "on" },
-        "BATTERY_LEVEL": { "Format": "int", "Read": "battery-level" },
-        "SULPHUR_DIOXIDE_DENSITY": { "Format": "float", "Read": "density.so2" },
-        "WATER_LEVEL": { "Format": "float", "Read": "water-level" }
+        "OBSTRUCTION_DETECTED": {
+          "Format": "bool",
+          "Read": "obstruction-detected"
+        },
+        "SWING_MODE": {
+          "Format": "bool",
+          "ReadWrite": "swing-mode"
+        },
+        "POWER": {
+          "Format": "bool",
+          "ReadWrite": "on"
+        },
+        "BATTERY_LEVEL": {
+          "Format": "int",
+          "Read": "battery-level"
+        },
+        "SULPHUR_DIOXIDE_DENSITY": {
+          "Format": "float",
+          "Read": "density.so2"
+        },
+        "WATER_LEVEL": {
+          "Format": "float",
+          "Read": "water-level"
+        }
       },
       "Services": {
         "LEAK_SENSOR": "sensor.leak",
