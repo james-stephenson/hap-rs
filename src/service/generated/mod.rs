@@ -32,8 +32,6 @@ pub mod camera_stream_management;
 pub mod carbon_dioxide_sensor;
 /// Carbon monoxide Sensor service definition.
 pub mod carbon_monoxide_sensor;
-/// Cloud Relay service definition.
-pub mod cloud_relay;
 /// Contact Sensor service definition.
 pub mod contact_sensor;
 /// Data Stream Transport Management service definition.
@@ -52,6 +50,8 @@ pub mod fan_v2;
 pub mod faucet;
 /// Filter Maintenance service definition.
 pub mod filter_maintenance;
+/// Firmware Update service definition.
+pub mod firmware_update;
 /// Garage Door Opener service definition.
 pub mod garage_door_opener;
 /// Heater-Cooler service definition.
@@ -112,6 +112,8 @@ pub mod stateful_programmable_switch;
 pub mod stateless_programmable_switch;
 /// Switch service definition.
 pub mod switch;
+/// Tap Management service definition.
+pub mod tap_management;
 /// Target Control service definition.
 pub mod target_control;
 /// Target Control Management service definition.

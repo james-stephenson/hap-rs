@@ -25,26 +25,23 @@ use crate::{
 };
 
 // TODO - re-check MaximumDataLength
-/// Cloud Relay Current State characteristic.
+/// Supported Metrics characteristic.
 #[derive(Debug, Default, Serialize)]
-pub struct CloudRelayCurrentStateCharacteristic(Characteristic<u8>);
+pub struct SupportedMetricsCharacteristic(Characteristic<Vec<u8>>);
 
-impl CloudRelayCurrentStateCharacteristic {
-    /// Creates a new Cloud Relay Current State characteristic.
+impl SupportedMetricsCharacteristic {
+    /// Creates a new Supported Metrics characteristic.
     pub fn new(id: u64, accessory_id: u64) -> Self {
         #[allow(unused_mut)]
-        let mut c = Self(Characteristic::<u8> {
+        let mut c = Self(Characteristic::<Vec<u8>> {
             id,
             accessory_id,
-            hap_type: HapType::CloudRelayCurrentState,
-            format: Format::UInt8,
+            hap_type: HapType::SupportedMetrics,
+            format: Format::Tlv8,
             perms: vec![
-				Perm::Events,
 				Perm::PairedRead,
+				Perm::PairedWrite,
             ],
-			max_value: Some(5),
-			min_value: Some(0),
-			step_value: Some(1),
             ..Default::default()
         });
 
@@ -61,7 +58,7 @@ impl CloudRelayCurrentStateCharacteristic {
 }
 
 #[async_trait]
-impl HapCharacteristic for CloudRelayCurrentStateCharacteristic {
+impl HapCharacteristic for SupportedMetricsCharacteristic {
     fn get_id(&self) -> u64 { HapCharacteristic::get_id(&self.0) }
 
     fn set_id(&mut self, id: u64) { HapCharacteristic::set_id(&mut self.0, id) }
@@ -153,24 +150,24 @@ impl HapCharacteristic for CloudRelayCurrentStateCharacteristic {
     fn set_pid(&mut self, pid: Option<u64>) { HapCharacteristic::set_pid(&mut self.0, pid) }
 }
 
-impl HapCharacteristicSetup for CloudRelayCurrentStateCharacteristic {
+impl HapCharacteristicSetup for SupportedMetricsCharacteristic {
     fn set_event_emitter(&mut self, event_emitter: Option<pointer::EventEmitter>) {
         HapCharacteristicSetup::set_event_emitter(&mut self.0, event_emitter)
     }
 }
 
-impl CharacteristicCallbacks<u8> for CloudRelayCurrentStateCharacteristic {
-    fn on_read(&mut self, f: Option<impl OnReadFn<u8>>) { CharacteristicCallbacks::on_read(&mut self.0, f) }
+impl CharacteristicCallbacks<Vec<u8>> for SupportedMetricsCharacteristic {
+    fn on_read(&mut self, f: Option<impl OnReadFn<Vec<u8>>>) { CharacteristicCallbacks::on_read(&mut self.0, f) }
 
-    fn on_update(&mut self, f: Option<impl OnUpdateFn<u8>>) { CharacteristicCallbacks::on_update(&mut self.0, f) }
+    fn on_update(&mut self, f: Option<impl OnUpdateFn<Vec<u8>>>) { CharacteristicCallbacks::on_update(&mut self.0, f) }
 }
 
-impl AsyncCharacteristicCallbacks<u8> for CloudRelayCurrentStateCharacteristic {
-    fn on_read_async(&mut self, f: Option<impl OnReadFuture<u8>>) {
+impl AsyncCharacteristicCallbacks<Vec<u8>> for SupportedMetricsCharacteristic {
+    fn on_read_async(&mut self, f: Option<impl OnReadFuture<Vec<u8>>>) {
         AsyncCharacteristicCallbacks::on_read_async(&mut self.0, f)
     }
 
-    fn on_update_async(&mut self, f: Option<impl OnUpdateFuture<u8>>) {
+    fn on_update_async(&mut self, f: Option<impl OnUpdateFuture<Vec<u8>>>) {
         AsyncCharacteristicCallbacks::on_update_async(&mut self.0, f)
     }
 }

@@ -38,7 +38,7 @@ impl MdnsResponder {
 
         drop(c);
 
-        self.service = Some(self.responder.register("_hap._tcp".into(), name, port, &[
+        self.service = Some(self.responder.register("_hap._tcp".into(), &name, port, &[
             &tr[0], &tr[1], &tr[2], &tr[3], &tr[4], &tr[5], &tr[6], &tr[7],
         ]));
 

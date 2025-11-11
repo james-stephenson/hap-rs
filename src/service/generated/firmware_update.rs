@@ -6,19 +6,21 @@ use crate::{
     service::HapService,
     characteristic::{
         HapCharacteristic,
-		wake_configuration::WakeConfigurationCharacteristic,
-		selected_sleep_configuration::SelectedSleepConfigurationCharacteristic,
-		supported_sleep_configuration::SupportedSleepConfigurationCharacteristic,
+		firmware_update_readiness::FirmwareUpdateReadinessCharacteristic,
+		firmware_update_status::FirmwareUpdateStatusCharacteristic,
+		matter_firmware_update_status::MatterFirmwareUpdateStatusCharacteristic,
+		staged_firmware_version::StagedFirmwareVersionCharacteristic,
+		supported_firmware_update_configuration::SupportedFirmwareUpdateConfigurationCharacteristic,
 	},
     HapType,
 };
 
-/// Power Management service.
+/// Firmware Update service.
 #[derive(Debug, Default)]
-pub struct PowerManagementService {
-    /// Instance ID of the Power Management service.
+pub struct FirmwareUpdateService {
+    /// Instance ID of the Firmware Update service.
     id: u64,
-    /// [`HapType`](HapType) of the Power Management service.
+    /// [`HapType`](HapType) of the Firmware Update service.
     hap_type: HapType,
     /// When set to true, this service is not visible to user.
     hidden: bool,
@@ -27,30 +29,36 @@ pub struct PowerManagementService {
     /// An array of numbers containing the instance IDs of the services that this service links to.
     linked_services: Vec<u64>,
 
-	/// Wake Configuration characteristic (required).
-	pub wake_configuration: WakeConfigurationCharacteristic,
+	/// Firmware Update Readiness characteristic (required).
+	pub firmware_update_readiness: FirmwareUpdateReadinessCharacteristic,
+	/// Firmware Update Status characteristic (required).
+	pub firmware_update_status: FirmwareUpdateStatusCharacteristic,
 
-	/// Selected Sleep Configuration characteristic (optional).
-	pub selected_sleep_configuration: Option<SelectedSleepConfigurationCharacteristic>,
-	/// Supported Sleep Configuration characteristic (optional).
-	pub supported_sleep_configuration: Option<SupportedSleepConfigurationCharacteristic>,
+	/// Matter Firmware Update Status characteristic (optional).
+	pub matter_firmware_update_status: Option<MatterFirmwareUpdateStatusCharacteristic>,
+	/// Staged Firmware Version characteristic (optional).
+	pub staged_firmware_version: Option<StagedFirmwareVersionCharacteristic>,
+	/// Supported Firmware Update Configuration characteristic (optional).
+	pub supported_firmware_update_configuration: Option<SupportedFirmwareUpdateConfigurationCharacteristic>,
 }
 
-impl PowerManagementService {
-    /// Creates a new Power Management service.
+impl FirmwareUpdateService {
+    /// Creates a new Firmware Update service.
     pub fn new(id: u64, accessory_id: u64) -> Self {
         Self {
             id,
-            hap_type: HapType::PowerManagement,
-			wake_configuration: WakeConfigurationCharacteristic::new(id + 1 + 0, accessory_id),
-			selected_sleep_configuration: Some(SelectedSleepConfigurationCharacteristic::new(id + 1 + 0 + 1, accessory_id)),
-			supported_sleep_configuration: Some(SupportedSleepConfigurationCharacteristic::new(id + 1 + 1 + 1, accessory_id)),
+            hap_type: HapType::FirmwareUpdate,
+			firmware_update_readiness: FirmwareUpdateReadinessCharacteristic::new(id + 1 + 0, accessory_id),
+			firmware_update_status: FirmwareUpdateStatusCharacteristic::new(id + 1 + 1, accessory_id),
+			matter_firmware_update_status: Some(MatterFirmwareUpdateStatusCharacteristic::new(id + 1 + 0 + 2, accessory_id)),
+			staged_firmware_version: Some(StagedFirmwareVersionCharacteristic::new(id + 1 + 1 + 2, accessory_id)),
+			supported_firmware_update_configuration: Some(SupportedFirmwareUpdateConfigurationCharacteristic::new(id + 1 + 2 + 2, accessory_id)),
 			..Default::default()
         }
     }
 }
 
-impl HapService for PowerManagementService {
+impl HapService for FirmwareUpdateService {
     fn get_id(&self) -> u64 {
         self.id
     }
@@ -112,12 +120,16 @@ impl HapService for PowerManagementService {
     fn get_characteristics(&self) -> Vec<&dyn HapCharacteristic> {
         #[allow(unused_mut)]
         let mut characteristics: Vec<&dyn HapCharacteristic> = vec![
-			&self.wake_configuration,
+			&self.firmware_update_readiness,
+			&self.firmware_update_status,
 		];
-		if let Some(c) = &self.selected_sleep_configuration {
+		if let Some(c) = &self.matter_firmware_update_status {
 		    characteristics.push(c);
 		}
-		if let Some(c) = &self.supported_sleep_configuration {
+		if let Some(c) = &self.staged_firmware_version {
+		    characteristics.push(c);
+		}
+		if let Some(c) = &self.supported_firmware_update_configuration {
 		    characteristics.push(c);
 		}
 		characteristics
@@ -126,19 +138,23 @@ impl HapService for PowerManagementService {
     fn get_mut_characteristics(&mut self) -> Vec<&mut dyn HapCharacteristic> {
         #[allow(unused_mut)]
         let mut characteristics: Vec<&mut dyn HapCharacteristic> = vec![
-			&mut self.wake_configuration,
+			&mut self.firmware_update_readiness,
+			&mut self.firmware_update_status,
 		];
-		if let Some(c) = &mut self.selected_sleep_configuration {
+		if let Some(c) = &mut self.matter_firmware_update_status {
 		    characteristics.push(c);
 		}
-		if let Some(c) = &mut self.supported_sleep_configuration {
+		if let Some(c) = &mut self.staged_firmware_version {
+		    characteristics.push(c);
+		}
+		if let Some(c) = &mut self.supported_firmware_update_configuration {
 		    characteristics.push(c);
 		}
 		characteristics
     }
 }
 
-impl Serialize for PowerManagementService {
+impl Serialize for FirmwareUpdateService {
     fn serialize<S: Serializer>(&self, serializer: S) -> Result<S::Ok, S::Error> {
         let mut state = serializer.serialize_struct("HapService", 5)?;
         state.serialize_field("iid", &self.get_id())?;

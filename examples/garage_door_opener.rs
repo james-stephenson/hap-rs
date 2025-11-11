@@ -1,7 +1,7 @@
 use tokio;
 
 use hap::{
-    accessory::{garage_door_opener::GarageDoorOpenerAccessory, AccessoryCategory, AccessoryInformation},
+    accessory::{AccessoryCategory, AccessoryInformation, garage_door_opener::GarageDoorOpenerAccessory},
     server::{IpServer, Server},
     storage::{FileStorage, Storage},
     Config,

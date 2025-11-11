@@ -7,6 +7,8 @@ use crate::{
     characteristic::{
         HapCharacteristic,
 		active::ActiveCharacteristic,
+		metrics_buffer_full_state::MetricsBufferFullStateCharacteristic,
+		supported_metrics::SupportedMetricsCharacteristic,
 	},
     HapType,
 };
@@ -27,6 +29,10 @@ pub struct AccessoryMetricsService {
 
 	/// Active characteristic (required).
 	pub active: ActiveCharacteristic,
+	/// Metrics Buffer Full State characteristic (required).
+	pub metrics_buffer_full_state: MetricsBufferFullStateCharacteristic,
+	/// Supported Metrics characteristic (required).
+	pub supported_metrics: SupportedMetricsCharacteristic,
 
 }
 
@@ -37,6 +43,8 @@ impl AccessoryMetricsService {
             id,
             hap_type: HapType::AccessoryMetrics,
 			active: ActiveCharacteristic::new(id + 1 + 0, accessory_id),
+			metrics_buffer_full_state: MetricsBufferFullStateCharacteristic::new(id + 1 + 1, accessory_id),
+			supported_metrics: SupportedMetricsCharacteristic::new(id + 1 + 2, accessory_id),
 			..Default::default()
         }
     }
@@ -105,6 +113,8 @@ impl HapService for AccessoryMetricsService {
         #[allow(unused_mut)]
         let mut characteristics: Vec<&dyn HapCharacteristic> = vec![
 			&self.active,
+			&self.metrics_buffer_full_state,
+			&self.supported_metrics,
 		];
 		characteristics
     }
@@ -113,6 +123,8 @@ impl HapService for AccessoryMetricsService {
         #[allow(unused_mut)]
         let mut characteristics: Vec<&mut dyn HapCharacteristic> = vec![
 			&mut self.active,
+			&mut self.metrics_buffer_full_state,
+			&mut self.supported_metrics,
 		];
 		characteristics
     }

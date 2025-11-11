@@ -1,7 +1,7 @@
 use tokio;
 
 use hap::{
-    accessory::{fan::FanAccessory, AccessoryCategory, AccessoryInformation},
+    accessory::{AccessoryCategory, AccessoryInformation, fan::FanAccessory},
     server::{IpServer, Server},
     storage::{FileStorage, Storage},
     Config,

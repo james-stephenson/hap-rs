@@ -1,7 +1,7 @@
 use tokio;
 
 use hap::{
-    accessory::{smart_speaker::SmartSpeakerAccessory, AccessoryCategory, AccessoryInformation},
+    accessory::{AccessoryCategory, AccessoryInformation, smart_speaker::SmartSpeakerAccessory},
     server::{IpServer, Server},
     storage::{FileStorage, Storage},
     Config,

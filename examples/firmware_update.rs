@@ -1,7 +1,7 @@
 use tokio;
 
 use hap::{
-    accessory::{AccessoryCategory, AccessoryInformation, wi_fi_satellite::WiFiSatelliteAccessory},
+    accessory::{AccessoryCategory, AccessoryInformation, firmware_update::FirmwareUpdateAccessory},
     server::{IpServer, Server},
     storage::{FileStorage, Storage},
     Config,
@@ -12,8 +12,8 @@ use hap::{
 
 #[tokio::main]
 async fn main() -> Result<()> {
-    let wi_fi_satellite = WiFiSatelliteAccessory::new(1, AccessoryInformation {
-        name: "Acme Wi-Fi Satellite".into(),
+    let firmware_update = FirmwareUpdateAccessory::new(1, AccessoryInformation {
+        name: "Acme Firmware Update".into(),
         ..Default::default()
     })?;
 
@@ -28,9 +28,9 @@ async fn main() -> Result<()> {
         Err(_) => {
             let config = Config {
                 pin: Pin::new([1, 1, 1, 2, 2, 3, 3, 3])?,
-                name: "Acme Wi-Fi Satellite".into(),
+                name: "Acme Firmware Update".into(),
                 device_id: MacAddress::from([10, 20, 30, 40, 50, 60]),
-                category: AccessoryCategory::WiFiRouter,
+                category: AccessoryCategory::FirmwareUpdate,
                 ..Default::default()
             };
             storage.save_config(&config).await?;
@@ -39,7 +39,7 @@ async fn main() -> Result<()> {
     };
 
     let server = IpServer::new(config, storage).await?;
-    server.add_accessory(wi_fi_satellite).await?;
+    server.add_accessory(firmware_update).await?;
 
     let handle = server.run_handle();
 

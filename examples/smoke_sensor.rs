@@ -1,7 +1,7 @@
 use tokio;
 
 use hap::{
-    accessory::{smoke_sensor::SmokeSensorAccessory, AccessoryCategory, AccessoryInformation},
+    accessory::{AccessoryCategory, AccessoryInformation, smoke_sensor::SmokeSensorAccessory},
     server::{IpServer, Server},
     storage::{FileStorage, Storage},
     Config,

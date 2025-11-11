@@ -6,19 +6,20 @@ use crate::{
     service::HapService,
     characteristic::{
         HapCharacteristic,
-		cloud_relay_control_point::CloudRelayControlPointCharacteristic,
-		cloud_relay_current_state::CloudRelayCurrentStateCharacteristic,
-		cloud_relay_enable_status::CloudRelayEnableStatusCharacteristic,
+		active::ActiveCharacteristic,
+		crypto_hash::CryptoHashCharacteristic,
+		tap_type::TapTypeCharacteristic,
+		token::TokenCharacteristic,
 	},
     HapType,
 };
 
-/// Cloud Relay service.
+/// Tap Management service.
 #[derive(Debug, Default)]
-pub struct CloudRelayService {
-    /// Instance ID of the Cloud Relay service.
+pub struct TapManagementService {
+    /// Instance ID of the Tap Management service.
     id: u64,
-    /// [`HapType`](HapType) of the Cloud Relay service.
+    /// [`HapType`](HapType) of the Tap Management service.
     hap_type: HapType,
     /// When set to true, this service is not visible to user.
     hidden: bool,
@@ -27,30 +28,33 @@ pub struct CloudRelayService {
     /// An array of numbers containing the instance IDs of the services that this service links to.
     linked_services: Vec<u64>,
 
-	/// Cloud Relay Control Point characteristic (required).
-	pub cloud_relay_control_point: CloudRelayControlPointCharacteristic,
-	/// Cloud Relay Current State characteristic (required).
-	pub cloud_relay_current_state: CloudRelayCurrentStateCharacteristic,
-	/// Cloud Relay Enable Status characteristic (required).
-	pub cloud_relay_enable_status: CloudRelayEnableStatusCharacteristic,
+	/// Active characteristic (required).
+	pub active: ActiveCharacteristic,
+	/// Crypto Hash characteristic (required).
+	pub crypto_hash: CryptoHashCharacteristic,
+	/// Tap Type characteristic (required).
+	pub tap_type: TapTypeCharacteristic,
+	/// Token characteristic (required).
+	pub token: TokenCharacteristic,
 
 }
 
-impl CloudRelayService {
-    /// Creates a new Cloud Relay service.
+impl TapManagementService {
+    /// Creates a new Tap Management service.
     pub fn new(id: u64, accessory_id: u64) -> Self {
         Self {
             id,
-            hap_type: HapType::CloudRelay,
-			cloud_relay_control_point: CloudRelayControlPointCharacteristic::new(id + 1 + 0, accessory_id),
-			cloud_relay_current_state: CloudRelayCurrentStateCharacteristic::new(id + 1 + 1, accessory_id),
-			cloud_relay_enable_status: CloudRelayEnableStatusCharacteristic::new(id + 1 + 2, accessory_id),
+            hap_type: HapType::TapManagement,
+			active: ActiveCharacteristic::new(id + 1 + 0, accessory_id),
+			crypto_hash: CryptoHashCharacteristic::new(id + 1 + 1, accessory_id),
+			tap_type: TapTypeCharacteristic::new(id + 1 + 2, accessory_id),
+			token: TokenCharacteristic::new(id + 1 + 3, accessory_id),
 			..Default::default()
         }
     }
 }
 
-impl HapService for CloudRelayService {
+impl HapService for TapManagementService {
     fn get_id(&self) -> u64 {
         self.id
     }
@@ -112,9 +116,10 @@ impl HapService for CloudRelayService {
     fn get_characteristics(&self) -> Vec<&dyn HapCharacteristic> {
         #[allow(unused_mut)]
         let mut characteristics: Vec<&dyn HapCharacteristic> = vec![
-			&self.cloud_relay_control_point,
-			&self.cloud_relay_current_state,
-			&self.cloud_relay_enable_status,
+			&self.active,
+			&self.crypto_hash,
+			&self.tap_type,
+			&self.token,
 		];
 		characteristics
     }
@@ -122,15 +127,16 @@ impl HapService for CloudRelayService {
     fn get_mut_characteristics(&mut self) -> Vec<&mut dyn HapCharacteristic> {
         #[allow(unused_mut)]
         let mut characteristics: Vec<&mut dyn HapCharacteristic> = vec![
-			&mut self.cloud_relay_control_point,
-			&mut self.cloud_relay_current_state,
-			&mut self.cloud_relay_enable_status,
+			&mut self.active,
+			&mut self.crypto_hash,
+			&mut self.tap_type,
+			&mut self.token,
 		];
 		characteristics
     }
 }
 
-impl Serialize for CloudRelayService {
+impl Serialize for TapManagementService {
     fn serialize<S: Serializer>(&self, serializer: S) -> Result<S::Ok, S::Error> {
         let mut state = serializer.serialize_struct("HapService", 5)?;
         state.serialize_field("iid", &self.get_id())?;

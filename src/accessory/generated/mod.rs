@@ -16,6 +16,8 @@ pub mod door;
 pub mod fan;
 /// Fan v2 accessory definition.
 pub mod fan_v2;
+/// Firmware Update accessory definition.
+pub mod firmware_update;
 /// Garage Door Opener accessory definition.
 pub mod garage_door_opener;
 /// Humidifier-Dehumidifier accessory definition.
@@ -44,6 +46,8 @@ pub mod stateful_programmable_switch;
 pub mod stateless_programmable_switch;
 /// Switch accessory definition.
 pub mod switch;
+/// Tap Management accessory definition.
+pub mod tap_management;
 /// Temperature Sensor accessory definition.
 pub mod temperature_sensor;
 /// Thermostat accessory definition.

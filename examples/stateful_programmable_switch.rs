@@ -1,11 +1,7 @@
 use tokio;
 
 use hap::{
-    accessory::{
-        stateful_programmable_switch::StatefulProgrammableSwitchAccessory,
-        AccessoryCategory,
-        AccessoryInformation,
-    },
+    accessory::{AccessoryCategory, AccessoryInformation, stateful_programmable_switch::StatefulProgrammableSwitchAccessory},
     server::{IpServer, Server},
     storage::{FileStorage, Storage},
     Config,

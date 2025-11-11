@@ -1,7 +1,7 @@
 use tokio;
 
 use hap::{
-    accessory::{light_sensor::LightSensorAccessory, AccessoryCategory, AccessoryInformation},
+    accessory::{AccessoryCategory, AccessoryInformation, light_sensor::LightSensorAccessory},
     server::{IpServer, Server},
     storage::{FileStorage, Storage},
     Config,

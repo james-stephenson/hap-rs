@@ -25,22 +25,20 @@ use crate::{
 };
 
 // TODO - re-check MaximumDataLength
-/// Cloud Relay Control Point characteristic.
+/// Token characteristic.
 #[derive(Debug, Default, Serialize)]
-pub struct CloudRelayControlPointCharacteristic(Characteristic<Vec<u8>>);
+pub struct TokenCharacteristic(Characteristic<Vec<u8>>);
 
-impl CloudRelayControlPointCharacteristic {
-    /// Creates a new Cloud Relay Control Point characteristic.
+impl TokenCharacteristic {
+    /// Creates a new Token characteristic.
     pub fn new(id: u64, accessory_id: u64) -> Self {
         #[allow(unused_mut)]
         let mut c = Self(Characteristic::<Vec<u8>> {
             id,
             accessory_id,
-            hap_type: HapType::CloudRelayControlPoint,
-            format: Format::Tlv8,
+            hap_type: HapType::Token,
+            format: Format::Data,
             perms: vec![
-				Perm::Events,
-				Perm::PairedRead,
 				Perm::PairedWrite,
             ],
             ..Default::default()
@@ -59,7 +57,7 @@ impl CloudRelayControlPointCharacteristic {
 }
 
 #[async_trait]
-impl HapCharacteristic for CloudRelayControlPointCharacteristic {
+impl HapCharacteristic for TokenCharacteristic {
     fn get_id(&self) -> u64 { HapCharacteristic::get_id(&self.0) }
 
     fn set_id(&mut self, id: u64) { HapCharacteristic::set_id(&mut self.0, id) }
@@ -151,19 +149,19 @@ impl HapCharacteristic for CloudRelayControlPointCharacteristic {
     fn set_pid(&mut self, pid: Option<u64>) { HapCharacteristic::set_pid(&mut self.0, pid) }
 }
 
-impl HapCharacteristicSetup for CloudRelayControlPointCharacteristic {
+impl HapCharacteristicSetup for TokenCharacteristic {
     fn set_event_emitter(&mut self, event_emitter: Option<pointer::EventEmitter>) {
         HapCharacteristicSetup::set_event_emitter(&mut self.0, event_emitter)
     }
 }
 
-impl CharacteristicCallbacks<Vec<u8>> for CloudRelayControlPointCharacteristic {
+impl CharacteristicCallbacks<Vec<u8>> for TokenCharacteristic {
     fn on_read(&mut self, f: Option<impl OnReadFn<Vec<u8>>>) { CharacteristicCallbacks::on_read(&mut self.0, f) }
 
     fn on_update(&mut self, f: Option<impl OnUpdateFn<Vec<u8>>>) { CharacteristicCallbacks::on_update(&mut self.0, f) }
 }
 
-impl AsyncCharacteristicCallbacks<Vec<u8>> for CloudRelayControlPointCharacteristic {
+impl AsyncCharacteristicCallbacks<Vec<u8>> for TokenCharacteristic {
     fn on_read_async(&mut self, f: Option<impl OnReadFuture<Vec<u8>>>) {
         AsyncCharacteristicCallbacks::on_read_async(&mut self.0, f)
     }

@@ -1,7 +1,7 @@
 use tokio;
 
 use hap::{
-    accessory::{air_quality_sensor::AirQualitySensorAccessory, AccessoryCategory, AccessoryInformation},
+    accessory::{AccessoryCategory, AccessoryInformation, air_quality_sensor::AirQualitySensorAccessory},
     server::{IpServer, Server},
     storage::{FileStorage, Storage},
     Config,

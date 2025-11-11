@@ -62,12 +62,6 @@ pub mod characteristic_value_transition_control;
 pub mod charging_state;
 /// Closed Captions characteristic definition.
 pub mod closed_captions;
-/// Cloud Relay Control Point characteristic definition.
-pub mod cloud_relay_control_point;
-/// Cloud Relay Current State characteristic definition.
-pub mod cloud_relay_current_state;
-/// Cloud Relay Enable Status characteristic definition.
-pub mod cloud_relay_enable_status;
 /// Color Temperature characteristic definition.
 pub mod color_temperature;
 /// Configuration State characteristic definition.
@@ -78,6 +72,8 @@ pub mod configured_name;
 pub mod contact_sensor_state;
 /// Cooling Threshold Temperature characteristic definition.
 pub mod cooling_threshold_temperature;
+/// Crypto Hash characteristic definition.
+pub mod crypto_hash;
 /// Current Air Purifier State characteristic definition.
 pub mod current_air_purifier_state;
 /// Current Air Quality characteristic definition.
@@ -204,8 +200,14 @@ pub mod managed_network_enable;
 pub mod manually_disabled;
 /// Manufacturer characteristic definition.
 pub mod manufacturer;
+/// Matter Firmware Revision Number characteristic definition.
+pub mod matter_firmware_revision_number;
+/// Matter Firmware Update Status characteristic definition.
+pub mod matter_firmware_update_status;
 /// Maximum Transmit Power characteristic definition.
 pub mod maximum_transmit_power;
+/// Metrics Buffer Full State characteristic definition.
+pub mod metrics_buffer_full_state;
 /// Model characteristic definition.
 pub mod model;
 /// Motion Detected characteristic definition.
@@ -308,6 +310,8 @@ pub mod selected_audio_stream_configuration;
 pub mod selected_camera_recording_configuration;
 /// Selected Diagnostics Modes characteristic definition.
 pub mod selected_diagnostics_modes;
+/// Selected Sleep Configuration characteristic definition.
+pub mod selected_sleep_configuration;
 /// Selected Stream Configuration characteristic definition.
 pub mod selected_stream_configuration;
 /// Serial Number characteristic definition.
@@ -382,10 +386,14 @@ pub mod supported_diagnostics_modes;
 pub mod supported_diagnostics_snapshot;
 /// Supported Firmware Update Configuration characteristic definition.
 pub mod supported_firmware_update_configuration;
+/// Supported Metrics characteristic definition.
+pub mod supported_metrics;
 /// Supported Router Configuration characteristic definition.
 pub mod supported_router_configuration;
 /// Supported RTP Configuration characteristic definition.
 pub mod supported_rtp_configuration;
+/// Supported Sleep Configuration characteristic definition.
+pub mod supported_sleep_configuration;
 /// Supported Target Configuration characteristic definition.
 pub mod supported_target_configuration;
 /// Supported Transfer Transport Configuration characteristic definition.
@@ -396,6 +404,8 @@ pub mod supported_video_recording_configuration;
 pub mod supported_video_stream_configuration;
 /// Swing Mode characteristic definition.
 pub mod swing_mode;
+/// Tap Type characteristic definition.
+pub mod tap_type;
 /// Target Air Purifier State characteristic definition.
 pub mod target_air_purifier_state;
 /// Target Door State characteristic definition.
@@ -438,6 +448,8 @@ pub mod thread_node_capabilities;
 pub mod thread_openthread_version;
 /// Thread Status characteristic definition.
 pub mod thread_status;
+/// Token characteristic definition.
+pub mod token;
 /// Transmit Power characteristic definition.
 pub mod transmit_power;
 /// Valve Type characteristic definition.

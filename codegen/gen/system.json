@@ -1,5 +1,5 @@
 {
-  "Version": 880,
+  "Version": 886,
   "PlistDictionary": {
     "HomeKit": {
       "Notification": {
@@ -310,6 +310,482 @@
           "UUID": "14D8FE28-2998-49E3-AC95-E3969BE2957C"
         }
       },
+      "FirmwareUpdatePolicies": {
+        "Staging": {
+          "Services": {
+            "assistant": {},
+            "stateful-programmable-switch": {},
+            "humidifier-dehumidifier": {},
+            "stateless-programmable-switch": {},
+            "firmware-update": {},
+            "nfc-access": {},
+            "speaker": {},
+            "sensor.motion": {},
+            "metrics": {},
+            "input-source": {},
+            "accessory-runtime-information": {},
+            "sensor.light": {},
+            "fan": {},
+            "filter-maintenance": {},
+            "sensor.carbon-dioxide": {},
+            "valve": {},
+            "thread-transport": {},
+            "air-purifier": {},
+            "irrigation-system": {},
+            "garage-door-opener": {},
+            "diagnostics": {},
+            "target-control": {},
+            "sensor.leak": {},
+            "asset-update": {},
+            "sensor.temperature": {},
+            "sensor.carbon-monoxide": {},
+            "data-stream-transport-management": {},
+            "sensor.contact": {},
+            "doorbell": {},
+            "protocol-information": {},
+            "window": {},
+            "pairing": {},
+            "sensor.smoke": {},
+            "slats": {},
+            "battery": {},
+            "thermostat": {},
+            "lock-mechanism": {},
+            "microphone": {},
+            "target-control-management": {},
+            "lock-management": {},
+            "sensor.occupancy": {},
+            "siri-endpoint": {},
+            "siri": {},
+            "audio-stream-management": {},
+            "smart-speaker": {},
+            "faucet": {},
+            "door": {},
+            "security-system": {},
+            "tap-management": {},
+            "camera-rtp-stream-management": {},
+            "sensor.air-quality": {},
+            "television": {},
+            "transfer-transport-management": {},
+            "heater-cooler": {},
+            "accessory-information": {},
+            "outlet": {},
+            "sensor.humidity": {},
+            "fanv2": {},
+            "service-label": {},
+            "access-code": {},
+            "lightbulb": {},
+            "camera-recording-management": {},
+            "switch": {},
+            "access-control": {},
+            "power-management": {},
+            "window-covering": {}
+          }
+        },
+        "AutoApply": {
+          "Services": {
+            "assistant": {},
+            "stateful-programmable-switch": {},
+            "humidifier-dehumidifier": {
+              "Default": {
+                "CheckForScheduledAutomation": true,
+                "TimeWindow": {
+                  "EndTime": "05:00:00",
+                  "StartTime": "02:00:00"
+                }
+              }
+            },
+            "stateless-programmable-switch": {
+              "Default": {
+                "CheckForScheduledAutomation": true,
+                "TimeWindow": {
+                  "EndTime": "05:00:00",
+                  "StartTime": "02:00:00"
+                }
+              }
+            },
+            "firmware-update": {},
+            "nfc-access": {},
+            "speaker": {
+              "Default": {
+                "CheckForScheduledAutomation": true,
+                "TimeWindow": {
+                  "EndTime": "05:00:00",
+                  "StartTime": "02:00:00"
+                }
+              }
+            },
+            "sensor.motion": {
+              "Default": {
+                "Characteristics": {
+                  "motion-detected": {
+                    "SettlingTimeInSeconds": 300,
+                    "Values": [
+                      false
+                    ]
+                  }
+                },
+                "CheckForScheduledAutomation": true,
+                "TimeWindow": {
+                  "EndTime": "05:00:00",
+                  "StartTime": "02:00:00"
+                }
+              }
+            },
+            "metrics": {},
+            "input-source": {},
+            "accessory-runtime-information": {},
+            "sensor.light": {},
+            "fan": {
+              "Default": {
+                "CheckForScheduledAutomation": true,
+                "TimeWindow": {
+                  "EndTime": "05:00:00",
+                  "StartTime": "02:00:00"
+                }
+              }
+            },
+            "filter-maintenance": {},
+            "sensor.carbon-dioxide": {
+              "Default": {
+                "Characteristics": {
+                  "carbon-dioxide.detected": {
+                    "SettlingTimeInSeconds": 300,
+                    "Values": [
+                      false
+                    ]
+                  }
+                },
+                "CheckForScheduledAutomation": true,
+                "TimeWindow": {
+                  "EndTime": "18:00:00",
+                  "StartTime": "10:00:00"
+                }
+              }
+            },
+            "valve": {
+              "Default": {
+                "CheckForScheduledAutomation": true,
+                "TimeWindow": {
+                  "EndTime": "05:00:00",
+                  "StartTime": "02:00:00"
+                }
+              }
+            },
+            "thread-transport": {},
+            "air-purifier": {
+              "Default": {
+                "CheckForScheduledAutomation": true,
+                "TimeWindow": {
+                  "EndTime": "05:00:00",
+                  "StartTime": "02:00:00"
+                }
+              }
+            },
+            "irrigation-system": {
+              "Default": {
+                "CheckForScheduledAutomation": true,
+                "TimeWindow": {
+                  "EndTime": "05:00:00",
+                  "StartTime": "02:00:00"
+                }
+              }
+            },
+            "garage-door-opener": {
+              "Default": {
+                "AnyUserAtHome": true,
+                "TimeWindow": {
+                  "EndTime": "05:00:00",
+                  "StartTime": "02:00:00"
+                }
+              }
+            },
+            "diagnostics": {},
+            "target-control": {
+              "Default": {
+                "CheckForScheduledAutomation": true,
+                "TimeWindow": {
+                  "EndTime": "05:00:00",
+                  "StartTime": "02:00:00"
+                }
+              }
+            },
+            "sensor.leak": {
+              "Default": {
+                "CheckForScheduledAutomation": true,
+                "TimeWindow": {
+                  "EndTime": "05:00:00",
+                  "StartTime": "02:00:00"
+                }
+              }
+            },
+            "asset-update": {},
+            "sensor.temperature": {},
+            "sensor.carbon-monoxide": {
+              "Default": {
+                "Characteristics": {
+                  "carbon-monoxide.detected": {
+                    "SettlingTimeInSeconds": 300,
+                    "Values": [
+                      false
+                    ]
+                  }
+                },
+                "CheckForScheduledAutomation": true,
+                "TimeWindow": {
+                  "EndTime": "18:00:00",
+                  "StartTime": "10:00:00"
+                }
+              }
+            },
+            "data-stream-transport-management": {},
+            "sensor.contact": {
+              "Default": {
+                "CheckForScheduledAutomation": true,
+                "TimeWindow": {
+                  "EndTime": "05:00:00",
+                  "StartTime": "02:00:00"
+                }
+              }
+            },
+            "doorbell": {
+              "Default": {
+                "CheckForScheduledAutomation": true,
+                "TimeWindow": {
+                  "EndTime": "05:00:00",
+                  "StartTime": "02:00:00"
+                }
+              }
+            },
+            "protocol-information": {},
+            "window": {
+              "Default": {
+                "AnyUserAtHome": true,
+                "CheckForScheduledAutomation": true,
+                "TimeWindow": {
+                  "EndTime": "05:00:00",
+                  "StartTime": "02:00:00"
+                }
+              }
+            },
+            "pairing": {},
+            "sensor.smoke": {
+              "Default": {
+                "Characteristics": {
+                  "smoke-detected": {
+                    "SettlingTimeInSeconds": 300,
+                    "Values": [
+                      false
+                    ]
+                  }
+                },
+                "CheckForScheduledAutomation": true,
+                "TimeWindow": {
+                  "EndTime": "18:00:00",
+                  "StartTime": "10:00:00"
+                }
+              }
+            },
+            "slats": {
+              "Default": {
+                "CheckForScheduledAutomation": true,
+                "TimeWindow": {
+                  "EndTime": "05:00:00",
+                  "StartTime": "02:00:00"
+                }
+              }
+            },
+            "battery": {},
+            "thermostat": {
+              "Default": {
+                "CheckForScheduledAutomation": true,
+                "TimeWindow": {
+                  "EndTime": "05:00:00",
+                  "StartTime": "02:00:00"
+                }
+              }
+            },
+            "lock-mechanism": {
+              "Default": {
+                "AnyUserAtHome": true,
+                "CheckForScheduledAutomation": true,
+                "TimeWindow": {
+                  "EndTime": "05:00:00",
+                  "StartTime": "02:00:00"
+                }
+              }
+            },
+            "microphone": {},
+            "target-control-management": {},
+            "lock-management": {},
+            "sensor.occupancy": {
+              "Default": {
+                "Characteristics": {
+                  "occupancy-detected": {
+                    "SettlingTimeInSeconds": 300,
+                    "Values": [
+                      false
+                    ]
+                  }
+                },
+                "CheckForScheduledAutomation": true,
+                "TimeWindow": {
+                  "EndTime": "05:00:00",
+                  "StartTime": "02:00:00"
+                }
+              }
+            },
+            "siri-endpoint": {},
+            "siri": {},
+            "audio-stream-management": {},
+            "smart-speaker": {},
+            "faucet": {
+              "Default": {
+                "CheckForScheduledAutomation": true,
+                "TimeWindow": {
+                  "EndTime": "05:00:00",
+                  "StartTime": "02:00:00"
+                }
+              }
+            },
+            "door": {
+              "Default": {
+                "AnyUserAtHome": true,
+                "CheckForScheduledAutomation": true,
+                "TimeWindow": {
+                  "EndTime": "05:00:00",
+                  "StartTime": "02:00:00"
+                }
+              }
+            },
+            "security-system": {
+              "Default": {
+                "Characteristics": {
+                  "security-system-state.current": {
+                    "SettlingTimeInSeconds": 300,
+                    "Values": [
+                      3
+                    ]
+                  }
+                }
+              }
+            },
+            "tap-management": {},
+            "camera-rtp-stream-management": {
+              "Default": {
+                "CheckForScheduledAutomation": true,
+                "TimeWindow": {
+                  "EndTime": "05:00:00",
+                  "StartTime": "02:00:00"
+                }
+              }
+            },
+            "sensor.air-quality": {
+              "Default": {
+                "CheckForScheduledAutomation": true,
+                "TimeWindow": {
+                  "EndTime": "05:00:00",
+                  "StartTime": "02:00:00"
+                }
+              }
+            },
+            "television": {
+              "Default": {
+                "Characteristics": {
+                  "active": {
+                    "SettlingTimeInSeconds": 300,
+                    "Values": [
+                      false
+                    ]
+                  }
+                },
+                "CheckForScheduledAutomation": true,
+                "TimeWindow": {
+                  "EndTime": "05:00:00",
+                  "StartTime": "02:00:00"
+                }
+              }
+            },
+            "transfer-transport-management": {},
+            "heater-cooler": {
+              "Default": {
+                "CheckForScheduledAutomation": true,
+                "TimeWindow": {
+                  "EndTime": "05:00:00",
+                  "StartTime": "02:00:00"
+                }
+              }
+            },
+            "accessory-information": {},
+            "outlet": {
+              "Default": {
+                "CheckForScheduledAutomation": true,
+                "TimeWindow": {
+                  "EndTime": "05:00:00",
+                  "StartTime": "02:00:00"
+                }
+              }
+            },
+            "sensor.humidity": {
+              "Default": {
+                "CheckForScheduledAutomation": true,
+                "TimeWindow": {
+                  "EndTime": "05:00:00",
+                  "StartTime": "02:00:00"
+                }
+              }
+            },
+            "fanv2": {
+              "Default": {
+                "CheckForScheduledAutomation": true,
+                "TimeWindow": {
+                  "EndTime": "05:00:00",
+                  "StartTime": "02:00:00"
+                }
+              }
+            },
+            "service-label": {},
+            "access-code": {},
+            "lightbulb": {
+              "Default": {
+                "CheckForScheduledAutomation": true,
+                "TimeWindow": {
+                  "EndTime": "05:00:00",
+                  "StartTime": "02:00:00"
+                }
+              }
+            },
+            "camera-recording-management": {
+              "Default": {
+                "CheckForScheduledAutomation": true,
+                "TimeWindow": {
+                  "EndTime": "05:00:00",
+                  "StartTime": "02:00:00"
+                }
+              }
+            },
+            "switch": {
+              "Default": {
+                "CheckForScheduledAutomation": true,
+                "TimeWindow": {
+                  "EndTime": "05:00:00",
+                  "StartTime": "02:00:00"
+                }
+              }
+            },
+            "access-control": {},
+            "power-management": {},
+            "window-covering": {
+              "Default": {
+                "CheckForScheduledAutomation": true,
+                "TimeWindow": {
+                  "EndTime": "05:00:00",
+                  "StartTime": "02:00:00"
+                }
+              }
+            }
+          }
+        }
+      },
       "AllowableSecuringWrites": {
         "security-system-state.target": [
           0,
@@ -367,9 +843,6 @@
       "Blacklist": {
         "Characteristics": [
           "accessory.identifier",
-          "cloud-relay.control-point",
-          "cloud-relay.current-state",
-          "cloud-relay.enabled",
           "list-pairings",
           "pair-setup",
           "pair-verify",
@@ -377,7 +850,6 @@
           "service-signature"
         ],
         "Services": [
-          "cloud-relay",
           "pairing",
           "protocol-information"
         ]
@@ -392,9 +864,10 @@
           "characteristic-value-transition-control",
           "configuration-state",
           "display-order",
+          "firmware.matter-revision-number",
           "hardware-finish",
-          "identifier",
           "managed-network-enable",
+          "matter-firmware-update-status",
           "network-access-violation-control",
           "network-client-control",
           "network-client-status-control",
@@ -404,26 +877,25 @@
           "password-setting",
           "privilege",
           "product-data",
-          "router-status",
           "selected-audio-stream-configuration",
+          "selected-camera-recording-configuration",
           "service-signature",
           "setup-data-stream-transport",
+          "supported-audio-recording-configuration",
+          "supported-camera-recording-configuration",
           "supported-characteristic-value-transition-configuration",
           "supported-data-stream-transport-configuration",
           "supported-router-configuration",
+          "supported-video-recording-configuration",
           "thread-control-point",
           "wake-configuration",
-          "wan-configuration-list",
-          "wan-status-list",
-          "wifi-satellite-status"
+          "wan-configuration-list"
         ],
         "Services": [
           "access-code",
           "access-control",
           "assistant",
           "audio-stream-management",
-          "camera-operating-mode",
-          "camera-recording-management",
           "camera-rtp-stream-management",
           "data-stream-transport-management",
           "nfc-access",
@@ -432,122 +904,13 @@
           "siri-endpoint",
           "smart-speaker",
           "target-control",
-          "target-control-management",
-          "wifi-router",
-          "wifi-satellite"
+          "target-control-management"
         ]
       }
     },
     "HAP": {
       "Base UUID": "-0000-1000-8000-0026BB765291",
       "Characteristics": {
-        "siri-input-type": {
-          "ShortUUID": "00000132",
-          "MinValue": 0,
-          "Format": "uint8",
-          "LocalizationKey": "",
-          "DefaultDescription": "Siri Input Type",
-          "Properties": 2,
-          "MaxValue": 1
-        },
-        "access-code-control-point": {
-          "DefaultDescription": "Access Code Control Point",
-          "Format": "tlv8",
-          "ShortUUID": "00000262",
-          "LocalizationKey": "",
-          "Properties": 6
-        },
-        "wan-status-list": {
-          "DefaultDescription": "WAN Status List",
-          "Format": "tlv8",
-          "ShortUUID": "00000212",
-          "LocalizationKey": "",
-          "Properties": 3
-        },
-        "multifunction-button": {
-          "ShortUUID": "0000026B",
-          "MinValue": 0,
-          "Format": "uint8",
-          "LocalizationKey": "",
-          "DefaultDescription": "Multifunction Button",
-          "Properties": 3,
-          "MaxValue": 1
-        },
-        "in-use": {
-          "ShortUUID": "000000D2",
-          "MinValue": 0,
-          "Format": "uint8",
-          "LocalizationKey": "",
-          "DefaultDescription": "In Use",
-          "Properties": 3,
-          "StepValue": 1,
-          "MaxValue": 1
-        },
-        "wifi-configuration-control": {
-          "DefaultDescription": "Wi-Fi Configuration Control",
-          "Format": "tlv8",
-          "ShortUUID": "0000022D",
-          "LocalizationKey": "",
-          "Properties": 167
-        },
-        "rotation.speed": {
-          "ShortUUID": "00000029",
-          "MinValue": 0,
-          "Format": "float",
-          "LocalizationKey": "",
-          "DefaultDescription": "Rotation Speed",
-          "Properties": 7,
-          "StepValue": 1,
-          "MaxValue": 100
-        },
-        "supported-target-configuration": {
-          "DefaultDescription": "Supported Target Configuration",
-          "Format": "tlv8",
-          "ShortUUID": "00000123",
-          "LocalizationKey": "",
-          "Properties": 2
-        },
-        "wake-configuration": {
-          "DefaultDescription": "Wake Configuration",
-          "Format": "tlv8",
-          "ShortUUID": "00000222",
-          "LocalizationKey": "",
-          "Properties": 2
-        },
-        "rssi": {
-          "DefaultDescription": "Received Signal Strength Indication",
-          "Format": "int",
-          "ShortUUID": "0000023F",
-          "LocalizationKey": "",
-          "Properties": 2
-        },
-        "setup-data-stream-transport": {
-          "DefaultDescription": "Setup Data Stream Transport",
-          "Format": "tlv8",
-          "ShortUUID": "00000131",
-          "LocalizationKey": "",
-          "Properties": 6
-        },
-        "slat.type": {
-          "ShortUUID": "000000C0",
-          "MinValue": 0,
-          "Format": "uint8",
-          "LocalizationKey": "",
-          "DefaultDescription": "Slat Type",
-          "Properties": 2,
-          "StepValue": 1,
-          "MaxValue": 1
-        },
-        "temperature.units": {
-          "ShortUUID": "00000036",
-          "MinValue": 0,
-          "Format": "uint8",
-          "LocalizationKey": "",
-          "DefaultDescription": "Temperature Display Units",
-          "Properties": 7,
-          "StepValue": 1,
-          "MaxValue": 1
-        },
         "air-purifier.state.target": {
           "ShortUUID": "000000A8",
           "MinValue": 0,
@@ -555,244 +918,6 @@
           "LocalizationKey": "",
           "DefaultDescription": "Target Air Purifier State",
           "Properties": 7,
-          "StepValue": 1,
-          "MaxValue": 1
-        },
-        "density.voc": {
-          "ShortUUID": "000000C8",
-          "MinValue": 0,
-          "Format": "float",
-          "LocalizationKey": "",
-          "DefaultDescription": "Volatile Organic Compound Density",
-          "Properties": 3,
-          "StepValue": 1,
-          "MaxValue": 1000,
-          "Units": "micrograms/m^3"
-        },
-        "volume": {
-          "ShortUUID": "00000119",
-          "MinValue": 0,
-          "Format": "uint8",
-          "LocalizationKey": "",
-          "DefaultDescription": "Volume",
-          "Properties": 7,
-          "StepValue": 1,
-          "MaxValue": 100,
-          "Units": "percentage"
-        },
-        "hue": {
-          "ShortUUID": "00000013",
-          "MinValue": 0,
-          "Format": "float",
-          "LocalizationKey": "",
-          "DefaultDescription": "Hue",
-          "Properties": 7,
-          "StepValue": 1,
-          "MaxValue": 360,
-          "Units": "arcdegrees"
-        },
-        "logs": {
-          "DefaultDescription": "Logs",
-          "Format": "tlv8",
-          "ShortUUID": "0000001F",
-          "LocalizationKey": "",
-          "Properties": 3
-        },
-        "characteristic-value-active-transition-count": {
-          "DefaultDescription": "Characteristic Value Active Transition Count",
-          "Format": "uint8",
-          "ShortUUID": "0000024B",
-          "LocalizationKey": "",
-          "Properties": 3
-        },
-        "firmware-update-readiness": {
-          "DefaultDescription": "Firmware Update Readiness",
-          "Format": "tlv8",
-          "ShortUUID": "00000234",
-          "LocalizationKey": "",
-          "Properties": 3
-        },
-        "cloud-relay.enabled": {
-          "DefaultDescription": "Cloud Relay Enable Status",
-          "Format": "bool",
-          "ShortUUID": "0000005B",
-          "LocalizationKey": "",
-          "Properties": 7
-        },
-        "selected-camera-recording-configuration": {
-          "DefaultDescription": "Selected Camera Recording Configuration",
-          "Format": "tlv8",
-          "ShortUUID": "00000209",
-          "LocalizationKey": "",
-          "Properties": 7
-        },
-        "mac-transmission-counters": {
-          "DefaultDescription": "MAC Transmission Counters",
-          "Format": "data",
-          "ShortUUID": "00000248",
-          "LocalizationKey": "",
-          "Properties": 2
-        },
-        "characteristic-value-transition-control": {
-          "DefaultDescription": "Characteristic Value Transition Control",
-          "Format": "tlv8",
-          "ShortUUID": "00000143",
-          "LocalizationKey": "",
-          "Properties": 6
-        },
-        "filter.change-indication": {
-          "ShortUUID": "000000AC",
-          "MinValue": 0,
-          "Format": "uint8",
-          "LocalizationKey": "",
-          "DefaultDescription": "Filter Change indication",
-          "Properties": 3,
-          "StepValue": 1,
-          "MaxValue": 1
-        },
-        "position.current": {
-          "ShortUUID": "0000006D",
-          "MinValue": 0,
-          "Format": "uint8",
-          "LocalizationKey": "",
-          "DefaultDescription": "Current Position",
-          "Properties": 3,
-          "StepValue": 1,
-          "MaxValue": 100,
-          "Units": "percentage"
-        },
-        "staged-firmware-version": {
-          "DefaultDescription": "Staged Firmware Version",
-          "Format": "string",
-          "ShortUUID": "00000249",
-          "LocalizationKey": "",
-          "Properties": 3
-        },
-        "smoke-detected": {
-          "ShortUUID": "00000076",
-          "MinValue": 0,
-          "Format": "uint8",
-          "LocalizationKey": "",
-          "DefaultDescription": "Smoke Detected",
-          "Properties": 3,
-          "StepValue": 1,
-          "MaxValue": 1
-        },
-        "output-state": {
-          "ShortUUID": "00000074",
-          "MinValue": 0,
-          "Format": "uint8",
-          "LocalizationKey": "",
-          "DefaultDescription": "Programmable Switch Output State",
-          "Properties": 7,
-          "StepValue": 1,
-          "MaxValue": 1
-        },
-        "remaining-duration": {
-          "ShortUUID": "000000D4",
-          "MinValue": 0,
-          "Format": "uint32",
-          "LocalizationKey": "",
-          "DefaultDescription": "Remaining Duration",
-          "Properties": 3,
-          "StepValue": 1,
-          "MaxValue": 3600,
-          "Units": "seconds"
-        },
-        "manually-disabled": {
-          "DefaultDescription": "Manually disabled",
-          "Format": "bool",
-          "ShortUUID": "00000227",
-          "LocalizationKey": "",
-          "Properties": 3
-        },
-        "horizontal-tilt.current": {
-          "ShortUUID": "0000006C",
-          "MinValue": -90,
-          "Format": "int",
-          "LocalizationKey": "",
-          "DefaultDescription": "Current Horizontal Tilt Angle",
-          "Properties": 3,
-          "StepValue": 1,
-          "MaxValue": 90,
-          "Units": "arcdegrees"
-        },
-        "nfc-access-supported-configuration": {
-          "DefaultDescription": "NFC Access Supported Configuration",
-          "Format": "tlv8",
-          "ShortUUID": "00000265",
-          "LocalizationKey": "",
-          "Properties": 2
-        },
-        "ping": {
-          "DefaultDescription": "Ping",
-          "Format": "data",
-          "ShortUUID": "0000023C",
-          "LocalizationKey": "",
-          "Properties": 2
-        },
-        "digital-zoom": {
-          "StepValue": 0.1,
-          "DefaultDescription": "Digital Zoom",
-          "Format": "float",
-          "ShortUUID": "0000011D",
-          "LocalizationKey": "",
-          "Properties": 7
-        },
-        "swing-mode": {
-          "ShortUUID": "000000B6",
-          "MinValue": 0,
-          "Format": "uint8",
-          "LocalizationKey": "",
-          "DefaultDescription": "Swing Mode",
-          "Properties": 7,
-          "StepValue": 1,
-          "MaxValue": 1
-        },
-        "access-code-supported-configuration": {
-          "DefaultDescription": "Access Code Supported Configuration",
-          "Format": "tlv8",
-          "ShortUUID": "00000261",
-          "LocalizationKey": "",
-          "Properties": 2
-        },
-        "security-system-state.target": {
-          "ShortUUID": "00000067",
-          "MinValue": 0,
-          "Format": "uint8",
-          "LocalizationKey": "",
-          "DefaultDescription": "Security System Target State",
-          "Properties": 7,
-          "StepValue": 1,
-          "MaxValue": 3
-        },
-        "fan.state.current": {
-          "ShortUUID": "000000AF",
-          "MinValue": 0,
-          "Format": "uint8",
-          "LocalizationKey": "",
-          "DefaultDescription": "Current Fan State",
-          "Properties": 3,
-          "StepValue": 1,
-          "MaxValue": 2
-        },
-        "rotation.direction": {
-          "ShortUUID": "00000028",
-          "MinValue": 0,
-          "Format": "int",
-          "LocalizationKey": "",
-          "DefaultDescription": "Rotation Direction",
-          "Properties": 7,
-          "StepValue": 1,
-          "MaxValue": 1
-        },
-        "sleep-discovery-mode": {
-          "ShortUUID": "000000E8",
-          "MinValue": 0,
-          "Format": "uint8",
-          "LocalizationKey": "",
-          "DefaultDescription": "Sleep Discovery Mode",
-          "Properties": 3,
           "StepValue": 1,
           "MaxValue": 1
         },
@@ -806,30 +931,102 @@
           "StepValue": 1,
           "MaxValue": 3
         },
-        "input-source-type": {
-          "ShortUUID": "000000DB",
+        "water-level": {
+          "ShortUUID": "000000B5",
           "MinValue": 0,
-          "Format": "uint8",
+          "Format": "float",
           "LocalizationKey": "",
-          "DefaultDescription": "Input Source Type",
+          "DefaultDescription": "Current Water Level",
           "Properties": 3,
           "StepValue": 1,
-          "MaxValue": 10
+          "MaxValue": 100,
+          "Units": "percentage"
         },
-        "charging-state": {
-          "ShortUUID": "0000008F",
-          "MinValue": 0,
-          "Format": "uint8",
-          "LocalizationKey": "",
-          "DefaultDescription": "Charging State",
-          "Properties": 3,
-          "StepValue": 1,
-          "MaxValue": 2
-        },
-        "hardware-finish": {
-          "DefaultDescription": "Hardware Finish",
+        "selected-sleep-configuration": {
+          "DefaultDescription": "Selected Sleep Configuration",
           "Format": "tlv8",
-          "ShortUUID": "0000026C",
+          "ShortUUID": "00000252",
+          "LocalizationKey": "",
+          "Properties": 135
+        },
+        "network-client-status-control": {
+          "DefaultDescription": "Network Client Status Control",
+          "Format": "tlv8",
+          "ShortUUID": "0000020D",
+          "LocalizationKey": "",
+          "Properties": 134
+        },
+        "leak-detected": {
+          "ShortUUID": "00000070",
+          "MinValue": 0,
+          "Format": "uint8",
+          "LocalizationKey": "",
+          "DefaultDescription": "Leak Detected",
+          "Properties": 3,
+          "StepValue": 1,
+          "MaxValue": 1
+        },
+        "list-pairings": {
+          "DefaultDescription": "List Pairings",
+          "Format": "tlv8",
+          "ShortUUID": "00000050",
+          "LocalizationKey": "",
+          "Properties": 6
+        },
+        "serial-number": {
+          "ShortUUID": "00000030",
+          "Format": "string",
+          "LocalizationKey": "",
+          "DefaultDescription": "Serial Number",
+          "MaxLength": 64,
+          "Properties": 2,
+          "MinLength": 1
+        },
+        "mac-transmission-counters": {
+          "DefaultDescription": "MAC Transmission Counters",
+          "Format": "data",
+          "ShortUUID": "00000248",
+          "LocalizationKey": "",
+          "Properties": 2
+        },
+        "data-stream-hap-transport": {
+          "DefaultDescription": "Data Stream HAP Transport",
+          "Format": "tlv8",
+          "ShortUUID": "00000138",
+          "LocalizationKey": "",
+          "Properties": 6
+        },
+        "supported-router-configuration": {
+          "DefaultDescription": "Supported Router Configuration",
+          "Format": "tlv8",
+          "ShortUUID": "00000210",
+          "LocalizationKey": "",
+          "Properties": 2
+        },
+        "media-state.current": {
+          "ShortUUID": "000000E0",
+          "MinValue": 0,
+          "Format": "uint8",
+          "LocalizationKey": "",
+          "DefaultDescription": "Current Media State",
+          "Properties": 3,
+          "StepValue": 1,
+          "MaxValue": 5
+        },
+        "door-state.target": {
+          "ShortUUID": "00000032",
+          "MinValue": 0,
+          "Format": "uint8",
+          "LocalizationKey": "",
+          "DefaultDescription": "Target Door State",
+          "Properties": 23,
+          "StepValue": 1,
+          "MaxValue": 1
+        },
+        "supported-target-configuration": {
+          "DefaultDescription": "Supported Target Configuration",
+          "Format": "tlv8",
+          "ShortUUID": "00000123",
           "LocalizationKey": "",
           "Properties": 2
         },
@@ -844,51 +1041,6 @@
           "MaxValue": 100,
           "Units": "percentage"
         },
-        "relative-humidity.dehumidifier-threshold": {
-          "ShortUUID": "000000C9",
-          "MinValue": 0,
-          "Format": "float",
-          "LocalizationKey": "",
-          "DefaultDescription": "Relative Humidity Dehumidifier Threshold",
-          "Properties": 7,
-          "StepValue": 1,
-          "MaxValue": 100,
-          "Units": "percentage"
-        },
-        "color-temperature": {
-          "ShortUUID": "000000CE",
-          "MinValue": 140,
-          "Format": "int",
-          "LocalizationKey": "",
-          "DefaultDescription": "Color Temperature",
-          "Properties": 7,
-          "StepValue": 1,
-          "MaxValue": 500
-        },
-        "pair-setup": {
-          "DefaultDescription": "Pair Setup",
-          "Format": "tlv8",
-          "ShortUUID": "0000004C",
-          "LocalizationKey": "",
-          "Properties": 6
-        },
-        "supported-router-configuration": {
-          "DefaultDescription": "Supported Router Configuration",
-          "Format": "tlv8",
-          "ShortUUID": "00000210",
-          "LocalizationKey": "",
-          "Properties": 2
-        },
-        "carbon-dioxide.detected": {
-          "ShortUUID": "00000092",
-          "MinValue": 0,
-          "Format": "uint8",
-          "LocalizationKey": "",
-          "DefaultDescription": "Carbon dioxide Detected",
-          "Properties": 3,
-          "StepValue": 1,
-          "MaxValue": 1
-        },
         "light-level.current": {
           "ShortUUID": "0000006B",
           "MinValue": 0.0001,
@@ -899,19 +1051,79 @@
           "MaxValue": 100000,
           "Units": "lux"
         },
-        "software.revision": {
-          "DefaultDescription": "Software Revision",
-          "Format": "string",
-          "ShortUUID": "00000054",
+        "supported-video-recording-configuration": {
+          "DefaultDescription": "Supported Video Recording Configuration",
+          "Format": "tlv8",
+          "ShortUUID": "00000206",
+          "LocalizationKey": "",
+          "Properties": 3
+        },
+        "identifier": {
+          "DefaultDescription": "Identifier",
+          "MinValue": 0,
+          "Format": "uint32",
+          "ShortUUID": "000000E6",
           "LocalizationKey": "",
           "Properties": 2
         },
-        "event-transmission-counters": {
-          "DefaultDescription": "Event Transmission Counters",
-          "Format": "uint32",
-          "ShortUUID": "0000023E",
+        "characteristic-value-transition-control": {
+          "DefaultDescription": "Characteristic Value Transition Control",
+          "Format": "tlv8",
+          "ShortUUID": "00000143",
           "LocalizationKey": "",
-          "Properties": 2
+          "Properties": 6
+        },
+        "siri-endpoint-session-status": {
+          "DefaultDescription": "Siri Endpoint Session Status",
+          "Format": "tlv8",
+          "ShortUUID": "00000254",
+          "LocalizationKey": "",
+          "Properties": 3
+        },
+        "airplay-enable": {
+          "ShortUUID": "0000025B",
+          "MinValue": 0,
+          "Format": "uint8",
+          "LocalizationKey": "",
+          "DefaultDescription": "AirPlay Enable",
+          "Properties": 7,
+          "MaxValue": 1
+        },
+        "closed-captions": {
+          "ShortUUID": "000000DD",
+          "MinValue": 0,
+          "Format": "uint8",
+          "LocalizationKey": "",
+          "DefaultDescription": "Closed Captions",
+          "Properties": 7,
+          "StepValue": 1,
+          "MaxValue": 1
+        },
+        "asset-update-readiness": {
+          "DefaultDescription": "Asset Update Readiness",
+          "Format": "uint32",
+          "ShortUUID": "00000269",
+          "LocalizationKey": "",
+          "Properties": 3
+        },
+        "multifunction-button": {
+          "ShortUUID": "0000026B",
+          "MinValue": 0,
+          "Format": "uint8",
+          "LocalizationKey": "",
+          "DefaultDescription": "Multifunction Button",
+          "Properties": 3,
+          "MaxValue": 1
+        },
+        "contact-state": {
+          "ShortUUID": "0000006A",
+          "MinValue": 0,
+          "Format": "uint8",
+          "LocalizationKey": "",
+          "DefaultDescription": "Contact Sensor State",
+          "Properties": 3,
+          "StepValue": 1,
+          "MaxValue": 1
         },
         "is-configured": {
           "ShortUUID": "000000D6",
@@ -923,10 +1135,562 @@
           "StepValue": 1,
           "MaxValue": 1
         },
+        "wan-status-list": {
+          "DefaultDescription": "WAN Status List",
+          "Format": "tlv8",
+          "ShortUUID": "00000212",
+          "LocalizationKey": "",
+          "Properties": 3
+        },
+        "visibility-state.target": {
+          "ShortUUID": "00000134",
+          "MinValue": 0,
+          "Format": "uint8",
+          "LocalizationKey": "",
+          "DefaultDescription": "Target Visibility State",
+          "Properties": 7,
+          "StepValue": 1,
+          "MaxValue": 1
+        },
+        "digital-zoom": {
+          "StepValue": 0.1,
+          "DefaultDescription": "Digital Zoom",
+          "Format": "float",
+          "ShortUUID": "0000011D",
+          "LocalizationKey": "",
+          "Properties": 7
+        },
+        "product-data": {
+          "DefaultDescription": "Product Data",
+          "Format": "data",
+          "ShortUUID": "00000220",
+          "LocalizationKey": "",
+          "Properties": 2
+        },
+        "app-matching-identifier": {
+          "DefaultDescription": "Application Matching Identifier",
+          "Format": "tlv8",
+          "ShortUUID": "000000A4",
+          "LocalizationKey": "",
+          "Properties": 2
+        },
+        "status-jammed": {
+          "ShortUUID": "00000078",
+          "MinValue": 0,
+          "Format": "uint8",
+          "LocalizationKey": "",
+          "DefaultDescription": "Status Jammed",
+          "Properties": 3,
+          "StepValue": 1,
+          "MaxValue": 1
+        },
+        "homekit-camera-active": {
+          "DefaultDescription": "HomeKit Camera Active",
+          "Format": "bool",
+          "ShortUUID": "0000021B",
+          "LocalizationKey": "",
+          "Properties": 39
+        },
+        "filter.life-level": {
+          "ShortUUID": "000000AB",
+          "MinValue": 0,
+          "Format": "float",
+          "LocalizationKey": "",
+          "DefaultDescription": "Filter Life Level",
+          "Properties": 3,
+          "StepValue": 1,
+          "MaxValue": 100
+        },
+        "firmware-update-status": {
+          "DefaultDescription": "Firmware Update Status",
+          "Format": "tlv8",
+          "ShortUUID": "00000235",
+          "LocalizationKey": "",
+          "Properties": 3
+        },
+        "position.hold": {
+          "DefaultDescription": "Hold Position",
+          "Format": "bool",
+          "ShortUUID": "0000006F",
+          "LocalizationKey": "",
+          "Properties": 4
+        },
+        "input-event": {
+          "ShortUUID": "00000073",
+          "MinValue": 0,
+          "Format": "uint8",
+          "LocalizationKey": "",
+          "DefaultDescription": "Programmable Switch Event",
+          "Properties": 3,
+          "StepValue": 1,
+          "MaxValue": 2
+        },
+        "temperature.units": {
+          "ShortUUID": "00000036",
+          "MinValue": 0,
+          "Format": "uint8",
+          "LocalizationKey": "",
+          "DefaultDescription": "Temperature Display Units",
+          "Properties": 7,
+          "StepValue": 1,
+          "MaxValue": 1
+        },
+        "carbon-monoxide.detected": {
+          "ShortUUID": "00000069",
+          "MinValue": 0,
+          "Format": "uint8",
+          "LocalizationKey": "",
+          "DefaultDescription": "Carbon monoxide Detected",
+          "Properties": 3,
+          "StepValue": 1,
+          "MaxValue": 1
+        },
+        "image-rotation": {
+          "ShortUUID": "0000011E",
+          "MinValue": 0,
+          "Format": "int",
+          "LocalizationKey": "",
+          "DefaultDescription": "Image Rotation",
+          "Properties": 7,
+          "StepValue": 1,
+          "MaxValue": 360,
+          "Units": "arcdegrees"
+        },
+        "position.target": {
+          "ShortUUID": "0000007C",
+          "MinValue": 0,
+          "Format": "uint8",
+          "LocalizationKey": "",
+          "DefaultDescription": "Target Position",
+          "Properties": 7,
+          "StepValue": 1,
+          "MaxValue": 100,
+          "Units": "percentage"
+        },
+        "carbon-dioxide.level": {
+          "ShortUUID": "00000093",
+          "MinValue": 0,
+          "Format": "float",
+          "LocalizationKey": "",
+          "DefaultDescription": "Carbon dioxide Level",
+          "Properties": 3,
+          "StepValue": 1,
+          "MaxValue": 100000,
+          "Units": "ppm"
+        },
         "wan-configuration-list": {
           "DefaultDescription": "WAN Configuration List",
           "Format": "tlv8",
           "ShortUUID": "00000211",
+          "LocalizationKey": "",
+          "Properties": 3
+        },
+        "staged-firmware-version": {
+          "DefaultDescription": "Staged Firmware Version",
+          "Format": "string",
+          "ShortUUID": "00000249",
+          "LocalizationKey": "",
+          "Properties": 3
+        },
+        "media-state.target": {
+          "ShortUUID": "00000137",
+          "MinValue": 0,
+          "Format": "uint8",
+          "LocalizationKey": "",
+          "DefaultDescription": "Target Media State",
+          "Properties": 7,
+          "StepValue": 1,
+          "MaxValue": 2
+        },
+        "position.state": {
+          "ShortUUID": "00000072",
+          "MinValue": 0,
+          "Format": "uint8",
+          "LocalizationKey": "",
+          "DefaultDescription": "Position State",
+          "Properties": 3,
+          "StepValue": 1,
+          "MaxValue": 2
+        },
+        "logs": {
+          "DefaultDescription": "Logs",
+          "Format": "tlv8",
+          "ShortUUID": "0000001F",
+          "LocalizationKey": "",
+          "Properties": 3
+        },
+        "active-identifier": {
+          "DefaultDescription": "Active Identifier",
+          "MinValue": 0,
+          "Format": "uint32",
+          "ShortUUID": "000000E7",
+          "LocalizationKey": "",
+          "Properties": 7
+        },
+        "density.pm10": {
+          "ShortUUID": "000000C7",
+          "MinValue": 0,
+          "Format": "float",
+          "LocalizationKey": "",
+          "DefaultDescription": "PM10 Density",
+          "Properties": 3,
+          "StepValue": 1,
+          "MaxValue": 1000,
+          "Units": "micrograms/m^3"
+        },
+        "mute": {
+          "DefaultDescription": "Mute",
+          "Format": "bool",
+          "ShortUUID": "0000011A",
+          "LocalizationKey": "",
+          "Properties": 7
+        },
+        "accessory.identifier": {
+          "DefaultDescription": "Accessory Identifier",
+          "Format": "string",
+          "ShortUUID": "00000057",
+          "LocalizationKey": "",
+          "Properties": 2
+        },
+        "current-transport": {
+          "DefaultDescription": "Current Transport",
+          "Format": "bool",
+          "ShortUUID": "0000022B",
+          "LocalizationKey": "",
+          "Properties": 2
+        },
+        "lock-management.control-point": {
+          "DefaultDescription": "Lock Control Point",
+          "Format": "tlv8",
+          "ShortUUID": "00000019",
+          "LocalizationKey": "",
+          "Properties": 4
+        },
+        "receiver-sensitivity": {
+          "DefaultDescription": "Receiver Sensitivity",
+          "Format": "int",
+          "ShortUUID": "00000244",
+          "LocalizationKey": "",
+          "Properties": 2
+        },
+        "supported-rtp-configuration": {
+          "DefaultDescription": "Supported RTP Configuration",
+          "Format": "tlv8",
+          "ShortUUID": "00000116",
+          "LocalizationKey": "",
+          "Properties": 2
+        },
+        "relative-humidity.current": {
+          "ShortUUID": "00000010",
+          "MinValue": 0,
+          "Format": "float",
+          "LocalizationKey": "",
+          "DefaultDescription": "Current Relative Humidity",
+          "Properties": 3,
+          "StepValue": 1,
+          "MaxValue": 100,
+          "Units": "percentage"
+        },
+        "supported-characteristic-value-transition-configuration": {
+          "DefaultDescription": "Supported Characteristic Value Transition Configuration",
+          "Format": "tlv8",
+          "ShortUUID": "00000144",
+          "LocalizationKey": "",
+          "Properties": 2
+        },
+        "density.no2": {
+          "ShortUUID": "000000C4",
+          "MinValue": 0,
+          "Format": "float",
+          "LocalizationKey": "",
+          "DefaultDescription": "Nitrogen dioxide Density",
+          "Properties": 3,
+          "StepValue": 1,
+          "MaxValue": 1000,
+          "Units": "micrograms/m^3"
+        },
+        "temperature.heating-threshold": {
+          "ShortUUID": "00000012",
+          "MinValue": 0,
+          "Format": "float",
+          "LocalizationKey": "",
+          "DefaultDescription": "Heating Threshold Temperature",
+          "Properties": 7,
+          "StepValue": 0.1,
+          "MaxValue": 25,
+          "Units": "celsius"
+        },
+        "setup-stream-endpoint": {
+          "DefaultDescription": "Setup Endpoint",
+          "Format": "tlv8",
+          "ShortUUID": "00000118",
+          "LocalizationKey": "",
+          "Properties": 6
+        },
+        "transmit-power": {
+          "DefaultDescription": "Transmit Power",
+          "Format": "int",
+          "ShortUUID": "00000242",
+          "LocalizationKey": "",
+          "Properties": 2
+        },
+        "wake-configuration": {
+          "DefaultDescription": "Wake Configuration",
+          "Format": "tlv8",
+          "ShortUUID": "00000222",
+          "LocalizationKey": "",
+          "Properties": 2
+        },
+        "heating-cooling.current": {
+          "ShortUUID": "0000000F",
+          "MinValue": 0,
+          "Format": "uint8",
+          "LocalizationKey": "",
+          "DefaultDescription": "Current Heating Cooling State",
+          "Properties": 3,
+          "StepValue": 1,
+          "MaxValue": 2
+        },
+        "charging-state": {
+          "ShortUUID": "0000008F",
+          "MinValue": 0,
+          "Format": "uint8",
+          "LocalizationKey": "",
+          "DefaultDescription": "Charging State",
+          "Properties": 3,
+          "StepValue": 1,
+          "MaxValue": 2
+        },
+        "lock-physical-controls": {
+          "ShortUUID": "000000A7",
+          "MinValue": 0,
+          "Format": "uint8",
+          "LocalizationKey": "",
+          "DefaultDescription": "Lock Physical Controls",
+          "Properties": 7,
+          "StepValue": 1,
+          "MaxValue": 1
+        },
+        "filter.reset-indication": {
+          "ShortUUID": "000000AD",
+          "MinValue": 1,
+          "Format": "uint8",
+          "LocalizationKey": "",
+          "DefaultDescription": "Filter Reset Change Indication",
+          "Properties": 4,
+          "StepValue": 1,
+          "MaxValue": 1
+        },
+        "supported-data-stream-transport-configuration": {
+          "DefaultDescription": "Supported Data Stream Transport Configuration",
+          "Format": "tlv8",
+          "ShortUUID": "00000130",
+          "LocalizationKey": "",
+          "Properties": 2
+        },
+        "lock-mechanism.current-state": {
+          "ShortUUID": "0000001D",
+          "MinValue": 0,
+          "Format": "uint8",
+          "LocalizationKey": "",
+          "DefaultDescription": "Lock Current State",
+          "Properties": 3,
+          "StepValue": 1,
+          "MaxValue": 3
+        },
+        "temperature.current": {
+          "ShortUUID": "00000011",
+          "MinValue": 0,
+          "Format": "float",
+          "LocalizationKey": "",
+          "DefaultDescription": "Current Temperature",
+          "Properties": 3,
+          "StepValue": 0.1,
+          "MaxValue": 100,
+          "Units": "celsius"
+        },
+        "fan.state.target": {
+          "ShortUUID": "000000BF",
+          "MinValue": 0,
+          "Format": "uint8",
+          "LocalizationKey": "",
+          "DefaultDescription": "Target Fan State",
+          "Properties": 7,
+          "StepValue": 1,
+          "MaxValue": 1
+        },
+        "slat.type": {
+          "ShortUUID": "000000C0",
+          "MinValue": 0,
+          "Format": "uint8",
+          "LocalizationKey": "",
+          "DefaultDescription": "Slat Type",
+          "Properties": 2,
+          "StepValue": 1,
+          "MaxValue": 1
+        },
+        "vertical-tilt.target": {
+          "ShortUUID": "0000007D",
+          "MinValue": -90,
+          "Format": "int",
+          "LocalizationKey": "",
+          "DefaultDescription": "Target Vertical Tilt Angle",
+          "Properties": 7,
+          "StepValue": 1,
+          "MaxValue": 90,
+          "Units": "arcdegrees"
+        },
+        "cca-energy-detect-threshold": {
+          "DefaultDescription": "CCA Energy Detect Threshold",
+          "Format": "int",
+          "ShortUUID": "00000246",
+          "LocalizationKey": "",
+          "Properties": 2
+        },
+        "password-setting": {
+          "DefaultDescription": "Password Setting",
+          "Format": "tlv8",
+          "ShortUUID": "000000E4",
+          "LocalizationKey": "",
+          "Properties": 7
+        },
+        "recording-audio-active": {
+          "DefaultDescription": "recording audio active",
+          "Format": "uint8",
+          "ShortUUID": "00000226",
+          "LocalizationKey": "",
+          "Properties": 39
+        },
+        "wifi-capabilities": {
+          "DefaultDescription": "Wi-Fi Capabilities",
+          "Format": "uint32",
+          "ShortUUID": "0000022C",
+          "LocalizationKey": "",
+          "Properties": 2
+        },
+        "managed-network-enable": {
+          "ShortUUID": "00000215",
+          "MinValue": 0,
+          "Format": "uint8",
+          "LocalizationKey": "",
+          "DefaultDescription": "Managed Network Enable",
+          "Properties": 39,
+          "MaxValue": 1
+        },
+        "supported-camera-recording-configuration": {
+          "DefaultDescription": "Supported Camera Recording Configuration",
+          "Format": "tlv8",
+          "ShortUUID": "00000205",
+          "LocalizationKey": "",
+          "Properties": 3
+        },
+        "pair-setup": {
+          "DefaultDescription": "Pair Setup",
+          "Format": "tlv8",
+          "ShortUUID": "0000004C",
+          "LocalizationKey": "",
+          "Properties": 6
+        },
+        "carbon-dioxide.peak-level": {
+          "ShortUUID": "00000094",
+          "MinValue": 0,
+          "Format": "float",
+          "LocalizationKey": "",
+          "DefaultDescription": "Carbon dioxide Peak Level",
+          "Properties": 3,
+          "StepValue": 1,
+          "MaxValue": 100000,
+          "Units": "ppm"
+        },
+        "pair-verify": {
+          "DefaultDescription": "Pair Verify",
+          "Format": "tlv8",
+          "ShortUUID": "0000004E",
+          "LocalizationKey": "",
+          "Properties": 6
+        },
+        "in-use": {
+          "ShortUUID": "000000D2",
+          "MinValue": 0,
+          "Format": "uint8",
+          "LocalizationKey": "",
+          "DefaultDescription": "In Use",
+          "Properties": 3,
+          "StepValue": 1,
+          "MaxValue": 1
+        },
+        "tilt.current": {
+          "ShortUUID": "000000C1",
+          "MinValue": -90,
+          "Format": "int",
+          "LocalizationKey": "",
+          "DefaultDescription": "Current Tilt Angle",
+          "Properties": 3,
+          "StepValue": 1,
+          "MaxValue": 90,
+          "Units": "arcdegrees"
+        },
+        "activity-interval": {
+          "ShortUUID": "0000023B",
+          "MinValue": 0,
+          "Format": "uint32",
+          "LocalizationKey": "",
+          "DefaultDescription": "Activity Interval",
+          "StepValue": 1,
+          "Properties": 3
+        },
+        "carbon-monoxide.peak-level": {
+          "ShortUUID": "00000091",
+          "MinValue": 0,
+          "Format": "float",
+          "LocalizationKey": "",
+          "DefaultDescription": "Carbon monoxide Peak Level",
+          "Properties": 3,
+          "StepValue": 1,
+          "MaxValue": 100,
+          "Units": "ppm"
+        },
+        "carbon-dioxide.detected": {
+          "ShortUUID": "00000092",
+          "MinValue": 0,
+          "Format": "uint8",
+          "LocalizationKey": "",
+          "DefaultDescription": "Carbon dioxide Detected",
+          "Properties": 3,
+          "StepValue": 1,
+          "MaxValue": 1
+        },
+        "wifi-satellite-status": {
+          "ShortUUID": "0000021E",
+          "MinValue": 0,
+          "Format": "uint8",
+          "LocalizationKey": "",
+          "DefaultDescription": "Wi-Fi Satellite Status",
+          "Properties": 3,
+          "MaxValue": 2
+        },
+        "relative-humidity.dehumidifier-threshold": {
+          "ShortUUID": "000000C9",
+          "MinValue": 0,
+          "Format": "float",
+          "LocalizationKey": "",
+          "DefaultDescription": "Relative Humidity Dehumidifier Threshold",
+          "Properties": 7,
+          "StepValue": 1,
+          "MaxValue": 100,
+          "Units": "percentage"
+        },
+        "ping": {
+          "DefaultDescription": "Ping",
+          "Format": "data",
+          "ShortUUID": "0000023C",
+          "LocalizationKey": "",
+          "Properties": 2
+        },
+        "operating-state-response": {
+          "DefaultDescription": "Operating State Response",
+          "Format": "tlv8",
+          "ShortUUID": "00000232",
           "LocalizationKey": "",
           "Properties": 3
         },
@@ -940,59 +1704,155 @@
           "StepValue": 1,
           "MaxValue": 4
         },
-        "homekit-camera-active": {
-          "DefaultDescription": "HomeKit Camera Active",
-          "Format": "bool",
-          "ShortUUID": "0000021B",
+        "token": {
+          "DefaultDescription": "Token",
+          "Format": "data",
+          "ShortUUID": "00000231",
           "LocalizationKey": "",
-          "Properties": 39
+          "Properties": 4
         },
-        "optical-zoom": {
-          "StepValue": 0.1,
-          "DefaultDescription": "Optical Zoom",
-          "Format": "float",
-          "ShortUUID": "0000011C",
-          "LocalizationKey": "",
-          "Properties": 7
-        },
-        "mute": {
-          "DefaultDescription": "Mute",
-          "Format": "bool",
-          "ShortUUID": "0000011A",
-          "LocalizationKey": "",
-          "Properties": 7
-        },
-        "event-snapshots-active": {
-          "DefaultDescription": "Event Snapshots Active",
-          "Format": "bool",
-          "ShortUUID": "00000223",
-          "LocalizationKey": "",
-          "Properties": 39
-        },
-        "service-signature": {
-          "DefaultDescription": "Service Signature",
+        "supported-transfer-transport-configuration": {
+          "DefaultDescription": "Supported Transfer Transport Configuration",
           "Format": "tlv8",
-          "ShortUUID": "000000A5",
+          "ShortUUID": "00000202",
           "LocalizationKey": "",
-          "Properties": 6
+          "Properties": 2
         },
-        "temperature.current": {
-          "ShortUUID": "00000011",
+        "visibility-state.current": {
+          "ShortUUID": "00000135",
+          "MinValue": 0,
+          "Format": "uint8",
+          "LocalizationKey": "",
+          "DefaultDescription": "Current Visibility State",
+          "Properties": 3,
+          "StepValue": 1,
+          "MaxValue": 3
+        },
+        "video-analysis-active": {
+          "DefaultDescription": "Video Analysis Active",
+          "Format": "uint8",
+          "ShortUUID": "00000229",
+          "LocalizationKey": "",
+          "Properties": 7
+        },
+        "volume-selector": {
+          "ShortUUID": "000000EA",
+          "MinValue": 0,
+          "Format": "uint8",
+          "LocalizationKey": "",
+          "DefaultDescription": "Volume Selector",
+          "Properties": 4,
+          "StepValue": 1,
+          "MaxValue": 1
+        },
+        "rotation.direction": {
+          "ShortUUID": "00000028",
+          "MinValue": 0,
+          "Format": "int",
+          "LocalizationKey": "",
+          "DefaultDescription": "Rotation Direction",
+          "Properties": 7,
+          "StepValue": 1,
+          "MaxValue": 1
+        },
+        "access-code-supported-configuration": {
+          "DefaultDescription": "Access Code Supported Configuration",
+          "Format": "tlv8",
+          "ShortUUID": "00000261",
+          "LocalizationKey": "",
+          "Properties": 2
+        },
+        "selected-camera-recording-configuration": {
+          "DefaultDescription": "Selected Camera Recording Configuration",
+          "Format": "tlv8",
+          "ShortUUID": "00000209",
+          "LocalizationKey": "",
+          "Properties": 7
+        },
+        "lock-mechanism.last-known-action": {
+          "ShortUUID": "0000001C",
+          "MinValue": 0,
+          "Format": "uint8",
+          "LocalizationKey": "",
+          "DefaultDescription": "Lock Last Known Action",
+          "Properties": 3,
+          "StepValue": 1,
+          "MaxValue": 8
+        },
+        "humidifier-dehumidifier.state.target": {
+          "ShortUUID": "000000B4",
+          "MinValue": 0,
+          "Format": "uint8",
+          "LocalizationKey": "",
+          "DefaultDescription": "Target Humidifier-Dehumidifier State",
+          "Properties": 7,
+          "StepValue": 1,
+          "MaxValue": 2
+        },
+        "status-active": {
+          "DefaultDescription": "Status Active",
+          "Format": "bool",
+          "ShortUUID": "00000075",
+          "LocalizationKey": "",
+          "Properties": 3
+        },
+        "hue": {
+          "ShortUUID": "00000013",
           "MinValue": 0,
           "Format": "float",
           "LocalizationKey": "",
-          "DefaultDescription": "Current Temperature",
-          "Properties": 3,
-          "StepValue": 0.1,
-          "MaxValue": 100,
-          "Units": "celsius"
+          "DefaultDescription": "Hue",
+          "Properties": 7,
+          "StepValue": 1,
+          "MaxValue": 360,
+          "Units": "arcdegrees"
         },
-        "cloud-relay.control-point": {
-          "DefaultDescription": "Cloud Relay Control Point",
+        "camera-operating-mode-indicator": {
+          "DefaultDescription": "Camera Operating Mode Indicator",
+          "Format": "bool",
+          "ShortUUID": "0000021D",
+          "LocalizationKey": "",
+          "Properties": 39
+        },
+        "supported-video-stream-configuration": {
+          "DefaultDescription": "Supported Video Stream Configuration",
           "Format": "tlv8",
-          "ShortUUID": "0000005E",
+          "ShortUUID": "00000114",
+          "LocalizationKey": "",
+          "Properties": 2
+        },
+        "siri-listening": {
+          "ShortUUID": "00000256",
+          "MinValue": 0,
+          "Format": "uint8",
+          "LocalizationKey": "",
+          "DefaultDescription": "Siri Listening",
+          "Properties": 7,
+          "MaxValue": 1
+        },
+        "selected-audio-stream-configuration": {
+          "DefaultDescription": "Selected Audio Stream Configuration",
+          "Format": "tlv8",
+          "ShortUUID": "00000128",
+          "LocalizationKey": "",
+          "Properties": 6
+        },
+        "administrator-only-access": {
+          "DefaultDescription": "Administrator Only Access",
+          "Format": "bool",
+          "ShortUUID": "00000001",
           "LocalizationKey": "",
           "Properties": 7
+        },
+        "heater-cooler.state.target": {
+          "ShortUUID": "000000B2",
+          "MinValue": 0,
+          "Format": "uint8",
+          "LocalizationKey": "",
+          "DefaultDescription": "Target Heater-Cooler State",
+          "Properties": 7,
+          "StepValue": 1,
+          "MaxValue": 2
         },
         "supported-firmware-update-configuration": {
           "DefaultDescription": "Supported Firmware Update Configuration",
@@ -1009,20 +1869,326 @@
           "LocalizationKey": "",
           "Properties": 2
         },
-        "receiver-sensitivity": {
-          "DefaultDescription": "Receiver Sensitivity",
+        "accessory-flags": {
+          "DefaultDescription": "Accessory Flags",
+          "Format": "uint32",
+          "ShortUUID": "000000A6",
+          "LocalizationKey": "",
+          "Properties": 3
+        },
+        "optical-zoom": {
+          "StepValue": 0.1,
+          "DefaultDescription": "Optical Zoom",
+          "Format": "float",
+          "ShortUUID": "0000011C",
+          "LocalizationKey": "",
+          "Properties": 7
+        },
+        "air-particulate.size": {
+          "ShortUUID": "00000065",
+          "MinValue": 0,
+          "Format": "uint8",
+          "LocalizationKey": "",
+          "DefaultDescription": "Air Particulate Size",
+          "Properties": 3,
+          "StepValue": 1,
+          "MaxValue": 1
+        },
+        "horizontal-tilt.current": {
+          "ShortUUID": "0000006C",
+          "MinValue": -90,
           "Format": "int",
-          "ShortUUID": "00000244",
+          "LocalizationKey": "",
+          "DefaultDescription": "Current Horizontal Tilt Angle",
+          "Properties": 3,
+          "StepValue": 1,
+          "MaxValue": 90,
+          "Units": "arcdegrees"
+        },
+        "periodic-snapshots-active": {
+          "DefaultDescription": "Periodic Snapshots Active",
+          "Format": "bool",
+          "ShortUUID": "00000225",
+          "LocalizationKey": "",
+          "Properties": 39
+        },
+        "selected-stream-configuration": {
+          "DefaultDescription": "Selected Stream Configuration",
+          "Format": "tlv8",
+          "ShortUUID": "00000117",
+          "LocalizationKey": "",
+          "Properties": 6
+        },
+        "brightness": {
+          "ShortUUID": "00000008",
+          "MinValue": 0,
+          "Format": "int",
+          "LocalizationKey": "",
+          "DefaultDescription": "Brightness",
+          "Properties": 7,
+          "StepValue": 1,
+          "MaxValue": 100,
+          "Units": "percentage"
+        },
+        "heater-cooler.state.current": {
+          "ShortUUID": "000000B1",
+          "MinValue": 0,
+          "Format": "uint8",
+          "LocalizationKey": "",
+          "DefaultDescription": "Current Heater-Cooler State",
+          "Properties": 3,
+          "StepValue": 1,
+          "MaxValue": 3
+        },
+        "smoke-detected": {
+          "ShortUUID": "00000076",
+          "MinValue": 0,
+          "Format": "uint8",
+          "LocalizationKey": "",
+          "DefaultDescription": "Smoke Detected",
+          "Properties": 3,
+          "StepValue": 1,
+          "MaxValue": 1
+        },
+        "model": {
+          "DefaultDescription": "Model",
+          "MaxLength": 64,
+          "Format": "string",
+          "ShortUUID": "00000021",
           "LocalizationKey": "",
           "Properties": 2
         },
-        "active-identifier": {
-          "DefaultDescription": "Active Identifier",
+        "status-lo-batt": {
+          "ShortUUID": "00000079",
           "MinValue": 0,
+          "Format": "uint8",
+          "LocalizationKey": "",
+          "DefaultDescription": "Status Low Battery",
+          "Properties": 3,
+          "StepValue": 1,
+          "MaxValue": 1
+        },
+        "access-code-control-point": {
+          "DefaultDescription": "Access Code Control Point",
+          "Format": "tlv8",
+          "ShortUUID": "00000262",
+          "LocalizationKey": "",
+          "Properties": 6
+        },
+        "temperature.target": {
+          "ShortUUID": "00000035",
+          "MinValue": 10,
+          "Format": "float",
+          "LocalizationKey": "",
+          "DefaultDescription": "Target Temperature",
+          "Properties": 7,
+          "StepValue": 0.1,
+          "MaxValue": 38,
+          "Units": "celsius"
+        },
+        "manually-disabled": {
+          "DefaultDescription": "Manually disabled",
+          "Format": "bool",
+          "ShortUUID": "00000227",
+          "LocalizationKey": "",
+          "Properties": 3
+        },
+        "vertical-tilt.current": {
+          "ShortUUID": "0000006E",
+          "MinValue": -90,
+          "Format": "int",
+          "LocalizationKey": "",
+          "DefaultDescription": "Current Vertical Tilt Angle",
+          "Properties": 3,
+          "StepValue": 1,
+          "MaxValue": 90,
+          "Units": "arcdegrees"
+        },
+        "siri-input-type": {
+          "ShortUUID": "00000132",
+          "MinValue": 0,
+          "Format": "uint8",
+          "LocalizationKey": "",
+          "DefaultDescription": "Siri Input Type",
+          "Properties": 2,
+          "MaxValue": 1
+        },
+        "supported-audio-recording-configuration": {
+          "DefaultDescription": "Supported Audio Recording Configuration",
+          "Format": "tlv8",
+          "ShortUUID": "00000207",
+          "LocalizationKey": "",
+          "Properties": 3
+        },
+        "wifi-configuration-control": {
+          "DefaultDescription": "Wi-Fi Configuration Control",
+          "Format": "tlv8",
+          "ShortUUID": "0000022D",
+          "LocalizationKey": "",
+          "Properties": 167
+        },
+        "event-transmission-counters": {
+          "DefaultDescription": "Event Transmission Counters",
           "Format": "uint32",
-          "ShortUUID": "000000E7",
+          "ShortUUID": "0000023E",
+          "LocalizationKey": "",
+          "Properties": 2
+        },
+        "thread-control-point": {
+          "DefaultDescription": "Thread Control Point",
+          "Format": "tlv8",
+          "ShortUUID": "00000704",
+          "LocalizationKey": "",
+          "Properties": 4
+        },
+        "data-stream-hap-transport-interrupt": {
+          "DefaultDescription": "Data Stream HAP Transport Interrupt",
+          "Format": "tlv8",
+          "ShortUUID": "00000139",
+          "LocalizationKey": "",
+          "Properties": 3
+        },
+        "saturation": {
+          "ShortUUID": "0000002F",
+          "MinValue": 0,
+          "Format": "float",
+          "LocalizationKey": "",
+          "DefaultDescription": "Saturation",
+          "Properties": 7,
+          "StepValue": 1,
+          "MaxValue": 100,
+          "Units": "percentage"
+        },
+        "streaming-status": {
+          "DefaultDescription": "Streaming Status",
+          "Format": "tlv8",
+          "ShortUUID": "00000120",
+          "LocalizationKey": "",
+          "Properties": 3
+        },
+        "cca-signal-detect-threshold": {
+          "DefaultDescription": "CCA Signal Detect Threshold",
+          "Format": "int",
+          "ShortUUID": "00000245",
+          "LocalizationKey": "",
+          "Properties": 2
+        },
+        "network-client-control": {
+          "DefaultDescription": "Network Client Control",
+          "Format": "tlv8",
+          "ShortUUID": "0000020C",
+          "LocalizationKey": "",
+          "Properties": 167
+        },
+        "status-fault": {
+          "ShortUUID": "00000077",
+          "MinValue": 0,
+          "Format": "uint8",
+          "LocalizationKey": "",
+          "DefaultDescription": "Status Fault",
+          "Properties": 3,
+          "StepValue": 1,
+          "MaxValue": 1
+        },
+        "software.revision": {
+          "DefaultDescription": "Software Revision",
+          "Format": "string",
+          "ShortUUID": "00000054",
+          "LocalizationKey": "",
+          "Properties": 2
+        },
+        "swing-mode": {
+          "ShortUUID": "000000B6",
+          "MinValue": 0,
+          "Format": "uint8",
+          "LocalizationKey": "",
+          "DefaultDescription": "Swing Mode",
+          "Properties": 7,
+          "StepValue": 1,
+          "MaxValue": 1
+        },
+        "temperature.cooling-threshold": {
+          "ShortUUID": "0000000D",
+          "MinValue": 10,
+          "Format": "float",
+          "LocalizationKey": "",
+          "DefaultDescription": "Cooling Threshold Temperature",
+          "Properties": 7,
+          "StepValue": 0.1,
+          "MaxValue": 35,
+          "Units": "celsius"
+        },
+        "service-label-index": {
+          "ShortUUID": "000000CB",
+          "MinValue": 1,
+          "Format": "uint8",
+          "LocalizationKey": "",
+          "DefaultDescription": "Label Index",
+          "Properties": 2,
+          "StepValue": 1,
+          "MaxValue": 255
+        },
+        "rotation.speed": {
+          "ShortUUID": "00000029",
+          "MinValue": 0,
+          "Format": "float",
+          "LocalizationKey": "",
+          "DefaultDescription": "Rotation Speed",
+          "Properties": 7,
+          "StepValue": 1,
+          "MaxValue": 100
+        },
+        "supported-asset-types": {
+          "DefaultDescription": "Supported Asset Types",
+          "Format": "uint32",
+          "ShortUUID": "00000268",
+          "LocalizationKey": "",
+          "Properties": 2
+        },
+        "transmit-power-maximum": {
+          "DefaultDescription": "Maximum Transmit Power",
+          "Format": "int",
+          "ShortUUID": "00000243",
+          "LocalizationKey": "",
+          "Properties": 2
+        },
+        "display-order": {
+          "DefaultDescription": "Display Order",
+          "Format": "tlv8",
+          "ShortUUID": "00000136",
+          "LocalizationKey": "",
+          "Properties": 3
+        },
+        "configuration-state": {
+          "DefaultDescription": "Configuration State",
+          "Format": "uint16",
+          "ShortUUID": "00000263",
+          "LocalizationKey": "",
+          "Properties": 3
+        },
+        "audio-feedback": {
+          "DefaultDescription": "Audio Feedback",
+          "Format": "bool",
+          "ShortUUID": "00000005",
           "LocalizationKey": "",
           "Properties": 7
+        },
+        "heating-cooling.target": {
+          "ShortUUID": "00000033",
+          "MinValue": 0,
+          "Format": "uint8",
+          "LocalizationKey": "",
+          "DefaultDescription": "Target Heating Cooling State",
+          "Properties": 7,
+          "StepValue": 1,
+          "MaxValue": 3
+        },
+        "snr": {
+          "DefaultDescription": "Signal-to-noise Ratio",
+          "Format": "int",
+          "ShortUUID": "00000241",
+          "LocalizationKey": "",
+          "Properties": 2
         },
         "density.so2": {
           "ShortUUID": "000000C5",
@@ -1035,35 +2201,81 @@
           "MaxValue": 1000,
           "Units": "micrograms/m^3"
         },
-        "relative-humidity.current": {
-          "ShortUUID": "00000010",
+        "humidifier-dehumidifier.state.current": {
+          "ShortUUID": "000000B3",
+          "MinValue": 0,
+          "Format": "uint8",
+          "LocalizationKey": "",
+          "DefaultDescription": "Current Humidifier-Dehumidifier State",
+          "Properties": 3,
+          "StepValue": 1,
+          "MaxValue": 3
+        },
+        "image-mirroring": {
+          "DefaultDescription": "Image Mirroring",
+          "Format": "bool",
+          "ShortUUID": "0000011F",
+          "LocalizationKey": "",
+          "Properties": 7
+        },
+        "router-status": {
+          "ShortUUID": "0000020E",
+          "MinValue": 0,
+          "Format": "uint8",
+          "LocalizationKey": "",
+          "DefaultDescription": "Router Status",
+          "Properties": 3,
+          "MaxValue": 1
+        },
+        "hardware.revision": {
+          "DefaultDescription": "Hardware Revision",
+          "Format": "string",
+          "ShortUUID": "00000053",
+          "LocalizationKey": "",
+          "Properties": 2
+        },
+        "thread-status": {
+          "ShortUUID": "00000703",
+          "MinValue": 0,
+          "Format": "uint16",
+          "LocalizationKey": "",
+          "DefaultDescription": "Thread Status",
+          "Properties": 3,
+          "StepValue": 1,
+          "MaxValue": 6
+        },
+        "density.pm2_5": {
+          "ShortUUID": "000000C6",
           "MinValue": 0,
           "Format": "float",
           "LocalizationKey": "",
-          "DefaultDescription": "Current Relative Humidity",
+          "DefaultDescription": "PM2.5 Density",
           "Properties": 3,
           "StepValue": 1,
-          "MaxValue": 100,
-          "Units": "percentage"
+          "MaxValue": 1000,
+          "Units": "micrograms/m^3"
         },
-        "obstruction-detected": {
-          "DefaultDescription": "Obstruction Detected",
-          "Format": "bool",
-          "ShortUUID": "00000024",
+        "output-state": {
+          "ShortUUID": "00000074",
+          "MinValue": 0,
+          "Format": "uint8",
           "LocalizationKey": "",
-          "Properties": 3
+          "DefaultDescription": "Programmable Switch Output State",
+          "Properties": 7,
+          "StepValue": 1,
+          "MaxValue": 1
         },
-        "operating-state-response": {
-          "DefaultDescription": "Operating State Response",
-          "Format": "tlv8",
-          "ShortUUID": "00000232",
+        "pairing-features": {
+          "DefaultDescription": "Pairing Features",
+          "Format": "uint8",
+          "ShortUUID": "0000004F",
           "LocalizationKey": "",
-          "Properties": 3
+          "Properties": 6
         },
-        "supported-diagnostics-snapshot": {
-          "DefaultDescription": "Supported Diagnostics Snapshot",
-          "Format": "tlv8",
-          "ShortUUID": "00000238",
+        "thread-openthread-version": {
+          "DefaultDescription": "Thread OpenThread Version",
+          "Format": "string",
+          "ShortUUID": "00000706",
           "LocalizationKey": "",
           "Properties": 2
         },
@@ -1074,10 +2286,490 @@
           "LocalizationKey": "",
           "Properties": 7
         },
-        "supported-audio-recording-configuration": {
-          "DefaultDescription": "Supported Audio Recording Configuration",
+        "outlet-in-use": {
+          "DefaultDescription": "Outlet In Use",
+          "Format": "bool",
+          "ShortUUID": "00000026",
+          "LocalizationKey": "",
+          "Properties": 3
+        },
+        "siri-touch-to-use": {
+          "ShortUUID": "00000257",
+          "MinValue": 0,
+          "Format": "uint8",
+          "LocalizationKey": "",
+          "DefaultDescription": "Siri Touch To Use",
+          "Properties": 7,
+          "MaxValue": 1
+        },
+        "carbon-monoxide.level": {
+          "ShortUUID": "00000090",
+          "MinValue": 0,
+          "Format": "float",
+          "LocalizationKey": "",
+          "DefaultDescription": "Carbon monoxide Level",
+          "Properties": 3,
+          "StepValue": 1,
+          "MaxValue": 100,
+          "Units": "ppm"
+        },
+        "density.ozone": {
+          "ShortUUID": "000000C3",
+          "MinValue": 0,
+          "Format": "float",
+          "LocalizationKey": "",
+          "DefaultDescription": "Ozone Density",
+          "Properties": 3,
+          "StepValue": 1,
+          "MaxValue": 1000,
+          "Units": "micrograms/m^3"
+        },
+        "volume": {
+          "ShortUUID": "00000119",
+          "MinValue": 0,
+          "Format": "uint8",
+          "LocalizationKey": "",
+          "DefaultDescription": "Volume",
+          "Properties": 7,
+          "StepValue": 1,
+          "MaxValue": 100,
+          "Units": "percentage"
+        },
+        "characteristic-value-active-transition-count": {
+          "DefaultDescription": "Characteristic Value Active Transition Count",
+          "Format": "uint8",
+          "ShortUUID": "0000024B",
+          "LocalizationKey": "",
+          "Properties": 3
+        },
+        "remote-key": {
+          "ShortUUID": "000000E1",
+          "MinValue": 0,
+          "Format": "uint8",
+          "LocalizationKey": "",
+          "DefaultDescription": "Remote Key",
+          "Properties": 4,
+          "StepValue": 1,
+          "MaxValue": 16
+        },
+        "power-mode-selection": {
+          "ShortUUID": "000000DF",
+          "MinValue": 0,
+          "Format": "uint8",
+          "LocalizationKey": "",
+          "DefaultDescription": "Power Mode Selection",
+          "Properties": 4,
+          "StepValue": 1,
+          "MaxValue": 1
+        },
+        "lock-mechanism.target-state": {
+          "ShortUUID": "0000001E",
+          "MinValue": 0,
+          "Format": "uint8",
+          "LocalizationKey": "",
+          "DefaultDescription": "Lock Target State",
+          "Properties": 23,
+          "StepValue": 1,
+          "MaxValue": 1
+        },
+        "siri-engine-revision": {
+          "DefaultDescription": "Siri Engine Version",
+          "Format": "string",
+          "ShortUUID": "0000025A",
+          "LocalizationKey": "",
+          "Properties": 2
+        },
+        "obstruction-detected": {
+          "DefaultDescription": "Obstruction Detected",
+          "Format": "bool",
+          "ShortUUID": "00000024",
+          "LocalizationKey": "",
+          "Properties": 3
+        },
+        "status-tampered": {
+          "ShortUUID": "0000007A",
+          "MinValue": 0,
+          "Format": "uint8",
+          "LocalizationKey": "",
+          "DefaultDescription": "Status Tampered",
+          "Properties": 3,
+          "StepValue": 1,
+          "MaxValue": 1
+        },
+        "relative-humidity.humidifier-threshold": {
+          "ShortUUID": "000000CA",
+          "MinValue": 0,
+          "Format": "float",
+          "LocalizationKey": "",
+          "DefaultDescription": "Relative Humidity Humidifier Threshold",
+          "Properties": 7,
+          "StepValue": 1,
+          "MaxValue": 100,
+          "Units": "percentage"
+        },
+        "supported-metrics": {
+          "DefaultDescription": "Supported Metrics",
           "Format": "tlv8",
-          "ShortUUID": "00000207",
+          "ShortUUID": "00000271",
+          "LocalizationKey": "",
+          "Properties": 6
+        },
+        "siri-enable": {
+          "ShortUUID": "00000255",
+          "MinValue": 0,
+          "Format": "uint8",
+          "LocalizationKey": "",
+          "DefaultDescription": "Siri Enable",
+          "Properties": 7,
+          "MaxValue": 1
+        },
+        "sleep-interval": {
+          "ShortUUID": "0000023A",
+          "MinValue": 0,
+          "Format": "uint32",
+          "LocalizationKey": "",
+          "DefaultDescription": "Sleep Interval",
+          "StepValue": 1,
+          "Properties": 3
+        },
+        "siri-light-on-use": {
+          "ShortUUID": "00000258",
+          "MinValue": 0,
+          "Format": "uint8",
+          "LocalizationKey": "",
+          "DefaultDescription": "Siri Light On Use",
+          "Properties": 7,
+          "MaxValue": 1
+        },
+        "metrics-buffer-full-state": {
+          "DefaultDescription": "Metrics Buffer Full State",
+          "Format": "bool",
+          "ShortUUID": "00000272",
+          "LocalizationKey": "",
+          "Properties": 3
+        },
+        "matter-firmware-update-status": {
+          "DefaultDescription": "Matter Firmware Update Status",
+          "Format": "tlv8",
+          "ShortUUID": "0000026E",
+          "LocalizationKey": "",
+          "Properties": 3
+        },
+        "network-access-violation-control": {
+          "DefaultDescription": "Network Access Violation Control",
+          "Format": "tlv8",
+          "ShortUUID": "0000021F",
+          "LocalizationKey": "",
+          "Properties": 167
+        },
+        "firmware-update-readiness": {
+          "DefaultDescription": "Firmware Update Readiness",
+          "Format": "tlv8",
+          "ShortUUID": "00000234",
+          "LocalizationKey": "",
+          "Properties": 3
+        },
+        "security-system-state.target": {
+          "ShortUUID": "00000067",
+          "MinValue": 0,
+          "Format": "uint8",
+          "LocalizationKey": "",
+          "DefaultDescription": "Security System Target State",
+          "Properties": 7,
+          "StepValue": 1,
+          "MaxValue": 3
+        },
+        "nfc-access-supported-configuration": {
+          "DefaultDescription": "NFC Access Supported Configuration",
+          "Format": "tlv8",
+          "ShortUUID": "00000265",
+          "LocalizationKey": "",
+          "Properties": 2
+        },
+        "event-retransmission-maximum": {
+          "DefaultDescription": "Event Retransmission Maximum",
+          "Format": "uint8",
+          "ShortUUID": "0000023D",
+          "LocalizationKey": "",
+          "Properties": 2
+        },
+        "tap-type": {
+          "DefaultDescription": "Tap Type",
+          "Format": "uint16",
+          "ShortUUID": "0000022F",
+          "LocalizationKey": "",
+          "Properties": 2
+        },
+        "setup-data-stream-transport": {
+          "DefaultDescription": "Setup Data Stream Transport",
+          "Format": "tlv8",
+          "ShortUUID": "00000131",
+          "LocalizationKey": "",
+          "Properties": 6
+        },
+        "motion-detected": {
+          "DefaultDescription": "Motion Detected",
+          "Format": "bool",
+          "ShortUUID": "00000022",
+          "LocalizationKey": "",
+          "Properties": 3
+        },
+        "heart-beat": {
+          "DefaultDescription": "Heart Beat",
+          "Format": "uint32",
+          "ShortUUID": "0000024A",
+          "LocalizationKey": "",
+          "Properties": 3
+        },
+        "input-source-type": {
+          "ShortUUID": "000000DB",
+          "MinValue": 0,
+          "Format": "uint8",
+          "LocalizationKey": "",
+          "DefaultDescription": "Input Source Type",
+          "Properties": 3,
+          "StepValue": 1,
+          "MaxValue": 10
+        },
+        "occupancy-detected": {
+          "ShortUUID": "00000071",
+          "MinValue": 0,
+          "Format": "uint8",
+          "LocalizationKey": "",
+          "DefaultDescription": "Occupancy Detected",
+          "Properties": 3,
+          "StepValue": 1,
+          "MaxValue": 1
+        },
+        "setup-transfer-transport": {
+          "DefaultDescription": "Setup Transfer Transport",
+          "Format": "tlv8",
+          "ShortUUID": "00000201",
+          "LocalizationKey": "",
+          "Properties": 132
+        },
+        "security-system.alarm-type": {
+          "ShortUUID": "0000008E",
+          "MinValue": 0,
+          "Format": "uint8",
+          "LocalizationKey": "",
+          "DefaultDescription": "Security System Alarm Type",
+          "Properties": 3,
+          "StepValue": 1,
+          "MaxValue": 1
+        },
+        "picture-mode": {
+          "ShortUUID": "000000E2",
+          "MinValue": 0,
+          "Format": "uint8",
+          "LocalizationKey": "",
+          "DefaultDescription": "Picture Mode",
+          "Properties": 7,
+          "StepValue": 1,
+          "MaxValue": 13
+        },
+        "valve-type": {
+          "ShortUUID": "000000D5",
+          "MinValue": 0,
+          "Format": "uint8",
+          "LocalizationKey": "",
+          "DefaultDescription": "Valve Type",
+          "Properties": 3,
+          "StepValue": 1,
+          "MaxValue": 3
+        },
+        "lock-management.auto-secure-timeout": {
+          "Properties": 7,
+          "DefaultDescription": "Lock Management Auto Security Timeout",
+          "Format": "uint32",
+          "ShortUUID": "0000001A",
+          "Units": "seconds",
+          "LocalizationKey": ""
+        },
+        "horizontal-tilt.target": {
+          "ShortUUID": "0000007B",
+          "MinValue": -90,
+          "Format": "int",
+          "LocalizationKey": "",
+          "DefaultDescription": "Target Horizontal Tilt Angle",
+          "Properties": 7,
+          "StepValue": 1,
+          "MaxValue": 90,
+          "Units": "arcdegrees"
+        },
+        "button-event": {
+          "DefaultDescription": "Button Event",
+          "Format": "tlv8",
+          "ShortUUID": "00000126",
+          "LocalizationKey": "",
+          "Properties": 3
+        },
+        "sleep-discovery-mode": {
+          "ShortUUID": "000000E8",
+          "MinValue": 0,
+          "Format": "uint8",
+          "LocalizationKey": "",
+          "DefaultDescription": "Sleep Discovery Mode",
+          "Properties": 3,
+          "StepValue": 1,
+          "MaxValue": 1
+        },
+        "input-device-type": {
+          "ShortUUID": "000000DC",
+          "MinValue": 0,
+          "Format": "uint8",
+          "LocalizationKey": "",
+          "DefaultDescription": "Input Device Type",
+          "Properties": 3,
+          "StepValue": 1,
+          "MaxValue": 6
+        },
+        "target-list": {
+          "DefaultDescription": "Target List Configuration",
+          "Format": "tlv8",
+          "ShortUUID": "00000124",
+          "LocalizationKey": "",
+          "Properties": 134
+        },
+        "privilege": {
+          "ShortUUID": "000000E5",
+          "MinValue": 0,
+          "Format": "uint16",
+          "LocalizationKey": "",
+          "DefaultDescription": "Access Control Level",
+          "Properties": 7,
+          "StepValue": 1,
+          "MaxValue": 2
+        },
+        "manufacturer": {
+          "DefaultDescription": "Manufacturer",
+          "MaxLength": 64,
+          "Format": "string",
+          "ShortUUID": "00000020",
+          "LocalizationKey": "",
+          "Properties": 2
+        },
+        "door-state.current": {
+          "ShortUUID": "0000000E",
+          "MinValue": 0,
+          "Format": "uint8",
+          "LocalizationKey": "",
+          "DefaultDescription": "Current Door State",
+          "Properties": 3,
+          "StepValue": 1,
+          "MaxValue": 4
+        },
+        "rssi": {
+          "DefaultDescription": "Received Signal Strength Indication",
+          "Format": "int",
+          "ShortUUID": "0000023F",
+          "LocalizationKey": "",
+          "Properties": 2
+        },
+        "firmware.matter-revision-number": {
+          "DefaultDescription": "Matter Firmware Revision Number",
+          "Format": "uint32",
+          "ShortUUID": "0000026D",
+          "LocalizationKey": "",
+          "Properties": 3
+        },
+        "filter.change-indication": {
+          "ShortUUID": "000000AC",
+          "MinValue": 0,
+          "Format": "uint8",
+          "LocalizationKey": "",
+          "DefaultDescription": "Filter Change indication",
+          "Properties": 3,
+          "StepValue": 1,
+          "MaxValue": 1
+        },
+        "slat.state.current": {
+          "ShortUUID": "000000AA",
+          "MinValue": 0,
+          "Format": "uint8",
+          "LocalizationKey": "",
+          "DefaultDescription": "Current Slat State",
+          "Properties": 3,
+          "StepValue": 1,
+          "MaxValue": 3
+        },
+        "supported-sleep-configuration": {
+          "DefaultDescription": "Supported Sleep Configuration",
+          "Format": "tlv8",
+          "ShortUUID": "00000251",
+          "LocalizationKey": "",
+          "Properties": 2
+        },
+        "firmware.revision": {
+          "DefaultDescription": "Firmware Revision",
+          "Format": "string",
+          "ShortUUID": "00000052",
+          "LocalizationKey": "",
+          "Properties": 2
+        },
+        "set-duration": {
+          "ShortUUID": "000000D3",
+          "MinValue": 0,
+          "Format": "uint32",
+          "LocalizationKey": "",
+          "DefaultDescription": "Set Duration",
+          "Properties": 7,
+          "StepValue": 1,
+          "MaxValue": 3600,
+          "Units": "seconds"
+        },
+        "mac-retransmission-maximum": {
+          "DefaultDescription": "MAC Retransmission Maximum",
+          "Format": "uint8",
+          "ShortUUID": "00000247",
+          "LocalizationKey": "",
+          "Properties": 2
+        },
+        "third-party-camera-active": {
+          "DefaultDescription": "Third Party Camera Active",
+          "Format": "bool",
+          "ShortUUID": "0000021C",
+          "LocalizationKey": "",
+          "Properties": 3
+        },
+        "color-temperature": {
+          "ShortUUID": "000000CE",
+          "MinValue": 140,
+          "Format": "int",
+          "LocalizationKey": "",
+          "DefaultDescription": "Color Temperature",
+          "Properties": 7,
+          "StepValue": 1,
+          "MaxValue": 500
+        },
+        "supported-audio-stream-configuration": {
+          "DefaultDescription": "Supported Audio Stream Configuration",
+          "Format": "tlv8",
+          "ShortUUID": "00000115",
+          "LocalizationKey": "",
+          "Properties": 2
+        },
+        "hardware-finish": {
+          "DefaultDescription": "Hardware Finish",
+          "Format": "tlv8",
+          "ShortUUID": "0000026C",
+          "LocalizationKey": "",
+          "Properties": 2
+        },
+        "air-purifier.state.current": {
+          "ShortUUID": "000000A9",
+          "MinValue": 0,
+          "Format": "uint8",
+          "LocalizationKey": "",
+          "DefaultDescription": "Current Air Purifier State",
+          "Properties": 3,
+          "StepValue": 1,
+          "MaxValue": 2
+        },
+        "configured-name": {
+          "DefaultDescription": "Configured Name",
+          "Format": "string",
+          "ShortUUID": "000000E3",
           "LocalizationKey": "",
           "Properties": 3
         },
@@ -1091,678 +2783,23 @@
           "StepValue": 1,
           "MaxValue": 1
         },
-        "heating-cooling.current": {
-          "ShortUUID": "0000000F",
-          "MinValue": 0,
-          "Format": "uint8",
-          "LocalizationKey": "",
-          "DefaultDescription": "Current Heating Cooling State",
-          "Properties": 3,
-          "StepValue": 1,
-          "MaxValue": 2
-        },
-        "accessory-flags": {
-          "DefaultDescription": "Accessory Flags",
+        "supported-diagnostics-modes": {
+          "DefaultDescription": "Supported Diagnostics Modes",
           "Format": "uint32",
-          "ShortUUID": "000000A6",
-          "LocalizationKey": "",
-          "Properties": 3
-        },
-        "motion-detected": {
-          "DefaultDescription": "Motion Detected",
-          "Format": "bool",
-          "ShortUUID": "00000022",
-          "LocalizationKey": "",
-          "Properties": 3
-        },
-        "camera-operating-mode-indicator": {
-          "DefaultDescription": "Camera Operating Mode Indicator",
-          "Format": "bool",
-          "ShortUUID": "0000021D",
-          "LocalizationKey": "",
-          "Properties": 39
-        },
-        "periodic-snapshots-active": {
-          "DefaultDescription": "Periodic Snapshots Active",
-          "Format": "bool",
-          "ShortUUID": "00000225",
-          "LocalizationKey": "",
-          "Properties": 39
-        },
-        "service-label-index": {
-          "ShortUUID": "000000CB",
-          "MinValue": 1,
-          "Format": "uint8",
-          "LocalizationKey": "",
-          "DefaultDescription": "Label Index",
-          "Properties": 2,
-          "StepValue": 1,
-          "MaxValue": 255
-        },
-        "lock-mechanism.target-state": {
-          "ShortUUID": "0000001E",
-          "MinValue": 0,
-          "Format": "uint8",
-          "LocalizationKey": "",
-          "DefaultDescription": "Lock Target State",
-          "Properties": 23,
-          "StepValue": 1,
-          "MaxValue": 1
-        },
-        "accessory.identifier": {
-          "DefaultDescription": "Accessory Identifier",
-          "Format": "string",
-          "ShortUUID": "00000057",
+          "ShortUUID": "0000024C",
           "LocalizationKey": "",
           "Properties": 2
         },
-        "app-matching-identifier": {
-          "DefaultDescription": "Application Matching Identifier",
-          "Format": "tlv8",
-          "ShortUUID": "000000A4",
-          "LocalizationKey": "",
-          "Properties": 2
-        },
-        "list-pairings": {
-          "DefaultDescription": "List Pairings",
-          "Format": "tlv8",
-          "ShortUUID": "00000050",
-          "LocalizationKey": "",
-          "Properties": 6
-        },
-        "siri-listening": {
-          "ShortUUID": "00000256",
-          "MinValue": 0,
-          "Format": "uint8",
-          "LocalizationKey": "",
-          "DefaultDescription": "Siri Listening",
-          "Properties": 7,
-          "MaxValue": 1
-        },
-        "product-data": {
-          "DefaultDescription": "Product Data",
-          "Format": "data",
-          "ShortUUID": "00000220",
-          "LocalizationKey": "",
-          "Properties": 2
-        },
-        "water-level": {
-          "ShortUUID": "000000B5",
+        "density.voc": {
+          "ShortUUID": "000000C8",
           "MinValue": 0,
           "Format": "float",
           "LocalizationKey": "",
-          "DefaultDescription": "Current Water Level",
-          "Properties": 3,
-          "StepValue": 1,
-          "MaxValue": 100,
-          "Units": "percentage"
-        },
-        "wifi-satellite-status": {
-          "ShortUUID": "0000021E",
-          "MinValue": 0,
-          "Format": "uint8",
-          "LocalizationKey": "",
-          "DefaultDescription": "Wi-Fi Satellite Status",
-          "Properties": 3,
-          "MaxValue": 2
-        },
-        "model": {
-          "DefaultDescription": "Model",
-          "MaxLength": 64,
-          "Format": "string",
-          "ShortUUID": "00000021",
-          "LocalizationKey": "",
-          "Properties": 2
-        },
-        "heater-cooler.state.target": {
-          "ShortUUID": "000000B2",
-          "MinValue": 0,
-          "Format": "uint8",
-          "LocalizationKey": "",
-          "DefaultDescription": "Target Heater-Cooler State",
-          "Properties": 7,
-          "StepValue": 1,
-          "MaxValue": 2
-        },
-        "media-state.target": {
-          "ShortUUID": "00000137",
-          "MinValue": 0,
-          "Format": "uint8",
-          "LocalizationKey": "",
-          "DefaultDescription": "Target Media State",
-          "Properties": 7,
-          "StepValue": 1,
-          "MaxValue": 2
-        },
-        "router-status": {
-          "ShortUUID": "0000020E",
-          "MinValue": 0,
-          "Format": "uint8",
-          "LocalizationKey": "",
-          "DefaultDescription": "Router Status",
-          "Properties": 3,
-          "MaxValue": 1
-        },
-        "power-mode-selection": {
-          "ShortUUID": "000000DF",
-          "MinValue": 0,
-          "Format": "uint8",
-          "LocalizationKey": "",
-          "DefaultDescription": "Power Mode Selection",
-          "Properties": 4,
-          "StepValue": 1,
-          "MaxValue": 1
-        },
-        "battery-level": {
-          "ShortUUID": "00000068",
-          "MinValue": 0,
-          "Format": "uint8",
-          "LocalizationKey": "",
-          "DefaultDescription": "Battery Level",
-          "Properties": 3,
-          "StepValue": 1,
-          "MaxValue": 100,
-          "Units": "percentage"
-        },
-        "firmware-update-status": {
-          "DefaultDescription": "Firmware Update Status",
-          "Format": "tlv8",
-          "ShortUUID": "00000235",
-          "LocalizationKey": "",
-          "Properties": 3
-        },
-        "setup-stream-endpoint": {
-          "DefaultDescription": "Setup Endpoint",
-          "Format": "tlv8",
-          "ShortUUID": "00000118",
-          "LocalizationKey": "",
-          "Properties": 6
-        },
-        "input-device-type": {
-          "ShortUUID": "000000DC",
-          "MinValue": 0,
-          "Format": "uint8",
-          "LocalizationKey": "",
-          "DefaultDescription": "Input Device Type",
-          "Properties": 3,
-          "StepValue": 1,
-          "MaxValue": 6
-        },
-        "carbon-dioxide.level": {
-          "ShortUUID": "00000093",
-          "MinValue": 0,
-          "Format": "float",
-          "LocalizationKey": "",
-          "DefaultDescription": "Carbon dioxide Level",
-          "Properties": 3,
-          "StepValue": 1,
-          "MaxValue": 100000,
-          "Units": "ppm"
-        },
-        "streaming-status": {
-          "DefaultDescription": "Streaming Status",
-          "Format": "tlv8",
-          "ShortUUID": "00000120",
-          "LocalizationKey": "",
-          "Properties": 3
-        },
-        "lock-mechanism.last-known-action": {
-          "ShortUUID": "0000001C",
-          "MinValue": 0,
-          "Format": "uint8",
-          "LocalizationKey": "",
-          "DefaultDescription": "Lock Last Known Action",
-          "Properties": 3,
-          "StepValue": 1,
-          "MaxValue": 8
-        },
-        "density.pm2_5": {
-          "ShortUUID": "000000C6",
-          "MinValue": 0,
-          "Format": "float",
-          "LocalizationKey": "",
-          "DefaultDescription": "PM2.5 Density",
+          "DefaultDescription": "Volatile Organic Compound Density",
           "Properties": 3,
           "StepValue": 1,
           "MaxValue": 1000,
           "Units": "micrograms/m^3"
-        },
-        "air-purifier.state.current": {
-          "ShortUUID": "000000A9",
-          "MinValue": 0,
-          "Format": "uint8",
-          "LocalizationKey": "",
-          "DefaultDescription": "Current Air Purifier State",
-          "Properties": 3,
-          "StepValue": 1,
-          "MaxValue": 2
-        },
-        "video-analysis-active": {
-          "DefaultDescription": "Video Analysis Active",
-          "Format": "uint8",
-          "ShortUUID": "00000229",
-          "LocalizationKey": "",
-          "Properties": 7
-        },
-        "slat.state.current": {
-          "ShortUUID": "000000AA",
-          "MinValue": 0,
-          "Format": "uint8",
-          "LocalizationKey": "",
-          "DefaultDescription": "Current Slat State",
-          "Properties": 3,
-          "StepValue": 1,
-          "MaxValue": 3
-        },
-        "asset-update-readiness": {
-          "DefaultDescription": "Asset Update Readiness",
-          "Format": "uint32",
-          "ShortUUID": "00000269",
-          "LocalizationKey": "",
-          "Properties": 3
-        },
-        "button-event": {
-          "DefaultDescription": "Button Event",
-          "Format": "tlv8",
-          "ShortUUID": "00000126",
-          "LocalizationKey": "",
-          "Properties": 3
-        },
-        "carbon-monoxide.peak-level": {
-          "ShortUUID": "00000091",
-          "MinValue": 0,
-          "Format": "float",
-          "LocalizationKey": "",
-          "DefaultDescription": "Carbon monoxide Peak Level",
-          "Properties": 3,
-          "StepValue": 1,
-          "MaxValue": 100,
-          "Units": "ppm"
-        },
-        "air-particulate.density": {
-          "ShortUUID": "00000064",
-          "MinValue": 0,
-          "Format": "float",
-          "LocalizationKey": "",
-          "DefaultDescription": "Air Particulate Density",
-          "Properties": 3,
-          "MaxValue": 1000,
-          "Units": "micrograms/m^3"
-        },
-        "supported-characteristic-value-transition-configuration": {
-          "DefaultDescription": "Supported Characteristic Value Transition Configuration",
-          "Format": "tlv8",
-          "ShortUUID": "00000144",
-          "LocalizationKey": "",
-          "Properties": 2
-        },
-        "selected-stream-configuration": {
-          "DefaultDescription": "Selected Stream Configuration",
-          "Format": "tlv8",
-          "ShortUUID": "00000117",
-          "LocalizationKey": "",
-          "Properties": 6
-        },
-        "humidifier-dehumidifier.state.target": {
-          "ShortUUID": "000000B4",
-          "MinValue": 0,
-          "Format": "uint8",
-          "LocalizationKey": "",
-          "DefaultDescription": "Target Humidifier-Dehumidifier State",
-          "Properties": 7,
-          "StepValue": 1,
-          "MaxValue": 2
-        },
-        "airplay-enable": {
-          "ShortUUID": "0000025B",
-          "MinValue": 0,
-          "Format": "uint8",
-          "LocalizationKey": "",
-          "DefaultDescription": "AirPlay Enable",
-          "Properties": 7,
-          "MaxValue": 1
-        },
-        "heart-beat": {
-          "DefaultDescription": "Heart Beat",
-          "Format": "uint32",
-          "ShortUUID": "0000024A",
-          "LocalizationKey": "",
-          "Properties": 3
-        },
-        "sleep-interval": {
-          "ShortUUID": "0000023A",
-          "MinValue": 0,
-          "Format": "uint32",
-          "LocalizationKey": "",
-          "DefaultDescription": "Sleep Interval",
-          "StepValue": 1,
-          "Properties": 3
-        },
-        "pair-verify": {
-          "DefaultDescription": "Pair Verify",
-          "Format": "tlv8",
-          "ShortUUID": "0000004E",
-          "LocalizationKey": "",
-          "Properties": 6
-        },
-        "supported-video-stream-configuration": {
-          "DefaultDescription": "Supported Video Stream Configuration",
-          "Format": "tlv8",
-          "ShortUUID": "00000114",
-          "LocalizationKey": "",
-          "Properties": 2
-        },
-        "tilt.current": {
-          "ShortUUID": "000000C1",
-          "MinValue": -90,
-          "Format": "int",
-          "LocalizationKey": "",
-          "DefaultDescription": "Current Tilt Angle",
-          "Properties": 3,
-          "StepValue": 1,
-          "MaxValue": 90,
-          "Units": "arcdegrees"
-        },
-        "supported-audio-stream-configuration": {
-          "DefaultDescription": "Supported Audio Stream Configuration",
-          "Format": "tlv8",
-          "ShortUUID": "00000115",
-          "LocalizationKey": "",
-          "Properties": 2
-        },
-        "lock-management.control-point": {
-          "DefaultDescription": "Lock Control Point",
-          "Format": "tlv8",
-          "ShortUUID": "00000019",
-          "LocalizationKey": "",
-          "Properties": 4
-        },
-        "hardware.revision": {
-          "DefaultDescription": "Hardware Revision",
-          "Format": "string",
-          "ShortUUID": "00000053",
-          "LocalizationKey": "",
-          "Properties": 2
-        },
-        "transmit-power": {
-          "DefaultDescription": "Transmit Power",
-          "Format": "int",
-          "ShortUUID": "00000242",
-          "LocalizationKey": "",
-          "Properties": 2
-        },
-        "density.ozone": {
-          "ShortUUID": "000000C3",
-          "MinValue": 0,
-          "Format": "float",
-          "LocalizationKey": "",
-          "DefaultDescription": "Ozone Density",
-          "Properties": 3,
-          "StepValue": 1,
-          "MaxValue": 1000,
-          "Units": "micrograms/m^3"
-        },
-        "brightness": {
-          "ShortUUID": "00000008",
-          "MinValue": 0,
-          "Format": "int",
-          "LocalizationKey": "",
-          "DefaultDescription": "Brightness",
-          "Properties": 7,
-          "StepValue": 1,
-          "MaxValue": 100,
-          "Units": "percentage"
-        },
-        "humidifier-dehumidifier.state.current": {
-          "ShortUUID": "000000B3",
-          "MinValue": 0,
-          "Format": "uint8",
-          "LocalizationKey": "",
-          "DefaultDescription": "Current Humidifier-Dehumidifier State",
-          "Properties": 3,
-          "StepValue": 1,
-          "MaxValue": 3
-        },
-        "carbon-monoxide.detected": {
-          "ShortUUID": "00000069",
-          "MinValue": 0,
-          "Format": "uint8",
-          "LocalizationKey": "",
-          "DefaultDescription": "Carbon monoxide Detected",
-          "Properties": 3,
-          "StepValue": 1,
-          "MaxValue": 1
-        },
-        "network-access-violation-control": {
-          "DefaultDescription": "Network Access Violation Control",
-          "Format": "tlv8",
-          "ShortUUID": "0000021F",
-          "LocalizationKey": "",
-          "Properties": 167
-        },
-        "data-stream-hap-transport": {
-          "DefaultDescription": "Data Stream HAP Transport",
-          "Format": "tlv8",
-          "ShortUUID": "00000138",
-          "LocalizationKey": "",
-          "Properties": 6
-        },
-        "door-state.current": {
-          "ShortUUID": "0000000E",
-          "MinValue": 0,
-          "Format": "uint8",
-          "LocalizationKey": "",
-          "DefaultDescription": "Current Door State",
-          "Properties": 3,
-          "StepValue": 1,
-          "MaxValue": 4
-        },
-        "pairing-features": {
-          "DefaultDescription": "Pairing Features",
-          "Format": "uint8",
-          "ShortUUID": "0000004F",
-          "LocalizationKey": "",
-          "Properties": 6
-        },
-        "cca-energy-detect-threshold": {
-          "DefaultDescription": "CCA Energy Detect Threshold",
-          "Format": "int",
-          "ShortUUID": "00000246",
-          "LocalizationKey": "",
-          "Properties": 2
-        },
-        "filter.life-level": {
-          "ShortUUID": "000000AB",
-          "MinValue": 0,
-          "Format": "float",
-          "LocalizationKey": "",
-          "DefaultDescription": "Filter Life Level",
-          "Properties": 3,
-          "StepValue": 1,
-          "MaxValue": 100
-        },
-        "selected-audio-stream-configuration": {
-          "DefaultDescription": "Selected Audio Stream Configuration",
-          "Format": "tlv8",
-          "ShortUUID": "00000128",
-          "LocalizationKey": "",
-          "Properties": 6
-        },
-        "density.pm10": {
-          "ShortUUID": "000000C7",
-          "MinValue": 0,
-          "Format": "float",
-          "LocalizationKey": "",
-          "DefaultDescription": "PM10 Density",
-          "Properties": 3,
-          "StepValue": 1,
-          "MaxValue": 1000,
-          "Units": "micrograms/m^3"
-        },
-        "volume-selector": {
-          "ShortUUID": "000000EA",
-          "MinValue": 0,
-          "Format": "uint8",
-          "LocalizationKey": "",
-          "DefaultDescription": "Volume Selector",
-          "Properties": 4,
-          "StepValue": 1,
-          "MaxValue": 1
-        },
-        "version": {
-          "DefaultDescription": "Version",
-          "MaxLength": 64,
-          "Format": "string",
-          "ShortUUID": "00000037",
-          "LocalizationKey": "",
-          "Properties": 3
-        },
-        "administrator-only-access": {
-          "DefaultDescription": "Administrator Only Access",
-          "Format": "bool",
-          "ShortUUID": "00000001",
-          "LocalizationKey": "",
-          "Properties": 7
-        },
-        "configuration-state": {
-          "DefaultDescription": "Configuration State",
-          "Format": "uint16",
-          "ShortUUID": "00000263",
-          "LocalizationKey": "",
-          "Properties": 3
-        },
-        "setup-transfer-transport": {
-          "DefaultDescription": "Setup Transfer Transport",
-          "Format": "tlv8",
-          "ShortUUID": "00000201",
-          "LocalizationKey": "",
-          "Properties": 132
-        },
-        "thread-control-point": {
-          "DefaultDescription": "Thread Control Point",
-          "Format": "tlv8",
-          "ShortUUID": "00000704",
-          "LocalizationKey": "",
-          "Properties": 4
-        },
-        "identifier": {
-          "DefaultDescription": "Identifier",
-          "MinValue": 0,
-          "Format": "uint32",
-          "ShortUUID": "000000E6",
-          "LocalizationKey": "",
-          "Properties": 2
-        },
-        "firmware.revision": {
-          "DefaultDescription": "Firmware Revision",
-          "Format": "string",
-          "ShortUUID": "00000052",
-          "LocalizationKey": "",
-          "Properties": 2
-        },
-        "carbon-dioxide.peak-level": {
-          "ShortUUID": "00000094",
-          "MinValue": 0,
-          "Format": "float",
-          "LocalizationKey": "",
-          "DefaultDescription": "Carbon dioxide Peak Level",
-          "Properties": 3,
-          "StepValue": 1,
-          "MaxValue": 100000,
-          "Units": "ppm"
-        },
-        "carbon-monoxide.level": {
-          "ShortUUID": "00000090",
-          "MinValue": 0,
-          "Format": "float",
-          "LocalizationKey": "",
-          "DefaultDescription": "Carbon monoxide Level",
-          "Properties": 3,
-          "StepValue": 1,
-          "MaxValue": 100,
-          "Units": "ppm"
-        },
-        "target-list": {
-          "DefaultDescription": "Target List Configuration",
-          "Format": "tlv8",
-          "ShortUUID": "00000124",
-          "LocalizationKey": "",
-          "Properties": 134
-        },
-        "network-client-status-control": {
-          "DefaultDescription": "Network Client Status Control",
-          "Format": "tlv8",
-          "ShortUUID": "0000020D",
-          "LocalizationKey": "",
-          "Properties": 134
-        },
-        "valve-type": {
-          "ShortUUID": "000000D5",
-          "MinValue": 0,
-          "Format": "uint8",
-          "LocalizationKey": "",
-          "DefaultDescription": "Valve Type",
-          "Properties": 3,
-          "StepValue": 1,
-          "MaxValue": 3
-        },
-        "mac-retransmission-maximum": {
-          "DefaultDescription": "MAC Retransmission Maximum",
-          "Format": "uint8",
-          "ShortUUID": "00000247",
-          "LocalizationKey": "",
-          "Properties": 2
-        },
-        "configured-name": {
-          "DefaultDescription": "Configured Name",
-          "Format": "string",
-          "ShortUUID": "000000E3",
-          "LocalizationKey": "",
-          "Properties": 3
-        },
-        "network-client-control": {
-          "DefaultDescription": "Network Client Control",
-          "Format": "tlv8",
-          "ShortUUID": "0000020C",
-          "LocalizationKey": "",
-          "Properties": 167
-        },
-        "heating-cooling.target": {
-          "ShortUUID": "00000033",
-          "MinValue": 0,
-          "Format": "uint8",
-          "LocalizationKey": "",
-          "DefaultDescription": "Target Heating Cooling State",
-          "Properties": 7,
-          "StepValue": 1,
-          "MaxValue": 3
-        },
-        "lock-physical-controls": {
-          "ShortUUID": "000000A7",
-          "MinValue": 0,
-          "Format": "uint8",
-          "LocalizationKey": "",
-          "DefaultDescription": "Lock Physical Controls",
-          "Properties": 7,
-          "StepValue": 1,
-          "MaxValue": 1
-        },
-        "third-party-camera-active": {
-          "DefaultDescription": "Third Party Camera Active",
-          "Format": "bool",
-          "ShortUUID": "0000021C",
-          "LocalizationKey": "",
-          "Properties": 3
-        },
-        "filter.reset-indication": {
-          "ShortUUID": "000000AD",
-          "MinValue": 1,
-          "Format": "uint8",
-          "LocalizationKey": "",
-          "DefaultDescription": "Filter Reset Change Indication",
-          "Properties": 4,
-          "StepValue": 1,
-          "MaxValue": 1
         },
         "air-quality": {
           "ShortUUID": "00000095",
@@ -1773,451 +2810,6 @@
           "Properties": 3,
           "StepValue": 1,
           "MaxValue": 5
-        },
-        "density.no2": {
-          "ShortUUID": "000000C4",
-          "MinValue": 0,
-          "Format": "float",
-          "LocalizationKey": "",
-          "DefaultDescription": "Nitrogen dioxide Density",
-          "Properties": 3,
-          "StepValue": 1,
-          "MaxValue": 1000,
-          "Units": "micrograms/m^3"
-        },
-        "supported-data-stream-transport-configuration": {
-          "DefaultDescription": "Supported Data Stream Transport Configuration",
-          "Format": "tlv8",
-          "ShortUUID": "00000130",
-          "LocalizationKey": "",
-          "Properties": 2
-        },
-        "position.target": {
-          "ShortUUID": "0000007C",
-          "MinValue": 0,
-          "Format": "uint8",
-          "LocalizationKey": "",
-          "DefaultDescription": "Target Position",
-          "Properties": 7,
-          "StepValue": 1,
-          "MaxValue": 100,
-          "Units": "percentage"
-        },
-        "image-rotation": {
-          "ShortUUID": "0000011E",
-          "MinValue": 0,
-          "Format": "int",
-          "LocalizationKey": "",
-          "DefaultDescription": "Image Rotation",
-          "Properties": 7,
-          "StepValue": 1,
-          "MaxValue": 360,
-          "Units": "arcdegrees"
-        },
-        "cloud-relay.current-state": {
-          "ShortUUID": "0000005C",
-          "MinValue": 0,
-          "Format": "uint8",
-          "LocalizationKey": "",
-          "DefaultDescription": "Cloud Relay Current State",
-          "Properties": 3,
-          "StepValue": 1,
-          "MaxValue": 5
-        },
-        "status-jammed": {
-          "ShortUUID": "00000078",
-          "MinValue": 0,
-          "Format": "uint8",
-          "LocalizationKey": "",
-          "DefaultDescription": "Status Jammed",
-          "Properties": 3,
-          "StepValue": 1,
-          "MaxValue": 1
-        },
-        "vertical-tilt.target": {
-          "ShortUUID": "0000007D",
-          "MinValue": -90,
-          "Format": "int",
-          "LocalizationKey": "",
-          "DefaultDescription": "Target Vertical Tilt Angle",
-          "Properties": 7,
-          "StepValue": 1,
-          "MaxValue": 90,
-          "Units": "arcdegrees"
-        },
-        "picture-mode": {
-          "ShortUUID": "000000E2",
-          "MinValue": 0,
-          "Format": "uint8",
-          "LocalizationKey": "",
-          "DefaultDescription": "Picture Mode",
-          "Properties": 7,
-          "StepValue": 1,
-          "MaxValue": 13
-        },
-        "input-event": {
-          "ShortUUID": "00000073",
-          "MinValue": 0,
-          "Format": "uint8",
-          "LocalizationKey": "",
-          "DefaultDescription": "Programmable Switch Event",
-          "Properties": 3,
-          "StepValue": 1,
-          "MaxValue": 2
-        },
-        "selected-diagnostics-modes": {
-          "DefaultDescription": "Selected Diagnostics Modes",
-          "Format": "uint32",
-          "ShortUUID": "0000024D",
-          "LocalizationKey": "",
-          "Properties": 6
-        },
-        "identify": {
-          "DefaultDescription": "Identify",
-          "Format": "bool",
-          "ShortUUID": "00000014",
-          "LocalizationKey": "",
-          "Properties": 4
-        },
-        "outlet-in-use": {
-          "DefaultDescription": "Outlet In Use",
-          "Format": "bool",
-          "ShortUUID": "00000026",
-          "LocalizationKey": "",
-          "Properties": 3
-        },
-        "service-label-namespace": {
-          "ShortUUID": "000000CD",
-          "MinValue": 0,
-          "Format": "uint8",
-          "LocalizationKey": "",
-          "DefaultDescription": "Label Namespace",
-          "Properties": 2,
-          "StepValue": 1,
-          "MaxValue": 4
-        },
-        "leak-detected": {
-          "ShortUUID": "00000070",
-          "MinValue": 0,
-          "Format": "uint8",
-          "LocalizationKey": "",
-          "DefaultDescription": "Leak Detected",
-          "Properties": 3,
-          "StepValue": 1,
-          "MaxValue": 1
-        },
-        "lock-mechanism.current-state": {
-          "ShortUUID": "0000001D",
-          "MinValue": 0,
-          "Format": "uint8",
-          "LocalizationKey": "",
-          "DefaultDescription": "Lock Current State",
-          "Properties": 3,
-          "StepValue": 1,
-          "MaxValue": 3
-        },
-        "media-state.current": {
-          "ShortUUID": "000000E0",
-          "MinValue": 0,
-          "Format": "uint8",
-          "LocalizationKey": "",
-          "DefaultDescription": "Current Media State",
-          "Properties": 3,
-          "StepValue": 1,
-          "MaxValue": 5
-        },
-        "display-order": {
-          "DefaultDescription": "Display Order",
-          "Format": "tlv8",
-          "ShortUUID": "00000136",
-          "LocalizationKey": "",
-          "Properties": 3
-        },
-        "contact-state": {
-          "ShortUUID": "0000006A",
-          "MinValue": 0,
-          "Format": "uint8",
-          "LocalizationKey": "",
-          "DefaultDescription": "Contact Sensor State",
-          "Properties": 3,
-          "StepValue": 1,
-          "MaxValue": 1
-        },
-        "data-stream-hap-transport-interrupt": {
-          "DefaultDescription": "Data Stream HAP Transport Interrupt",
-          "Format": "tlv8",
-          "ShortUUID": "00000139",
-          "LocalizationKey": "",
-          "Properties": 3
-        },
-        "siri-enable": {
-          "ShortUUID": "00000255",
-          "MinValue": 0,
-          "Format": "uint8",
-          "LocalizationKey": "",
-          "DefaultDescription": "Siri Enable",
-          "Properties": 7,
-          "MaxValue": 1
-        },
-        "horizontal-tilt.target": {
-          "ShortUUID": "0000007B",
-          "MinValue": -90,
-          "Format": "int",
-          "LocalizationKey": "",
-          "DefaultDescription": "Target Horizontal Tilt Angle",
-          "Properties": 7,
-          "StepValue": 1,
-          "MaxValue": 90,
-          "Units": "arcdegrees"
-        },
-        "supported-transfer-transport-configuration": {
-          "DefaultDescription": "Supported Transfer Transport Configuration",
-          "Format": "tlv8",
-          "ShortUUID": "00000202",
-          "LocalizationKey": "",
-          "Properties": 2
-        },
-        "relative-humidity.humidifier-threshold": {
-          "ShortUUID": "000000CA",
-          "MinValue": 0,
-          "Format": "float",
-          "LocalizationKey": "",
-          "DefaultDescription": "Relative Humidity Humidifier Threshold",
-          "Properties": 7,
-          "StepValue": 1,
-          "MaxValue": 100,
-          "Units": "percentage"
-        },
-        "position.state": {
-          "ShortUUID": "00000072",
-          "MinValue": 0,
-          "Format": "uint8",
-          "LocalizationKey": "",
-          "DefaultDescription": "Position State",
-          "Properties": 3,
-          "StepValue": 1,
-          "MaxValue": 2
-        },
-        "status-fault": {
-          "ShortUUID": "00000077",
-          "MinValue": 0,
-          "Format": "uint8",
-          "LocalizationKey": "",
-          "DefaultDescription": "Status Fault",
-          "Properties": 3,
-          "StepValue": 1,
-          "MaxValue": 1
-        },
-        "password-setting": {
-          "DefaultDescription": "Password Setting",
-          "Format": "tlv8",
-          "ShortUUID": "000000E4",
-          "LocalizationKey": "",
-          "Properties": 7
-        },
-        "security-system.alarm-type": {
-          "ShortUUID": "0000008E",
-          "MinValue": 0,
-          "Format": "uint8",
-          "LocalizationKey": "",
-          "DefaultDescription": "Security System Alarm Type",
-          "Properties": 3,
-          "StepValue": 1,
-          "MaxValue": 1
-        },
-        "event-retransmission-maximum": {
-          "DefaultDescription": "Event Retransmission Maximum",
-          "Format": "uint8",
-          "ShortUUID": "0000023D",
-          "LocalizationKey": "",
-          "Properties": 2
-        },
-        "cca-signal-detect-threshold": {
-          "DefaultDescription": "CCA Signal Detect Threshold",
-          "Format": "int",
-          "ShortUUID": "00000245",
-          "LocalizationKey": "",
-          "Properties": 2
-        },
-        "supported-diagnostics-modes": {
-          "DefaultDescription": "Supported Diagnostics Modes",
-          "Format": "uint32",
-          "ShortUUID": "0000024C",
-          "LocalizationKey": "",
-          "Properties": 2
-        },
-        "temperature.cooling-threshold": {
-          "ShortUUID": "0000000D",
-          "MinValue": 10,
-          "Format": "float",
-          "LocalizationKey": "",
-          "DefaultDescription": "Cooling Threshold Temperature",
-          "Properties": 7,
-          "StepValue": 0.1,
-          "MaxValue": 35,
-          "Units": "celsius"
-        },
-        "snr": {
-          "DefaultDescription": "Signal-to-noise Ratio",
-          "Format": "int",
-          "ShortUUID": "00000241",
-          "LocalizationKey": "",
-          "Properties": 2
-        },
-        "thread-openthread-version": {
-          "DefaultDescription": "Thread OpenThread Version",
-          "Format": "string",
-          "ShortUUID": "00000706",
-          "LocalizationKey": "",
-          "Properties": 2
-        },
-        "privilege": {
-          "ShortUUID": "000000E5",
-          "MinValue": 0,
-          "Format": "uint16",
-          "LocalizationKey": "",
-          "DefaultDescription": "Access Control Level",
-          "Properties": 7,
-          "StepValue": 1,
-          "MaxValue": 2
-        },
-        "siri-endpoint-session-status": {
-          "DefaultDescription": "Siri Endpoint Session Status",
-          "Format": "tlv8",
-          "ShortUUID": "00000254",
-          "LocalizationKey": "",
-          "Properties": 3
-        },
-        "nfc-access-control-point": {
-          "DefaultDescription": "NFC Access Control Point",
-          "Format": "tlv8",
-          "ShortUUID": "00000264",
-          "LocalizationKey": "",
-          "Properties": 6
-        },
-        "siri-touch-to-use": {
-          "ShortUUID": "00000257",
-          "MinValue": 0,
-          "Format": "uint8",
-          "LocalizationKey": "",
-          "DefaultDescription": "Siri Touch To Use",
-          "Properties": 7,
-          "MaxValue": 1
-        },
-        "transmit-power-maximum": {
-          "DefaultDescription": "Maximum Transmit Power",
-          "Format": "int",
-          "ShortUUID": "00000243",
-          "LocalizationKey": "",
-          "Properties": 2
-        },
-        "serial-number": {
-          "ShortUUID": "00000030",
-          "Format": "string",
-          "LocalizationKey": "",
-          "DefaultDescription": "Serial Number",
-          "MaxLength": 64,
-          "Properties": 2,
-          "MinLength": 1
-        },
-        "visibility-state.target": {
-          "ShortUUID": "00000134",
-          "MinValue": 0,
-          "Format": "uint8",
-          "LocalizationKey": "",
-          "DefaultDescription": "Target Visibility State",
-          "Properties": 7,
-          "StepValue": 1,
-          "MaxValue": 1
-        },
-        "visibility-state.current": {
-          "ShortUUID": "00000135",
-          "MinValue": 0,
-          "Format": "uint8",
-          "LocalizationKey": "",
-          "DefaultDescription": "Current Visibility State",
-          "Properties": 3,
-          "StepValue": 1,
-          "MaxValue": 3
-        },
-        "vertical-tilt.current": {
-          "ShortUUID": "0000006E",
-          "MinValue": -90,
-          "Format": "int",
-          "LocalizationKey": "",
-          "DefaultDescription": "Current Vertical Tilt Angle",
-          "Properties": 3,
-          "StepValue": 1,
-          "MaxValue": 90,
-          "Units": "arcdegrees"
-        },
-        "door-state.target": {
-          "ShortUUID": "00000032",
-          "MinValue": 0,
-          "Format": "uint8",
-          "LocalizationKey": "",
-          "DefaultDescription": "Target Door State",
-          "Properties": 23,
-          "StepValue": 1,
-          "MaxValue": 1
-        },
-        "supported-rtp-configuration": {
-          "DefaultDescription": "Supported RTP Configuration",
-          "Format": "tlv8",
-          "ShortUUID": "00000116",
-          "LocalizationKey": "",
-          "Properties": 2
-        },
-        "heater-cooler.state.current": {
-          "ShortUUID": "000000B1",
-          "MinValue": 0,
-          "Format": "uint8",
-          "LocalizationKey": "",
-          "DefaultDescription": "Current Heater-Cooler State",
-          "Properties": 3,
-          "StepValue": 1,
-          "MaxValue": 3
-        },
-        "fan.state.target": {
-          "ShortUUID": "000000BF",
-          "MinValue": 0,
-          "Format": "uint8",
-          "LocalizationKey": "",
-          "DefaultDescription": "Target Fan State",
-          "Properties": 7,
-          "StepValue": 1,
-          "MaxValue": 1
-        },
-        "status-tampered": {
-          "ShortUUID": "0000007A",
-          "MinValue": 0,
-          "Format": "uint8",
-          "LocalizationKey": "",
-          "DefaultDescription": "Status Tampered",
-          "Properties": 3,
-          "StepValue": 1,
-          "MaxValue": 1
-        },
-        "temperature.target": {
-          "ShortUUID": "00000035",
-          "MinValue": 10,
-          "Format": "float",
-          "LocalizationKey": "",
-          "DefaultDescription": "Target Temperature",
-          "Properties": 7,
-          "StepValue": 0.1,
-          "MaxValue": 38,
-          "Units": "celsius"
-        },
-        "thread-status": {
-          "ShortUUID": "00000703",
-          "MinValue": 0,
-          "Format": "uint16",
-          "LocalizationKey": "",
-          "DefaultDescription": "Thread Status",
-          "Properties": 3,
-          "StepValue": 1,
-          "MaxValue": 6
         },
         "tilt.target": {
           "ShortUUID": "000000C2",
@@ -2230,174 +2822,17 @@
           "MaxValue": 90,
           "Units": "arcdegrees"
         },
-        "status-lo-batt": {
-          "ShortUUID": "00000079",
-          "MinValue": 0,
-          "Format": "uint8",
-          "LocalizationKey": "",
-          "DefaultDescription": "Status Low Battery",
-          "Properties": 3,
-          "StepValue": 1,
-          "MaxValue": 1
-        },
-        "managed-network-enable": {
-          "ShortUUID": "00000215",
-          "MinValue": 0,
-          "Format": "uint8",
-          "LocalizationKey": "",
-          "DefaultDescription": "Managed Network Enable",
-          "Properties": 39,
-          "MaxValue": 1
-        },
-        "air-particulate.size": {
-          "ShortUUID": "00000065",
-          "MinValue": 0,
-          "Format": "uint8",
-          "LocalizationKey": "",
-          "DefaultDescription": "Air Particulate Size",
-          "Properties": 3,
-          "StepValue": 1,
-          "MaxValue": 1
-        },
-        "saturation": {
-          "ShortUUID": "0000002F",
-          "MinValue": 0,
-          "Format": "float",
-          "LocalizationKey": "",
-          "DefaultDescription": "Saturation",
-          "Properties": 7,
-          "StepValue": 1,
-          "MaxValue": 100,
-          "Units": "percentage"
-        },
-        "siri-light-on-use": {
-          "ShortUUID": "00000258",
-          "MinValue": 0,
-          "Format": "uint8",
-          "LocalizationKey": "",
-          "DefaultDescription": "Siri Light On Use",
-          "Properties": 7,
-          "MaxValue": 1
-        },
-        "status-active": {
-          "DefaultDescription": "Status Active",
-          "Format": "bool",
-          "ShortUUID": "00000075",
-          "LocalizationKey": "",
-          "Properties": 3
-        },
-        "supported-camera-recording-configuration": {
-          "DefaultDescription": "Supported Camera Recording Configuration",
+        "cyrpto-hash": {
+          "DefaultDescription": "Crypto Hash",
           "Format": "tlv8",
-          "ShortUUID": "00000205",
+          "ShortUUID": "00000250",
           "LocalizationKey": "",
-          "Properties": 3
-        },
-        "activity-interval": {
-          "ShortUUID": "0000023B",
-          "MinValue": 0,
-          "Format": "uint32",
-          "LocalizationKey": "",
-          "DefaultDescription": "Activity Interval",
-          "StepValue": 1,
-          "Properties": 3
-        },
-        "set-duration": {
-          "ShortUUID": "000000D3",
-          "MinValue": 0,
-          "Format": "uint32",
-          "LocalizationKey": "",
-          "DefaultDescription": "Set Duration",
-          "Properties": 7,
-          "StepValue": 1,
-          "MaxValue": 3600,
-          "Units": "seconds"
-        },
-        "wifi-capabilities": {
-          "DefaultDescription": "Wi-Fi Capabilities",
-          "Format": "uint32",
-          "ShortUUID": "0000022C",
-          "LocalizationKey": "",
-          "Properties": 2
-        },
-        "occupancy-detected": {
-          "ShortUUID": "00000071",
-          "MinValue": 0,
-          "Format": "uint8",
-          "LocalizationKey": "",
-          "DefaultDescription": "Occupancy Detected",
-          "Properties": 3,
-          "StepValue": 1,
-          "MaxValue": 1
-        },
-        "audio-feedback": {
-          "DefaultDescription": "Audio Feedback",
-          "Format": "bool",
-          "ShortUUID": "00000005",
-          "LocalizationKey": "",
-          "Properties": 7
-        },
-        "supported-video-recording-configuration": {
-          "DefaultDescription": "Supported Video Recording Configuration",
-          "Format": "tlv8",
-          "ShortUUID": "00000206",
-          "LocalizationKey": "",
-          "Properties": 3
-        },
-        "current-transport": {
-          "DefaultDescription": "Current Transport",
-          "Format": "bool",
-          "ShortUUID": "0000022B",
-          "LocalizationKey": "",
-          "Properties": 2
-        },
-        "manufacturer": {
-          "DefaultDescription": "Manufacturer",
-          "MaxLength": 64,
-          "Format": "string",
-          "ShortUUID": "00000020",
-          "LocalizationKey": "",
-          "Properties": 2
-        },
-        "thread-node-capabilities": {
-          "ShortUUID": "00000702",
-          "MinValue": 0,
-          "Format": "uint16",
-          "LocalizationKey": "",
-          "DefaultDescription": "Thread Node Capabilities",
-          "Properties": 2,
-          "StepValue": 1,
-          "MaxValue": 31
+          "Properties": 132
         },
         "night-vision": {
           "DefaultDescription": "Night Vision",
           "Format": "bool",
           "ShortUUID": "0000011B",
-          "LocalizationKey": "",
-          "Properties": 39
-        },
-        "closed-captions": {
-          "ShortUUID": "000000DD",
-          "MinValue": 0,
-          "Format": "uint8",
-          "LocalizationKey": "",
-          "DefaultDescription": "Closed Captions",
-          "Properties": 7,
-          "StepValue": 1,
-          "MaxValue": 1
-        },
-        "lock-management.auto-secure-timeout": {
-          "Properties": 7,
-          "DefaultDescription": "Lock Management Auto Security Timeout",
-          "Format": "uint32",
-          "ShortUUID": "0000001A",
-          "Units": "seconds",
-          "LocalizationKey": ""
-        },
-        "recording-audio-active": {
-          "DefaultDescription": "recording audio active",
-          "Format": "uint8",
-          "ShortUUID": "00000226",
           "LocalizationKey": "",
           "Properties": 39
         },
@@ -2411,54 +2846,128 @@
           "StepValue": 1,
           "MaxValue": 2
         },
-        "image-mirroring": {
-          "DefaultDescription": "Image Mirroring",
-          "Format": "bool",
-          "ShortUUID": "0000011F",
+        "service-signature": {
+          "DefaultDescription": "Service Signature",
+          "Format": "tlv8",
+          "ShortUUID": "000000A5",
           "LocalizationKey": "",
-          "Properties": 7
+          "Properties": 6
         },
-        "siri-engine-revision": {
-          "DefaultDescription": "Siri Engine Version",
-          "Format": "string",
-          "ShortUUID": "0000025A",
-          "LocalizationKey": "",
-          "Properties": 2
-        },
-        "position.hold": {
-          "DefaultDescription": "Hold Position",
-          "Format": "bool",
-          "ShortUUID": "0000006F",
-          "LocalizationKey": "",
-          "Properties": 4
-        },
-        "remote-key": {
-          "ShortUUID": "000000E1",
-          "MinValue": 0,
-          "Format": "uint8",
-          "LocalizationKey": "",
-          "DefaultDescription": "Remote Key",
-          "Properties": 4,
-          "StepValue": 1,
-          "MaxValue": 16
-        },
-        "supported-asset-types": {
-          "DefaultDescription": "Supported Asset Types",
-          "Format": "uint32",
-          "ShortUUID": "00000268",
-          "LocalizationKey": "",
-          "Properties": 2
-        },
-        "temperature.heating-threshold": {
-          "ShortUUID": "00000012",
+        "air-particulate.density": {
+          "ShortUUID": "00000064",
           "MinValue": 0,
           "Format": "float",
           "LocalizationKey": "",
-          "DefaultDescription": "Heating Threshold Temperature",
-          "Properties": 7,
-          "StepValue": 0.1,
-          "MaxValue": 25,
-          "Units": "celsius"
+          "DefaultDescription": "Air Particulate Density",
+          "Properties": 3,
+          "MaxValue": 1000,
+          "Units": "micrograms/m^3"
+        },
+        "identify": {
+          "DefaultDescription": "Identify",
+          "Format": "bool",
+          "ShortUUID": "00000014",
+          "LocalizationKey": "",
+          "Properties": 4
+        },
+        "thread-node-capabilities": {
+          "ShortUUID": "00000702",
+          "MinValue": 0,
+          "Format": "uint16",
+          "LocalizationKey": "",
+          "DefaultDescription": "Thread Node Capabilities",
+          "Properties": 2,
+          "StepValue": 1,
+          "MaxValue": 31
+        },
+        "event-snapshots-active": {
+          "DefaultDescription": "Event Snapshots Active",
+          "Format": "bool",
+          "ShortUUID": "00000223",
+          "LocalizationKey": "",
+          "Properties": 39
+        },
+        "supported-diagnostics-snapshot": {
+          "DefaultDescription": "Supported Diagnostics Snapshot",
+          "Format": "tlv8",
+          "ShortUUID": "00000238",
+          "LocalizationKey": "",
+          "Properties": 2
+        },
+        "version": {
+          "DefaultDescription": "Version",
+          "MaxLength": 64,
+          "Format": "string",
+          "ShortUUID": "00000037",
+          "LocalizationKey": "",
+          "Properties": 3
+        },
+        "remaining-duration": {
+          "ShortUUID": "000000D4",
+          "MinValue": 0,
+          "Format": "uint32",
+          "LocalizationKey": "",
+          "DefaultDescription": "Remaining Duration",
+          "Properties": 3,
+          "StepValue": 1,
+          "MaxValue": 3600,
+          "Units": "seconds"
+        },
+        "service-label-namespace": {
+          "ShortUUID": "000000CD",
+          "MinValue": 0,
+          "Format": "uint8",
+          "LocalizationKey": "",
+          "DefaultDescription": "Label Namespace",
+          "Properties": 2,
+          "StepValue": 1,
+          "MaxValue": 4
+        },
+        "nfc-access-control-point": {
+          "DefaultDescription": "NFC Access Control Point",
+          "Format": "tlv8",
+          "ShortUUID": "00000264",
+          "LocalizationKey": "",
+          "Properties": 6
+        },
+        "battery-level": {
+          "ShortUUID": "00000068",
+          "MinValue": 0,
+          "Format": "uint8",
+          "LocalizationKey": "",
+          "DefaultDescription": "Battery Level",
+          "Properties": 3,
+          "StepValue": 1,
+          "MaxValue": 100,
+          "Units": "percentage"
+        },
+        "fan.state.current": {
+          "ShortUUID": "000000AF",
+          "MinValue": 0,
+          "Format": "uint8",
+          "LocalizationKey": "",
+          "DefaultDescription": "Current Fan State",
+          "Properties": 3,
+          "StepValue": 1,
+          "MaxValue": 2
+        },
+        "position.current": {
+          "ShortUUID": "0000006D",
+          "MinValue": 0,
+          "Format": "uint8",
+          "LocalizationKey": "",
+          "DefaultDescription": "Current Position",
+          "Properties": 3,
+          "StepValue": 1,
+          "MaxValue": 100,
+          "Units": "percentage"
+        },
+        "selected-diagnostics-modes": {
+          "DefaultDescription": "Selected Diagnostics Modes",
+          "Format": "uint32",
+          "ShortUUID": "0000024D",
+          "LocalizationKey": "",
+          "Properties": 6
         }
       },
       "Properties": {
@@ -2632,6 +3141,22 @@
           "ShortUUID": "00000089",
           "DefaultDescription": "Stateless Programmable Switch"
         },
+        "firmware-update": {
+          "Characteristics": {
+            "Required": [
+              "firmware-update-readiness",
+              "firmware-update-status"
+            ],
+            "Optional": [
+              "matter-firmware-update-status",
+              "staged-firmware-version",
+              "supported-firmware-update-configuration"
+            ]
+          },
+          "LocalizationKey": "",
+          "ShortUUID": "00000236",
+          "DefaultDescription": "Firmware Update"
+        },
         "nfc-access": {
           "Characteristics": {
             "Required": [
@@ -2680,7 +3205,9 @@
         "metrics": {
           "Characteristics": {
             "Required": [
-              "active"
+              "active",
+              "metrics-buffer-full-state",
+              "supported-metrics"
             ]
           },
           "LocalizationKey": "",
@@ -2905,18 +3432,6 @@
           "ShortUUID": "00000041",
           "LocalizationKey": "",
           "BTLE_ShortUUID": "FECE"
-        },
-        "cloud-relay": {
-          "Characteristics": {
-            "Required": [
-              "cloud-relay.control-point",
-              "cloud-relay.current-state",
-              "cloud-relay.enabled"
-            ]
-          },
-          "LocalizationKey": "",
-          "ShortUUID": "0000005A",
-          "DefaultDescription": "Cloud Relay"
         },
         "diagnostics": {
           "Characteristics": {
@@ -3367,6 +3882,19 @@
           "ShortUUID": "0000007E",
           "DefaultDescription": "Security System"
         },
+        "tap-management": {
+          "Characteristics": {
+            "Required": [
+              "active",
+              "cyrpto-hash",
+              "tap-type",
+              "token"
+            ]
+          },
+          "LocalizationKey": "",
+          "ShortUUID": "0000022E",
+          "DefaultDescription": "Tap Management"
+        },
         "camera-rtp-stream-management": {
           "Characteristics": {
             "Required": [
@@ -3479,6 +4007,7 @@
               "accessory-flags",
               "app-matching-identifier",
               "configured-name",
+              "firmware.matter-revision-number",
               "firmware.revision",
               "hardware-finish",
               "hardware.revision",
@@ -3589,10 +4118,10 @@
           "Characteristics": {
             "Required": [
               "active",
-              "supported-camera-recording-configuration",
-              "supported-video-recording-configuration",
+              "selected-camera-recording-configuration",
               "supported-audio-recording-configuration",
-              "selected-camera-recording-configuration"
+              "supported-camera-recording-configuration",
+              "supported-video-recording-configuration"
             ],
             "Optional": [
               "recording-audio-active"
@@ -3635,7 +4164,10 @@
             "Required": [
               "wake-configuration"
             ],
-            "Optional": []
+            "Optional": [
+              "selected-sleep-configuration",
+              "supported-sleep-configuration"
+            ]
           },
           "LocalizationKey": "",
           "ShortUUID": "00000221",
@@ -3678,7 +4210,7 @@
         }
       }
     },
-    "Version": 880,
+    "Version": 886,
     "SchemaVersion": 1,
     "Assistant": {
       "Characteristics": {

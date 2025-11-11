@@ -25,23 +25,22 @@ use crate::{
 };
 
 // TODO - re-check MaximumDataLength
-/// Cloud Relay Enable Status characteristic.
+/// Metrics Buffer Full State characteristic.
 #[derive(Debug, Default, Serialize)]
-pub struct CloudRelayEnableStatusCharacteristic(Characteristic<bool>);
+pub struct MetricsBufferFullStateCharacteristic(Characteristic<bool>);
 
-impl CloudRelayEnableStatusCharacteristic {
-    /// Creates a new Cloud Relay Enable Status characteristic.
+impl MetricsBufferFullStateCharacteristic {
+    /// Creates a new Metrics Buffer Full State characteristic.
     pub fn new(id: u64, accessory_id: u64) -> Self {
         #[allow(unused_mut)]
         let mut c = Self(Characteristic::<bool> {
             id,
             accessory_id,
-            hap_type: HapType::CloudRelayEnableStatus,
+            hap_type: HapType::MetricsBufferFullState,
             format: Format::Bool,
             perms: vec![
 				Perm::Events,
 				Perm::PairedRead,
-				Perm::PairedWrite,
             ],
             ..Default::default()
         });
@@ -59,7 +58,7 @@ impl CloudRelayEnableStatusCharacteristic {
 }
 
 #[async_trait]
-impl HapCharacteristic for CloudRelayEnableStatusCharacteristic {
+impl HapCharacteristic for MetricsBufferFullStateCharacteristic {
     fn get_id(&self) -> u64 { HapCharacteristic::get_id(&self.0) }
 
     fn set_id(&mut self, id: u64) { HapCharacteristic::set_id(&mut self.0, id) }
@@ -151,19 +150,19 @@ impl HapCharacteristic for CloudRelayEnableStatusCharacteristic {
     fn set_pid(&mut self, pid: Option<u64>) { HapCharacteristic::set_pid(&mut self.0, pid) }
 }
 
-impl HapCharacteristicSetup for CloudRelayEnableStatusCharacteristic {
+impl HapCharacteristicSetup for MetricsBufferFullStateCharacteristic {
     fn set_event_emitter(&mut self, event_emitter: Option<pointer::EventEmitter>) {
         HapCharacteristicSetup::set_event_emitter(&mut self.0, event_emitter)
     }
 }
 
-impl CharacteristicCallbacks<bool> for CloudRelayEnableStatusCharacteristic {
+impl CharacteristicCallbacks<bool> for MetricsBufferFullStateCharacteristic {
     fn on_read(&mut self, f: Option<impl OnReadFn<bool>>) { CharacteristicCallbacks::on_read(&mut self.0, f) }
 
     fn on_update(&mut self, f: Option<impl OnUpdateFn<bool>>) { CharacteristicCallbacks::on_update(&mut self.0, f) }
 }
 
-impl AsyncCharacteristicCallbacks<bool> for CloudRelayEnableStatusCharacteristic {
+impl AsyncCharacteristicCallbacks<bool> for MetricsBufferFullStateCharacteristic {
     fn on_read_async(&mut self, f: Option<impl OnReadFuture<bool>>) {
         AsyncCharacteristicCallbacks::on_read_async(&mut self.0, f)
     }

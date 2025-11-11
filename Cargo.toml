@@ -33,7 +33,7 @@ futures = "0.3"
 get_if_addrs = "0.5"
 hkdf = "0.11"
 hyper = { version = "0.14", features = ["server", "http1"] }
-libmdns = "0.6"
+libmdns = "0.10"
 log = "0.4"
 num = "0.2"
 rand = "0.7"

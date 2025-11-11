@@ -1,7 +1,7 @@
 use tokio;
 
 use hap::{
-    accessory::{switch::SwitchAccessory, AccessoryCategory, AccessoryInformation},
+    accessory::{AccessoryCategory, AccessoryInformation, switch::SwitchAccessory},
     server::{IpServer, Server},
     storage::{FileStorage, Storage},
     Config,

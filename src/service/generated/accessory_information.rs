@@ -14,6 +14,7 @@ use crate::{
 		accessory_flags::AccessoryFlagsCharacteristic,
 		application_matching_identifier::ApplicationMatchingIdentifierCharacteristic,
 		configured_name::ConfiguredNameCharacteristic,
+		matter_firmware_revision_number::MatterFirmwareRevisionNumberCharacteristic,
 		firmware_revision::FirmwareRevisionCharacteristic,
 		hardware_finish::HardwareFinishCharacteristic,
 		hardware_revision::HardwareRevisionCharacteristic,
@@ -54,6 +55,8 @@ pub struct AccessoryInformationService {
 	pub application_matching_identifier: Option<ApplicationMatchingIdentifierCharacteristic>,
 	/// Configured Name characteristic (optional).
 	pub configured_name: Option<ConfiguredNameCharacteristic>,
+	/// Matter Firmware Revision Number characteristic (optional).
+	pub matter_firmware_revision_number: Option<MatterFirmwareRevisionNumberCharacteristic>,
 	/// Firmware Revision characteristic (optional).
 	pub firmware_revision: Option<FirmwareRevisionCharacteristic>,
 	/// Hardware Finish characteristic (optional).
@@ -80,11 +83,12 @@ impl AccessoryInformationService {
 			accessory_flags: Some(AccessoryFlagsCharacteristic::new(id + 1 + 0 + 5, accessory_id)),
 			application_matching_identifier: Some(ApplicationMatchingIdentifierCharacteristic::new(id + 1 + 1 + 5, accessory_id)),
 			configured_name: Some(ConfiguredNameCharacteristic::new(id + 1 + 2 + 5, accessory_id)),
-			firmware_revision: Some(FirmwareRevisionCharacteristic::new(id + 1 + 3 + 5, accessory_id)),
-			hardware_finish: Some(HardwareFinishCharacteristic::new(id + 1 + 4 + 5, accessory_id)),
-			hardware_revision: Some(HardwareRevisionCharacteristic::new(id + 1 + 5 + 5, accessory_id)),
-			product_data: Some(ProductDataCharacteristic::new(id + 1 + 6 + 5, accessory_id)),
-			software_revision: Some(SoftwareRevisionCharacteristic::new(id + 1 + 7 + 5, accessory_id)),
+			matter_firmware_revision_number: Some(MatterFirmwareRevisionNumberCharacteristic::new(id + 1 + 3 + 5, accessory_id)),
+			firmware_revision: Some(FirmwareRevisionCharacteristic::new(id + 1 + 4 + 5, accessory_id)),
+			hardware_finish: Some(HardwareFinishCharacteristic::new(id + 1 + 5 + 5, accessory_id)),
+			hardware_revision: Some(HardwareRevisionCharacteristic::new(id + 1 + 6 + 5, accessory_id)),
+			product_data: Some(ProductDataCharacteristic::new(id + 1 + 7 + 5, accessory_id)),
+			software_revision: Some(SoftwareRevisionCharacteristic::new(id + 1 + 8 + 5, accessory_id)),
 			..Default::default()
         }
     }
@@ -167,6 +171,9 @@ impl HapService for AccessoryInformationService {
 		if let Some(c) = &self.configured_name {
 		    characteristics.push(c);
 		}
+		if let Some(c) = &self.matter_firmware_revision_number {
+		    characteristics.push(c);
+		}
 		if let Some(c) = &self.firmware_revision {
 		    characteristics.push(c);
 		}
@@ -201,6 +208,9 @@ impl HapService for AccessoryInformationService {
 		    characteristics.push(c);
 		}
 		if let Some(c) = &mut self.configured_name {
+		    characteristics.push(c);
+		}
+		if let Some(c) = &mut self.matter_firmware_revision_number {
 		    characteristics.push(c);
 		}
 		if let Some(c) = &mut self.firmware_revision {

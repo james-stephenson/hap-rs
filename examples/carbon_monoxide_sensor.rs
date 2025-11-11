@@ -1,7 +1,7 @@
 use tokio;
 
 use hap::{
-    accessory::{carbon_monoxide_sensor::CarbonMonoxideSensorAccessory, AccessoryCategory, AccessoryInformation},
+    accessory::{AccessoryCategory, AccessoryInformation, carbon_monoxide_sensor::CarbonMonoxideSensorAccessory},
     server::{IpServer, Server},
     storage::{FileStorage, Storage},
     Config,

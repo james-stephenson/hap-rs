@@ -1,7 +1,7 @@
 use tokio;
 
 use hap::{
-    accessory::{humidity_sensor::HumiditySensorAccessory, AccessoryCategory, AccessoryInformation},
+    accessory::{AccessoryCategory, AccessoryInformation, humidity_sensor::HumiditySensorAccessory},
     server::{IpServer, Server},
     storage::{FileStorage, Storage},
     Config,
