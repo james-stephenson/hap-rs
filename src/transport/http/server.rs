@@ -173,7 +173,7 @@ impl Server {
         }
     }
 
-    pub fn run_handle(&self) -> BoxFuture<Result<()>> {
+    pub fn run_handle(&self) -> BoxFuture<'_, Result<()>> {
         let config = self.config.clone();
         let storage = self.storage.clone();
         let accessory_database = self.accessory_database.clone();

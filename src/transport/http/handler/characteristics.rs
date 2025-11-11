@@ -37,7 +37,7 @@ impl JsonHandlerExt for GetCharacteristics {
         _: pointer::Storage,
         accessory_database: pointer::AccessoryDatabase,
         _: pointer::EventEmitter,
-    ) -> BoxFuture<Result<Response<Body>>> {
+    ) -> BoxFuture<'_, Result<Response<Body>>> {
         async move {
             if let Some(query) = uri.query() {
                 let mut resp_body = CharacteristicResponseBody::<ReadResponseObject> {
@@ -133,7 +133,7 @@ impl JsonHandlerExt for UpdateCharacteristics {
         _: pointer::Storage,
         accessories: pointer::AccessoryDatabase,
         _: pointer::EventEmitter,
-    ) -> BoxFuture<Result<Response<Body>>> {
+    ) -> BoxFuture<'_, Result<Response<Body>>> {
         async move {
             let aggregated_body = hyper::body::aggregate(body).await?;
 

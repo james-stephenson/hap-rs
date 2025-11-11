@@ -68,7 +68,7 @@ impl TlvHandlerExt for PairSetup {
     type ParseResult = Step;
     type Result = tlv::Container;
 
-    fn parse(&self, body: Body) -> BoxFuture<Result<Step, tlv::ErrorContainer>> {
+    fn parse(&self, body: Body) -> BoxFuture<'_, Result<Step, tlv::ErrorContainer>> {
         async {
             let aggregated_body = hyper::body::aggregate(body)
                 .await
@@ -117,7 +117,7 @@ impl TlvHandlerExt for PairSetup {
         config: pointer::Config,
         storage: pointer::Storage,
         event_emitter: pointer::EventEmitter,
-    ) -> BoxFuture<Result<tlv::Container, tlv::ErrorContainer>> {
+    ) -> BoxFuture<'_, Result<tlv::Container, tlv::ErrorContainer>> {
         async move {
             match step {
                 Step::Start => match handle_start(self, config).await {

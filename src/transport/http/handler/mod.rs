@@ -27,14 +27,14 @@ pub trait HandlerExt {
         storage: pointer::Storage,
         accessory_database: pointer::AccessoryDatabase,
         event_emitter: pointer::EventEmitter,
-    ) -> BoxFuture<Result<Response<Body>>>;
+    ) -> BoxFuture<'_, Result<Response<Body>>>;
 }
 
 pub trait TlvHandlerExt {
     type ParseResult: Send;
     type Result: Encodable;
 
-    fn parse(&self, body: Body) -> BoxFuture<std::result::Result<Self::ParseResult, tlv::ErrorContainer>>;
+    fn parse(&self, body: Body) -> BoxFuture<'_, std::result::Result<Self::ParseResult, tlv::ErrorContainer>>;
     fn handle(
         &mut self,
         step: Self::ParseResult,
@@ -42,7 +42,7 @@ pub trait TlvHandlerExt {
         config: pointer::Config,
         storage: pointer::Storage,
         event_emitter: pointer::EventEmitter,
-    ) -> BoxFuture<std::result::Result<Self::Result, tlv::ErrorContainer>>;
+    ) -> BoxFuture<'_, std::result::Result<Self::Result, tlv::ErrorContainer>>;
 }
 
 #[derive(Debug)]
@@ -63,7 +63,7 @@ impl<T: TlvHandlerExt + Send + Sync> HandlerExt for TlvHandler<T> {
         storage: pointer::Storage,
         _: pointer::AccessoryDatabase,
         event_emitter: pointer::EventEmitter,
-    ) -> BoxFuture<Result<Response<Body>>> {
+    ) -> BoxFuture<'_, Result<Response<Body>>> {
         async move {
             let response = match self.0.parse(body).await {
                 Err(e) => e.encode(),
@@ -89,7 +89,7 @@ pub trait JsonHandlerExt {
         storage: pointer::Storage,
         accessory_database: pointer::AccessoryDatabase,
         event_emitter: pointer::EventEmitter,
-    ) -> BoxFuture<Result<Response<Body>>>;
+    ) -> BoxFuture<'_, Result<Response<Body>>>;
 }
 
 #[derive(Debug)]
@@ -110,7 +110,7 @@ impl<T: JsonHandlerExt + Send + Sync> HandlerExt for JsonHandler<T> {
         storage: pointer::Storage,
         accessory_database: pointer::AccessoryDatabase,
         event_emitter: pointer::EventEmitter,
-    ) -> BoxFuture<Result<Response<Body>>> {
+    ) -> BoxFuture<'_, Result<Response<Body>>> {
         async move {
             match self
                 .0

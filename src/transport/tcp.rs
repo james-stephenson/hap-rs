@@ -419,7 +419,7 @@ impl AsyncRead for EncryptedStream {
         cx: &mut Context,
         buf: &mut ReadBuf,
     ) -> Poll<std::result::Result<(), io::Error>> {
-        let mut encrypted_stream = Pin::into_inner(self);
+        let encrypted_stream = Pin::into_inner(self);
 
         if encrypted_stream.shared_secret.is_none() {
             match encrypted_stream.session_receiver.try_recv() {

@@ -25,7 +25,7 @@ impl JsonHandlerExt for Accessories {
         _: pointer::Storage,
         accessory_database: pointer::AccessoryDatabase,
         _: pointer::EventEmitter,
-    ) -> BoxFuture<Result<Response<Body>>> {
+    ) -> BoxFuture<'_, Result<Response<Body>>> {
         info!("received list accessories request");
         async move {
             let resp_body = accessory_database.lock().await.as_serialized_json().await?;
