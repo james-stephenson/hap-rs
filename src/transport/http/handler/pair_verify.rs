@@ -1,12 +1,17 @@
-use aead::{generic_array::GenericArray, AeadInPlace, NewAead};
-use chacha20poly1305::ChaCha20Poly1305;
+//use aead::{generic_array::GenericArray, AeadInPlace, NewAead};
+//use chacha20poly1305::ChaCha20Poly1305;
+use chacha20poly1305::{
+    aead::{AeadInPlace, KeyInit},
+    ChaCha20Poly1305
+};
+use sha2::digest::generic_array::GenericArray;
 use futures::{
     channel::oneshot,
     future::{BoxFuture, FutureExt},
 };
 use hyper::{body::Buf, Body};
 use log::{debug, info};
-use rand::rngs::OsRng;
+use rand::{rngs::OsRng, Rng, RngCore, TryRngCore};
 use signature::{Signer, Verifier};
 use std::str;
 use uuid::Uuid;
@@ -131,8 +136,8 @@ async fn handle_start(
     a_pub.copy_from_slice(bytes);
     let a_pub = PublicKey::from(a_pub);
 
-    let mut csprng = OsRng {};
-    let b = EphemeralSecret::new(&mut csprng);
+    let mut csprng = chacha20poly1305::aead::OsRng {};
+    let b = EphemeralSecret::random_from_rng(csprng);
     let b_pub = PublicKey::from(&b);
     let shared_secret = b.diffie_hellman(&a_pub);
 
@@ -216,9 +221,9 @@ async fn handle_finish(
             debug!("received sub-TLV: {:?}", &sub_tlv);
             let device_pairing_id = sub_tlv.get(&(Type::Identifier as u8)).ok_or(tlv::Error::Unknown)?;
             debug!("raw device pairing ID: {:?}", &device_pairing_id);
-            let device_signature = ed25519_dalek::Signature::from_bytes(
-                sub_tlv.get(&(Type::Signature as u8)).ok_or(tlv::Error::Unknown)?,
-            )?;
+
+            let sig = sub_tlv.get(&(Type::Signature as u8)).ok_or(tlv::Error::Unknown)?.as_slice();
+            let device_signature = ed25519_dalek::Signature::from_slice(&sig)?;
             debug!("device signature: {:?}", &device_signature);
 
             let uuid_str = str::from_utf8(device_pairing_id)?;
@@ -232,7 +237,7 @@ async fn handle_finish(
             device_info.extend(device_pairing_id);
             device_info.extend(session.b_pub.as_bytes());
 
-            if ed25519_dalek::PublicKey::from_bytes(&pairing.public_key)?
+            if ed25519_dalek::VerifyingKey::from_bytes(&pairing.public_key)?
                 .verify(&device_info, &device_signature)
                 .is_err()
             {

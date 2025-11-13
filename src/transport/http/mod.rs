@@ -81,6 +81,7 @@ pub struct ReadResponseObject {
     pub status: Option<i32>,
 }
 
+//noinspection RsExternalLinter
 #[derive(Debug, Deserialize)]
 pub struct WriteObject {
     pub iid: u64,

@@ -1,12 +1,12 @@
-use aead::{generic_array::GenericArray, AeadInPlace, NewAead};
-use chacha20poly1305::ChaCha20Poly1305;
+use chacha20poly1305::{aead::{AeadInPlace, KeyInit}, ChaCha20Poly1305, Key};
 use futures::future::{BoxFuture, FutureExt};
 use hyper::{body::Buf, Body};
 use log::{debug, info};
 use num::BigUint;
-use rand::{rngs::OsRng, RngCore};
+use rand::{rngs::OsRng, TryRngCore};
+use sha2::digest::generic_array::GenericArray;
 use sha2::{digest::Digest, Sha512};
-use signature::{Signer, Verifier};
+use signature::Signer;
 use srp::{
     client::{srp_private_key, SrpClient},
     groups::G_3072,
@@ -174,11 +174,10 @@ async fn handle_start(handler: &mut PairSetup, config: pointer::Config) -> Resul
     // kTLVType_State <M2>
     // kTLVType_Error <kTLVError_Busy>
 
-    let mut csprng = OsRng {};
     let mut salt = [0; 16]; // s
     let mut b = [0; 64];
-    csprng.fill_bytes(&mut salt);
-    csprng.fill_bytes(&mut b);
+    OsRng.try_fill_bytes(&mut salt).expect("OsRng failed to fill bytes");
+    OsRng.try_fill_bytes(&mut b).expect("osrng err");
 
     // TODO - respect pairing flags (specification p. 35 - 7.) for split pair setup
 
@@ -276,12 +275,11 @@ async fn handle_exchange(
 
                 let sub_tlv = tlv::decode(&decrypted_data);
                 let device_pairing_id = sub_tlv.get(&(Type::Identifier as u8)).ok_or(tlv::Error::Unknown)?;
-                let device_ltpk = ed25519_dalek::PublicKey::from_bytes(
-                    sub_tlv.get(&(Type::PublicKey as u8)).ok_or(tlv::Error::Unknown)?,
-                )?;
-                let device_signature = ed25519_dalek::Signature::from_bytes(
-                    sub_tlv.get(&(Type::Signature as u8)).ok_or(tlv::Error::Unknown)?,
-                )?;
+                let (pub_key, _) = sub_tlv.get(&(Type::PublicKey as u8)).ok_or(tlv::Error::Unknown)?.as_chunks::<32>();
+                let sig = sub_tlv.get(&(Type::Signature as u8)).ok_or(tlv::Error::Unknown)?.as_slice();
+
+                let device_ltpk = ed25519_dalek::VerifyingKey::from_bytes(&pub_key[0])?;
+                let device_signature = ed25519_dalek::Signature::from_slice(&sig)?;
 
                 let device_x = hkdf_extract_and_expand(
                     b"Pair-Setup-Controller-Sign-Salt",
@@ -294,7 +292,7 @@ async fn handle_exchange(
                 device_info.extend(device_pairing_id);
                 device_info.extend(device_ltpk.as_bytes());
 
-                if device_ltpk.verify(&device_info, &device_signature).is_err() {
+                if device_ltpk.verify_strict(&device_info, &device_signature).is_err() {
                     return Err(tlv::Error::Authentication);
                 }
 
@@ -326,12 +324,12 @@ async fn handle_exchange(
                 let mut accessory_info: Vec<u8> = Vec::new();
                 accessory_info.extend(&accessory_x);
                 accessory_info.extend(device_id.as_bytes());
-                accessory_info.extend(config.device_ed25519_keypair.public.as_bytes());
-                let accessory_signature = config.device_ed25519_keypair.sign(&accessory_info);
+                accessory_info.extend(config.device_ed25519_keypair.verifying_key().as_bytes());
+                let accessory_signature = config.device_ed25519_keypair.sign(&accessory_info.as_slice());
 
                 let encoded_sub_tlv = vec![
                     Value::Identifier(device_id),
-                    Value::PublicKey(config.device_ed25519_keypair.public.as_bytes().to_vec()),
+                    Value::PublicKey(config.device_ed25519_keypair.verifying_key().as_bytes().to_vec()),
                     Value::Signature(accessory_signature.to_bytes().to_vec()),
                 ]
                 .encode();

@@ -1,7 +1,13 @@
-use aead::{generic_array::GenericArray, AeadInPlace, NewAead};
+//use aead::{generic_array::GenericArray, AeadInPlace, NewAead};
+//use generic_array::GenericArray;
+use sha2::digest::generic_array::GenericArray;
 use byteorder::{ByteOrder, LittleEndian};
 use bytes::{Buf, BytesMut};
-use chacha20poly1305::{ChaCha20Poly1305, Nonce, Tag};
+use chacha20poly1305::{
+    aead::{AeadInPlace, KeyInit},
+    ChaCha20Poly1305, Nonce, Tag
+};
+
 use futures::{
     channel::{
         mpsc::{self, UnboundedReceiver, UnboundedSender},
@@ -512,7 +518,8 @@ fn decrypt_chunk(
 
 fn encrypt_chunk(shared_secret: &[u8; 32], data: &[u8], count: &mut u64) -> Result<([u8; 2], Vec<u8>, [u8; 16])> {
     let write_key = compute_write_key(shared_secret)?;
-    let aead = ChaCha20Poly1305::new(GenericArray::from_slice(&write_key));
+    let chachakey = GenericArray::from_slice(&write_key);
+    let aead = ChaCha20Poly1305::new(&chachakey);
 
     let mut nonce = vec![0; 4];
     let mut suffix = vec![0; 8];

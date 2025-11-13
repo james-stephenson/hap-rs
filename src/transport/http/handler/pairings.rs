@@ -157,8 +157,8 @@ async fn handle_add(
     let mut s = storage.lock().await;
     match s.load_pairing(&pairing_uuid).await {
         Ok(mut pairing) => {
-            if ed25519_dalek::PublicKey::from_bytes(&pairing.public_key)?
-                != ed25519_dalek::PublicKey::from_bytes(&ltpk)?
+            if ed25519_dalek::VerifyingKey::from_bytes(&pairing.public_key)?
+                != ed25519_dalek::VerifyingKey::from_bytes(&ltpk.try_into().expect("Wrong length"))?
             {
                 return Err(tlv::Error::Unknown);
             }

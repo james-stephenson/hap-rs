@@ -1,6 +1,8 @@
 use std::{io, num, str, sync::mpsc};
 use thiserror::Error;
 
+use chacha20poly1305::aead;
+
 use crate::characteristic::Format;
 
 /// HAP error representation.

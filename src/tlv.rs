@@ -5,6 +5,8 @@ use log::error;
 use srp::types::SrpAuthError;
 use thiserror::Error;
 
+use chacha20poly1305::aead;
+
 use crate::{error, pairing::Permissions};
 
 /// Encodes a `Vec<(u8, Vec<u8>)>` in the format `(<Type>, <Value>)` to a `Vec<u8>` of concatenated TLVs.

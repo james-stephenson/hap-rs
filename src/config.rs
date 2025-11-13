@@ -1,10 +1,10 @@
-use ed25519_dalek::Keypair as Ed25519Keypair;
+use ed25519_dalek::{SecretKey, SigningKey as Ed25519Keypair};
 //use eui48::MacAddress;
 use macaddr::MacAddr6 as MacAddress;
-use rand::{rngs::OsRng, Rng};
+use rand::{rand_core, random, rngs::OsRng};
 use serde::{Deserialize, Serialize};
 use std::net::IpAddr;
-
+use rand_core::{TryRngCore};
 use crate::{accessory::AccessoryCategory, BonjourFeatureFlag, BonjourStatusFlag, Pin};
 
 /// The `Config` struct is used to store configuration options for the HomeKit Accessory Server.
@@ -112,15 +112,17 @@ impl Default for Config {
 
 /// Generates a random MAC address.
 fn generate_random_mac_address() -> MacAddress {
-    let mut csprng = OsRng {};
-    let eui = csprng.gen::<[u8; 6]>();
+    let eui : [u8; 6] = random::<[u8; 6]>().into();
     MacAddress::from(eui)
 }
 
 /// Generates an Ed25519 keypair.
 fn generate_ed25519_keypair() -> Ed25519Keypair {
-    let mut csprng = OsRng {};
-    Ed25519Keypair::generate(&mut csprng)
+    let mut secret = SecretKey::default();
+    OsRng.try_fill_bytes(&mut secret).expect("");
+    Ed25519Keypair::from_bytes(&secret)
+
+    // Ed25519Keypair::generate(&mut csprng)
 }
 
 /// Returns the IP of the system's first non-loopback network interface or defaults to `127.0.0.1`.
