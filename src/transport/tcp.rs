@@ -1,12 +1,10 @@
-//use aead::{generic_array::GenericArray, AeadInPlace, NewAead};
-//use generic_array::GenericArray;
-use sha2::digest::generic_array::GenericArray;
 use byteorder::{ByteOrder, LittleEndian};
 use bytes::{Buf, BytesMut};
 use chacha20poly1305::{
     aead::{AeadInPlace, KeyInit},
-    ChaCha20Poly1305, Nonce, Tag
+    ChaCha20Poly1305
 };
+use generic_array::GenericArray;
 
 use futures::{
     channel::{
@@ -501,7 +499,7 @@ fn decrypt_chunk(
     count: &mut u64,
 ) -> Result<Vec<u8>> {
     let read_key = compute_read_key(shared_secret)?;
-    let aead = ChaCha20Poly1305::new(GenericArray::from_slice(&read_key));
+    let aead = ChaCha20Poly1305::new(GenericArray::from_slice(&read_key).as_0_14());
 
     let mut nonce = vec![0; 4];
     let mut suffix = vec![0; 8];
@@ -511,7 +509,7 @@ fn decrypt_chunk(
 
     let mut buffer = Vec::new();
     buffer.extend_from_slice(data);
-    aead.decrypt_in_place_detached(Nonce::from_slice(&nonce), aad, &mut buffer, Tag::from_slice(&auth_tag))?;
+    aead.decrypt_in_place_detached(GenericArray::from_slice(&nonce).as_0_14(), aad, &mut buffer, GenericArray::from_slice(&auth_tag).as_0_14())?;
 
     Ok(buffer)
 }
@@ -519,7 +517,7 @@ fn decrypt_chunk(
 fn encrypt_chunk(shared_secret: &[u8; 32], data: &[u8], count: &mut u64) -> Result<([u8; 2], Vec<u8>, [u8; 16])> {
     let write_key = compute_write_key(shared_secret)?;
     let chachakey = GenericArray::from_slice(&write_key);
-    let aead = ChaCha20Poly1305::new(&chachakey);
+    let aead = ChaCha20Poly1305::new(&chachakey.as_0_14());
 
     let mut nonce = vec![0; 4];
     let mut suffix = vec![0; 8];
@@ -532,7 +530,7 @@ fn encrypt_chunk(shared_secret: &[u8; 32], data: &[u8], count: &mut u64) -> Resu
 
     let mut buffer = Vec::new();
     buffer.extend_from_slice(data);
-    let auth_tag = aead.encrypt_in_place_detached(Nonce::from_slice(&nonce), &aad, &mut buffer)?;
+    let auth_tag = aead.encrypt_in_place_detached(GenericArray::from_slice(&nonce).as_0_14(), &aad, &mut buffer)?;
 
     Ok((aad, buffer, auth_tag.into()))
 }

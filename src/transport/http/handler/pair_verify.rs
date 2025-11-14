@@ -1,17 +1,11 @@
-//use aead::{generic_array::GenericArray, AeadInPlace, NewAead};
-//use chacha20poly1305::ChaCha20Poly1305;
-use chacha20poly1305::{
-    aead::{AeadInPlace, KeyInit},
-    ChaCha20Poly1305
-};
-use sha2::digest::generic_array::GenericArray;
+use chacha20poly1305::{aead::{AeadInPlace, KeyInit}, ChaCha20Poly1305};
 use futures::{
     channel::oneshot,
     future::{BoxFuture, FutureExt},
 };
+use generic_array::GenericArray;
 use hyper::{body::Buf, Body};
 use log::{debug, info};
-use rand::{rngs::OsRng, Rng, RngCore, TryRngCore};
 use signature::{Signer, Verifier};
 use std::str;
 use uuid::Uuid;
@@ -136,7 +130,7 @@ async fn handle_start(
     a_pub.copy_from_slice(bytes);
     let a_pub = PublicKey::from(a_pub);
 
-    let mut csprng = chacha20poly1305::aead::OsRng {};
+    let csprng = chacha20poly1305::aead::OsRng {};
     let b = EphemeralSecret::random_from_rng(csprng);
     let b_pub = PublicKey::from(&b);
     let shared_secret = b.diffie_hellman(&a_pub);
@@ -174,11 +168,11 @@ async fn handle_start(
     let mut nonce = vec![0; 4];
     nonce.extend(b"PV-Msg02");
 
-    let aead = ChaCha20Poly1305::new(GenericArray::from_slice(&session_key));
+    let aead = ChaCha20Poly1305::new(GenericArray::from_slice(&session_key).as_0_14());
 
     let mut encrypted_data = Vec::new();
     encrypted_data.extend_from_slice(&encoded_sub_tlv);
-    let auth_tag = aead.encrypt_in_place_detached(GenericArray::from_slice(&nonce), &[], &mut encrypted_data)?;
+    let auth_tag = aead.encrypt_in_place_detached(GenericArray::from_slice(&nonce).as_0_14(), &[], &mut encrypted_data)?;
     encrypted_data.extend(&auth_tag);
 
     info!("pair verify M2: sending verify start response");
@@ -206,15 +200,15 @@ async fn handle_finish(
             let mut nonce = vec![0; 4];
             nonce.extend(b"PV-Msg03");
 
-            let aead = ChaCha20Poly1305::new(GenericArray::from_slice(&session.session_key));
+            let aead = ChaCha20Poly1305::new(GenericArray::from_slice(&session.session_key).as_0_14());
 
             let mut decrypted_data = Vec::new();
             decrypted_data.extend_from_slice(&encrypted_data);
             aead.decrypt_in_place_detached(
-                GenericArray::from_slice(&nonce),
+                GenericArray::from_slice(&nonce).as_0_14(),
                 &[],
                 &mut decrypted_data,
-                GenericArray::from_slice(&auth_tag),
+                GenericArray::from_slice(&auth_tag).as_0_14(),
             )?;
 
             let sub_tlv = tlv::decode(&decrypted_data);

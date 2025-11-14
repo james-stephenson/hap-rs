@@ -1,10 +1,10 @@
-use chacha20poly1305::{aead::{AeadInPlace, KeyInit}, ChaCha20Poly1305, Key};
+use chacha20poly1305::{aead::{AeadInPlace, KeyInit}, ChaCha20Poly1305};
 use futures::future::{BoxFuture, FutureExt};
+use generic_array::GenericArray;
 use hyper::{body::Buf, Body};
 use log::{debug, info};
 use num::BigUint;
 use rand::{rngs::OsRng, TryRngCore};
-use sha2::digest::generic_array::GenericArray;
 use sha2::{digest::Digest, Sha512};
 use signature::Signer;
 use srp::{
@@ -262,15 +262,15 @@ async fn handle_exchange(
                 let mut nonce = vec![0; 4];
                 nonce.extend(b"PS-Msg05");
 
-                let aead = ChaCha20Poly1305::new(GenericArray::from_slice(&encryption_key));
+                let aead = ChaCha20Poly1305::new(GenericArray::from_slice(&encryption_key).as_0_14());
 
                 let mut decrypted_data = Vec::new();
                 decrypted_data.extend_from_slice(&encrypted_data);
                 aead.decrypt_in_place_detached(
-                    GenericArray::from_slice(&nonce),
+                    GenericArray::from_slice(&nonce).as_0_14(),
                     &[],
                     &mut decrypted_data,
-                    GenericArray::from_slice(&auth_tag),
+                    GenericArray::from_slice(&auth_tag).as_0_14(),
                 )?;
 
                 let sub_tlv = tlv::decode(&decrypted_data);
@@ -342,7 +342,7 @@ async fn handle_exchange(
                 let mut encrypted_data = Vec::new();
                 encrypted_data.extend_from_slice(&encoded_sub_tlv);
                 let auth_tag =
-                    aead.encrypt_in_place_detached(GenericArray::from_slice(&nonce), &[], &mut encrypted_data)?;
+                    aead.encrypt_in_place_detached(GenericArray::from_slice(&nonce).as_0_14(), &[], &mut encrypted_data)?;
                 encrypted_data.extend(&auth_tag);
 
                 event_emitter

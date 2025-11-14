@@ -83,6 +83,7 @@ pub struct ReadResponseObject {
 
 //noinspection RsExternalLinter
 #[derive(Debug, Deserialize)]
+#[allow(dead_code)]
 pub struct WriteObject {
     pub iid: u64,
     pub aid: u64,
